@@ -1,0 +1,257 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    margin: 20px; 
+}
+
+#menu-toggle {
+    display: none;
+    background-color: #03DAC6;
+    color: #121212;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+}
+
+.sidebar {
+    width: 100%;
+    background-color: #1F1F1F;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #1F1F1F;
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    margin: 20px; 
+}
+
+.main-content h1 {
+    color: #BB86FC;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.disclaimer {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
+    margin-top: 20px;
+}
+
+.disclaimer h2 {
+    color: #03DAC6;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.disclaimer p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.disclaimer a {
+    color: #BB86FC;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.disclaimer a:hover {
+    color: #3700B3;
+}
+
+.section {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: #1F1F1F;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+
+.section h2 {
+    color: #BB86FC;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    cursor: pointer;
+}
+
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #1F1F1F;
+    color: #E0E0E0;
+}
+
+.search-box input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #03DAC6;
+    color: #121212;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.file {
+    display: block;
+    margin: 10px 0;
+    color: #BB86FC;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #1F1F1F;
+    position: relative;
+}
+
+.section .content a:hover {
+    background-color: #3700B3;
+    color: #E0E0E0;
+}
+
+.section input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    background-color: #1F1F1F;
+    color: #E0E0E0;
+}
+
+/* Sección de donaciones */
+.donate-section {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
+    margin-top: 20px;
+    text-align: center;
+}
+
+.donate-section h2 {
+    color: #03DAC6;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.donate-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #03DAC6;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 20px; 
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #00C4B4;
+    transform: scale(1.05);
+}
+
+.donation-options {
+    margin-top: 20px;
+}
+
+.donate-option {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #BB86FC;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 10px; 
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.donate-option:hover {
+    background-color: #3700B3;
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .sidebar.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+}
+
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MundoMedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="666.ico">
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+        <div class="sidebar" id="sidebar">
+            <div class="search-box">
+            </div>
+            <div class="section" id="libros">
+                <h2 onclick="showContent('libros')">Libros</h2>
+                <input type="text" placeholder="Buscar en libros..." oninput="searchInSection('ibros', this.value)">
+                <div class="content" style="display: none;">
+                    <a href="https://cors-anywhere.herokuapp.com/https://drive.google.com/uc?export=download&id=1ONI2vB0ZgGZXm4bjSPj5bQ3obOpde1pZ" class="file">Psicología Oscura Domine Las Técnicas Secretas de la Manipulación Emocional Encubierta,(S.L. Moore [Moore,]<span class="tag"></a>
+                    <a href="https://drive.google.com/file/d/10osAaw40UZIbJSDEmVXQ5VSdEptC5zcU/view?usp=sharing" class="file">Desarrolla una mente prodigiosa (Psicologia y Autoayuda) (Ramon Campayo).pdf</a>
+                    <a href="https://drive.google.com/file/d/1CjckXT08kN5sQOL_b7GQNVsc4yShBaxP/view?usp=sharing" class="file">Manipulación y Psicología Oscura (Alejandro Mendoza [Mendoza, Alejandro]).pdf</a>
+                    <a href="https://drive.google.com/file/d/1Q3xSiV02HzxvKSeEXuSuugJ4TYQvAP3Q/view?usp=sharing" class="file">Psicología Oscura Domine Las Técnicas Secretas de la Manipulación Emocional Encubierta, de la Persuasión Disimulada y del... (S.L. Moore [Moore, S.L.]).pdf</a>
+                    <a href="https://drive.google.com/file/d/15nHgB0vEW30hcGhIOFkoB9BkzqMZOvXJ/view?usp=sharing" class="file">Cómo Analizar a Las Personas con Psicología La guía definitiva para acelerar la lectura de la gente a través del análisis del... (Emotional Pathway [Pathway, Emotional]).pdf</a>
+                    <a href="https://drive.google.com/file/d/1zJ5GQAxXYvvhNZNCMUAnIVP7OCJktvLO/view?usp=drive_link" class="file">25 Técnicas aplicadas a campañas de Red Team y Hacking (Daniel Echeverri Montoya).pdf</a>
+                    <a href="https://drive.google.com/file/d/1Yzc174Y0nGQv3btSPXF1Q3lW4EKgwKDK/view?usp=drive_link" class="file">Ingeniería Social El Arte del Hacking Personal (Christopher Hadnagy, Paul Wilson).pdf</a>
+                    <a href="https://drive.google.com/file/d/1KaxKK0Wao_c0m_ttKyZvwyEA3rbzaNmj/view?usp=drive_link" class="file">Web Hacking (Sheila Berta).pdf</a>
+                    <a href="https://drive.google.com/file/d/1B-ahOunWXuCwoNMwF5r8KUT0iLEl5tp6/view?usp=drive_link" class="file">Ethical Hacking 2.0 (USERS).pdf</a>
+                    <a href="https://drive.google.com/file/d/1GqXsHOrR5dJZ_hDkUx6PBsehAIIEzhYF/view?usp=drive_link" class="file">Hacking Etico 101 - Cómo hackear profesionalmente en 21 días o menos 2da Edición.pdf</a>
+                    <a href="https://drive.google.com/file/d/1qhZ8W9ERqtctV704GWOSIy4Mpy6VqNU7/view?usp=drive_link" class="file">La domesticación del azar la erosión del determinismo y el nacimiento de las ciencias del caos.pdf</a>
+                    <a href="https://drive.google.com/file/d/1UVP76ypNPokzTOlymTrf133Q8PvGxrbO/view?usp=drive_link" class="file">Linux Server Linux Server Hacks Los Mejores Trucos the Best Tricks (Bill Von Hagen, Brian K. Jones).pdf</a>
+                    <a href="https://drive.google.com/file/d/1tGiccBzgfB6VC6CbdpIHsWkyXhUKkcXw/view?usp=sharing" class="file">Criptografía (USERS).pdf</a>
+                    <a href="https://drive.google.com/file/d/11wp8gJCtcIibKRFDfy8wEqOPQHOXFRgx/view?usp=sharing" class="file">Criptografía Ofensiva. Atacando y defendiendo organizaciones Criptografía aplicada para pentesters, programadores y analistas (Dr. Alfonso Muñoz - Prólogo Raúl siles).pdf</a>
+                    <a href="https://drive.google.com/file/d/1afQMJLGuupNcYZTKfmMeM8qE2VdVyiVC/view?usp=sharing" class="file">Criptografía sin secretos con python (Spanish Edition) (Arboledas Brihuega, David).pdf</a>
+                    <a href="https://drive.google.com/file/d/16-qqqLtCVlE92x5Srg3205zRLvNCzc4e/view?usp=sharing" class="file">Hacking ético con herramientas Python (José Manuel Ortega Candel [Candel etc.).pdf</a>
+                    <a href="https://drive.google.com/file/d/1PEBlMbcoqiRL1sUNoyOtjRdvkDYRh6pL/view?usp=sharing" class="file">Matemáticos, espías y piratas informáticos codificación y criptografía (Juan Gomez Urgelles).pdf</a>
+                    <a href="https://drive.google.com/file/d/1XbVRYUT8IvAVFljP8tovf27uPk2azk4j/view?usp=sharing" class="file">Web Hacking 101 en Español - Cómo hacer dinero hackeando éticamente (Peter Yaworski y Edwin A. Cartagena Hernández).pdf</a>
+                    <a href="https://drive.google.com/file/d/1oKyYM3-EdrlN_ZAl8r6wLWQmqd-r10t-/view?usp=drive_link" class="file">Aprende Lógica De Programación Aprende a Pensar Como Un Programador. Enfoque Práctico Con Ejercicios en Java (Jesús Ormaza).pdf</a>
+                    <a href="https://drive.google.com/file/d/1F6NN_DId3Uu7qbgAiFXGQ50fvW2uHH2d/view?usp=drive_link" class="file">C-C++ Curso de Programación (Javier Ceballos Sierra).pdf</a>
+                    <a href="https://drive.google.com/file/d/1dnxVxKPjIvkKAMd6lC8LqMDxHh8Y7tNJ/view?usp=drive_link" class="file">Fundamentos de programación, algoritmos, estructura de datos y objetos (Luis Joyanes Aguilar).pdf</a>
+                    <a href="https://drive.google.com/file/d/19udhRKuxyCQcbYhE3xoQVOuaC1XW5qVW/view?usp=drive_link" class="file">Programación en Java, Volumen 1 (Carlos Arroyo Diaz).pdf</a>
+                    <a href="https://drive.google.com/file/d/1b9Dt73B8S9Z8CQS6EebF1ZMEL0ynkUSL/view?usp=drive_link" class="file">Tutorial fácil de seguir para aprender la programación de Python en menos de una semana (R. M. Lewis).pdf</a>
+                    <a href="https://drive.google.com/file/d/1NQ3I7bKHsUnkNcU36T7kF7Imb9spzpuw/view?usp=drive_link" class="file">Curso de diseño y programaciòn de videojuegos, Fasciculo 1 (Iberprensa).pdf</a>
+                    <a href="https://drive.google.com/file/d/1uGLpZlV6ZXzGTqLlITSPiC-vBt-JzcCv/view?usp=sharing" class="file">Diseño Y Programacion De Paginas Web (Pedroza Pareja Miguel).pdf</a>
+                    <a href="https://drive.google.com/file/d/15E_A5HWUFWPGQC3YLGWGWXUZkZSR2GI7/view?usp=sharing" class="file">El aprendiz de brujo manual de ejercicios prácticos de Programación Neurolingüística (Alexa Mohl).pdf</a>
+                    <a href="https://drive.google.com/file/d/1xqeDXNITjIvcGS9_gV9sS35XejxnXMcN/view?usp=sharing" class="file">El Microcontrolador ATMega328P de Microchip Programación en Ensamblador, Lenguaje C y un enlace con Arduino (Felipe Santiago Espinosa).pdf</a>
+                    <a href="https://drive.google.com/file/d/1vxJEJKdJaS1jbhXcx69YpYenp37zdQeS/view?usp=sharing" class="file">Fundamentos de Programación Piensa en C (O. Cairó Battistutti).pdf</a>
+                    <a href="https://drive.google.com/file/d/1MsnBQ48Jzee86DSMPts1C_4BS6KjLiV4/view?usp=sharing" class="file">Introducción a la computación y a la programación estructurada (Guillermo Levine).pdf</a>
+                    <a href="https://drive.google.com/file/d/1UthRAOwz4wW94eM30iY59JjRw-lSzDxu/view?usp=sharing" class="file">Introducción a la programación orientada a objetos ( etc.).pdf</a>
+                    <a href="https://drive.google.com/file/d/1REjjaFfY-CqUm60zxwOXpWYBftd4FNId/view?usp=sharing" class="file">Programación en Java, Vol. 3 (Carlos Arroyo Díaz).pdf</a>
+                    <a href="https://drive.google.com/file/d/1Q2aTXGIIo0Inif-p4T-EkTqx-KFW3MKI/view?usp=sharing" class="file">Programación en Java, Volumen 2 (Carlos Arroyo Díaz).pdf</a>
+                    <a href="https://drive.google.com/file/d/1dsPy9K6VPVHgGJC-_Svf3_BeJWh8Y-Q6/view?usp=sharing" class="file">Programación en Java, Volumen 4 (Carlos Arroyo Diaz).pdf</a>
+                    <a href="https://drive.google.com/file/d/1SE2QBZQG2FIB3tSWhqwcilU9YDP0JRnc/view?usp=sharing" class="file">Programación orientada a objetos con Java una introducción práctica usando BlueJ (David J. Barnes Michael Kölling).pdf</a>
+                    <a href="https://drive.google.com/file/d/1URcW8k8VfJNsfdRSisJ1r1iM1AdrHkPg/view?usp=sharing" class="file">Robótica Avanzada Construcción y Programación de Robots (USERS).pdf</a>
+                    <a href="https://www.mediafire.com/file/9g9ohw45rcl5k1z/D34dp00l_Kills_Th3_M4rv3l_Un1v3rs3_Ag41n.rar/file" class="file">Deadpool mata al Universo Marvel otra vez</a>
+                    <a href="https://mega.nz/file/MdpHVaxA#W6M8Sr0cNDTXQGVbRLm7SVH_BWsL2u81sZ-NfjwyASU" class="file">Deadpoll mata al Universo Marvel [COMPLETO]</a>
+                    <a href="https://mega.nz/folder/MEh3XCzT#bpjlOS1eRtrQ73Am3DixeA" class="file">World War Hulks [Evento Completo]</a>
+                    <a href="https://www.mediafire.com/file/a5sugryye7qg6br/Deadpool_Vs_The_Punisher.rar/file" class="file">The Punisher vs Deadpool [5 de 5] [En Español]</a>
+                    <a href="https://www.mediafire.com/file/0afm2aktcmzwjho/Deadpool_vs_Thanos.zip/file" class="file">Deadpool vs Thanos [4 de 4] [En Español]</a>
+                    <a href="https://mega.nz/folder/3UxlQAwD#zpyAGjHpECed7KJYo7rUMg" class="file">Deadpool vs Carnage [4 de 4] [En Español]</a>
+                    <a href="https://mega.nz/file/urpEiAZZ#wWTxhysyki8rnuc8uILo-WwBgePdGumj5uah__pUuHY" class="file">Deadpool Back in Black [5 de 5]</a>
+                    <a href="https://mega.nz/folder/mN0E2KzK#PP_Uz3jk9K361F4OuK0d6g" class="file">Spiderman 2099 [46 de 46]</a>
+                    <a href="https://mega.nz/file/KmRxSSiI#By7qq5ZBnNd8laowT_nCZfWLq0ktBiOHLAMiMWv1S9I" class="file">Spiderman: El Diario de Osborn</a>
+                    <a href="https://mega.nz/folder/cZZjFKQS#nABVnjcfDX-DlUF01AdYSg" class="file">Miles Morales Ultimate Spiderman [12 de 12] [Español]</a>
+                </div>
+            </div>
+            <div class="section" id="peliculas">
+                <h2 onclick="showContent('peliculas')">Películas</h2>
+                <input type="text" placeholder="Buscar en Películas..." oninput="searchInSection('peliculas', this.value)">
+                <div class="content" style="display: none;">
+                    <a href="https://filelions.site/f/4trpofap4z4p" class="file">Beekeeper: Sentencia de muerte</a>
+                    <a href="https://filelions.site/f/oxjn80bow5wk" class="file">Madame Web</a>
+                    <a href="https://streamwish.to/twuf4i3fyc2p" class="file">El Duro</a>
+                    <a href="https://streamwish.to/w7lt3dczvdyp" class="file">Entrenado para Matar</a>
+                    <a href="https://supervideo.cc/vxnklz8tp00z" class="file">Venganza Silenciosa</a>
+                    <a href="https://filelions.site/f/evwlmgmybwvb" class="file">Control total</a>
+                    <a href="https://streamwish.to/2bvlr3i0wrhn" class="file">Corazones De Hierro</a>
+                    <a href="https://filelions.site/f/dc4b5pdntfbx" class="file">Atómica</a>
+                    <a href="https://michaelapplysome.com/e/i6nul7bzmfsh" class="file">Atlas</a>
+                    <a href="https://d000d.com/d/598rf38uebk2" class="file">Duna: Parte dos</a>
+                    <a href="https://filelions.site/f/s6hveo8yfrm7" class="file">Five Nights at Freddy’s</a>
+                    <a href="https://supervideo.cc/f5fvp1b5l3ff" class="file">Un día para sobrevivir</a>
+                    <a href="https://swhoi.com/7env8fl9hyrn" class="file">Upgrade: Máquina asesina</a>
+                    <a href="https://swhoi.com/kw1ysrw6vixi" class="file">Hackers: Ningún sistema es seguro</a>
+                    <a href="https://swhoi.com/d60ukgk5j0sl" class="file">Hacker</a>
+                    <a href="https://swhoi.com/7081bncim8up" class="file">Mentes poderosas</a>
+                    <a href="https://swhoi.com/fgt7s6z38q58" class="file">Día de entrenamiento</a>
+                    <a href="https://swhoi.com/7mqyj0c78rpl" class="file">Amigos De Armas</a>   
+                    <a href="https://swhoi.com/rq60nbg1rtdw" class="file">8 Mile: Calle de ilusiones</a>
+                    <a href="https://swhoi.com/0pvrsq85loau" class="file">Eliminar Amigo</a>
+                    <a href="https://swhoi.com/hgl6b1nooax5" class="file">Eliminar Amigo2</a>
+                    <a href="https://861635218.tapecontent.net/radosgw/GMxl10xO6Ls1z9o/_0eJ91gqi33x1oSMkqFCHGByb7RlBmV53aSt_ICrN54I-9cEqKCxmLAkflS8F4MVhOyy6A3KjrSk4uHFWKBJaLx1rSt9oD1RluxKlFJyM4cmi21XQrTauFZXPF3adWoqO3GCKgDIq979o-2jGFRfisTY-7TdCbuJYu1EBG0vU-bYIT4yqaGrBdwGFvOblrDcR50u1fPzb_P6chQc9JZQQN8fgB549sPo_y4FPGLI-R03-h7_BgO5BaWUqOJRe1Ue7GgW31bhc57t7jTt_XnIoNyI9CNhl1BybH5sQsJ0Cd49r385XMGeB4YPvbTTxJhta6qVadm_4FrkS5DT/269655--7037d721-7a99-43b6-baa7-318a133bc943--wvzj--2359764-streamtape.mp4?stream=1" class="file">MR-9:Mision Mortal</a>
+                    <a href="https://filelions.site/f/ojo7ea2bjosw" class="file">Mamá y Papá</a>
+                    <a href="https://filelions.site/f/gh45l4sttke4" class="file">Breaking Bad T1xE1</a>
+                    <a href="https://filelions.site/f/cxa7g80a0epc" class="file">Breaking Bad T1xE2</a>
+                    <a href="https://filemoon.sx/d/mmrebuyaqrsq/mtm5ng-latino-full-hd-1-3-online.mp4" class="file">Breaking Bad T1xE3</a>
+                    <a href="https://filelions.site/f/ov76wc7bsyay" class="file">Breaking Bad T1xE4</a>
+                    <a href="https://filelions.site/f/w1kglqlyw35z" class="file">Breaking Bad T1xE5</a>
+                    <a href="https://filelions.site/f/438xqmd7vf8d" class="file">Breaking Bad T1xE6</a>
+                    <a href="https://filelions.site/f/3a48epoqifpe" class="file">Breaking Bad T1xE7</a>
+                    <a href="https://filelions.site/f/neg499g1f1l2" class="file">Breaking Bad T2xE1</a>
+                    <a href="https://filelions.site/f/nbb20h1wl7hp" class="file">Breaking Bad T2xE2</a>
+                    <a href="https://filelions.site/f/a64pzcusclw3" class="file">Breaking Bad T2xE3</a>
+                    <a href="https://filelions.site/f/imblwyby4tik" class="file">Breaking Bad T2xE4</a>
+                    <a href="https://filelions.site/f/ysgb5qwwa84j" class="file">Breaking Bad T2xE5</a>
+                    <a href="https://filelions.site/f/dlfgfk9c9bz8" class="file">Breaking Bad T2xE6</a>
+                    <a href="https://filelions.site/f/i627x1sj2iwd" class="file">Breaking Bad T2xE7</a>
+                    <a href="https://filelions.site/f/iizyx7qese64" class="file">Breaking Bad T2xE8</a>
+                    <a href="https://filelions.site/f/pr61hspjvvwv" class="file">Breaking Bad T2xE9</a>
+                    <a href="https://filelions.site/f/tcwq34pn2ynx" class="file">Breaking Bad T2xE10</a>
+                    <a href="https://filelions.site/f/s2rgvc378mwk" class="file">Breaking Bad T2xE11</a>
+                    <a href="https://filelions.site/f/iwaz0wgya0dt" class="file">Breaking Bad T2xE12</a>
+                    <a href="https://filelions.site/f/vp3r6uqbl95m" class="file">Breaking Bad T2xE13</a>
+                    <a href="https://swhoi.com/40nrr3wmo6f5 " class="file">MASHLE: MAGIC AND MUSCLES T1xE1</a>
+                    <a href="https://swhoi.com/51xzrvakeedn " class="file">MASHLE: MAGIC AND MUSCLES T1xE2</a>
+                    <a href="https://swhoi.com/pn7eyhlgaqct " class="file">MASHLE: MAGIC AND MUSCLES T1xE3</a>
+                    <a href="https://swhoi.com/ib3uod9uzeuy " class="file">MASHLE: MAGIC AND MUSCLES T1xE4</a>
+                    <a href="https://swhoi.com/ugnytkne398i " class="file">MASHLE: MAGIC AND MUSCLES T1xE5</a>
+                    <a href="https://swhoi.com/ugnytkne398i " class="file">MASHLE: MAGIC AND MUSCLES T1xE6</a>
+                    <a href="https://swhoi.com/2ad2ehozrob1 " class="file">MASHLE: MAGIC AND MUSCLES T1xE7</a>
+                    <a href="https://swhoi.com/ps5cpgn27p2v " class="file">MASHLE: MAGIC AND MUSCLES T1xE8</a>
+                    <a href="https://swhoi.com/2iwetl85a54k " class="file">MASHLE: MAGIC AND MUSCLES T1xE9</a>
+                    <a href="https://swhoi.com/e9epi8q4k0ne " class="file">MASHLE: MAGIC AND MUSCLES T1xE10</a>
+                    <a href="https://swhoi.com/detwq1a0uqwa " class="file">MASHLE: MAGIC AND MUSCLES T1xE11</a>
+                    <a href="https://swhoi.com/fl8zo28v4yzd " class="file">MASHLE: MAGIC AND MUSCLES T1xE12</a>
+                    <a href="https://swhoi.com/k7dsljmocmgc " class="file">MASHLE: MAGIC AND MUSCLES T1xE13</a>
+                    <a href="https://swhoi.com/xqnmrdn89sot " class="file">MASHLE: MAGIC AND MUSCLES T1xE14</a>
+                    <a href="https://swhoi.com/bqsu5jc0pidi" class="file">MASHLE: MAGIC AND MUSCLES T1xE15</a>
+                    <a href="https://swhoi.com/k483zfa2fsq1" class="file">MASHLE: MAGIC AND MUSCLES T1xE16</a>
+                    <a href="https://swhoi.com/9tka4sle9zt2 " class="file">MASHLE: MAGIC AND MUSCLES T1xE17</a>
+                    <a href="https://swhoi.com/b1w3i2tsqvc0 " class="file">MASHLE: MAGIC AND MUSCLES T1xE18</a>
+                    <a href="https://swhoi.com/v4rqoqlfc81r " class="file">MASHLE: MAGIC AND MUSCLES T1xE19</a>
+                    <a href="https://swhoi.com/qfqmb9vqikw3 " class="file">MASHLE: MAGIC AND MUSCLES T1xE20</a>
+                    <a href="https://swhoi.com/zktr3ecmdtmg " class="file">MASHLE: MAGIC AND MUSCLES T1xE21</a>
+                    <a href="https://swhoi.com/5iopukc7plnh " class="file">MASHLE: MAGIC AND MUSCLES T1xE22</a>
+                    <a href="https://swhoi.com/9f4um716y7uc " class="file">MASHLE: MAGIC AND MUSCLES T1xE23</a>
+                    <a href="https://swhoi.com/dtam2phj17sf " class="file">MASHLE: MAGIC AND MUSCLES T1xE24</a>
+                    <a href="https://filemooon.top/d/4vigvfzwzike/Arifureta_00.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE0</a>
+                    <a href="https://mixdrop.nu/f/1vj3zd4ei4rjx7" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE1</a>
+                    <a href="https://mixdrop.nu/f/1vj3zd99s346g1" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE2</a>
+                    <a href="https://mixdrop.nu/f/pkqgl06qsgol3o" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE3</a>
+                    <a href="https://mixdrop.nu/f/6qg0vw7jcqz6wv" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE4</a>
+                    <a href="https://mixdrop.nu/f/4nz63on7s0v0kp" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE5</a>
+                    <a href="https://mixdrop.nu/f/vnr4m1vjcq4pv1q" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE6</a>
+                    <a href="https://mixdrop.nu/f/3nxvgorzh11xrp" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE7</a>
+                    <a href="https://mixdrop.nu/f/wnr4g98df77837" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE8</a>
+                    <a href="https://mixdrop.nu/f/7r67n414iq36p1" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE9</a>
+                    <a href="https://mixdrop.nu/f/9n0ld487fj3436" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE10</a>
+                    <a href="https://mixdrop.nu/f/84dk69x6fg4zr8" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE11</a>
+                    <a href="https://mixdrop.nu/f/knrq6vq0b3mvxmk" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE12</a>
+                    <a href="https://mixdrop.nu/f/dqw6zo6nhd64ew" class="file">Arifureta Shokugyou de Sekai Saikyou: T1xE13</a>
+                    <a href="https://filemooon.top/d/p13pz5yndoa3/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_01.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE1</a>
+                    <a href="https://filemooon.top/d/g0uksu0tc38g/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_02.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE2</a>
+                    <a href="https://filemooon.top/d/5uhchd8tw0rh/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_03.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE3</a>
+                    <a href="https://filemooon.top/d/38fhi69lg60x/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_04.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE4</a>
+                    <a href="https://filemooon.top/d/fstmfu1cp0w9/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_05.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE5</a>
+                    <a href="https://filemooon.top/d/9qyrpnh14mcn/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_06.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE6</a>
+                    <a href="https://filemooon.top/d/v9xcbkxt3xsd/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_07.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE7</a>
+                    <a href="https://filemooon.top/d/jr2em12hqzxh/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_08.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE8</a>
+                    <a href="https://filemooon.top/d/xvd2y35o1bkz/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_09.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE9</a>
+                    <a href="https://filemooon.top/d/nlyfi5xdntqq/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_10.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE10</a>
+                    <a href="https://filemooon.top/d/z2ellgyii8t4/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_11.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE11</a>
+                    <a href="https://filemooon.top/d/a4gx4q4ehvr6/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_12.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE12</a>
+                    <a href="https://filemooon.top/d/qrscccum7ual/_AnimeOnlineNinja__Arifureta_S2_BD_Latino_13.mp4" class="file">Arifureta Shokugyou de Sekai Saikyou: T2xE13</a>
+                    <a href="https://filelions.site/f/8rz1min8vczb" class="file">ted T1xE1</a>
+                    <a href="https://filelions.site/f/erdwt5uezfw4" class="file">ted T1xE2</a>
+                    <a href="https://filelions.site/f/7uybw1uliv2d" class="file">ted T1xE3</a>
+                    <a href="https://filelions.site/f/m7in4cdlqa3j" class="file">ted T1xE4</a>
+                    <a href="https://filemoon.sx/d/gtg69d0zu4tw/mjaxodm0-latino-full-hd-1-5-online.mp4" class="file">ted T1xE5</a>
+                    <a href="https://filelions.site/f/4nj19od3chov" class="file">ted T1xE6</a>
+                    <a href="https://filelions.site/f/eug3ultl3f1a" class="file">ted T1xE7</a>
+                    <a href="https://swhoi.com/kw1ysrw6vixi" class="file">Amigos con beneficios</a>
+                    <a href="https://swhoi.com/3jz7sl96ieq7" class="file">Proyecto X</a>
+                    <a href="https://swhoi.com/2ais6oypqkm7" class="file">¡Te atrapé!</a>
+                    <a href="https://d000d.com/d/puv4sja2tqd0" class="file">Música, Amigos y Fiesta</a>
+                    <a href="https://swhoi.com/jy2999ej9djy" class="file">A La Mierda Con Los Zombis</a>
+                    <a href="https://d000d.com/d/i53yt9uy2drw" class="file">Dos extraños amantes</a>
+                    <a href="https://dood.wf/d/x42mubfnd6rd" class="file">Intocable</a>
+                    <a href="https://swhoi.com/h9c1h900913s" class="file">Por eso lo llaman amor</a>
+                    <a href="https://swhoi.com/lbkkxjznw1q5" class="file">Noche de juegos</a>
+                    <a href="https://swhoi.com/kceaegqedcmn" class="file">Una noche loca</a>
+                    <a href="https://swhoi.com/rdu453z8mkqg" class="file">¿Qué Pasó Ayer?</a>
+                    <a href="https://swhoi.com/2jjrs43id2r1" class="file">¿Qué Pasó Ayer? Parte II</a>
+                    <a href="https://swhoi.com/ehkosf8zq08u" class="file">¿Qué Pasó Ayer? Parte III</a>
+                    <a href="https://swhoi.com/nsoysnjcu4ym" class="file">Quiero matar a mi jefe</a>
+                    <a href="https://swhoi.com/4pask1hpbbwr" class="file">Quiero matar a mi jefe 2</a>
+                </div>
+            </div>
+            <div class="section" id="minios">
+                <h2 onclick="showContent('minios')">Minios</h2>
+                <input type="text" placeholder="Buscar en Minios..." oninput="searchInSection('minios', this.value)">
+                <div class="content" style="display: none;">
+                    <a href="https://www.mediafire.com/file/82mkufsr4txwwys/MiniOS7+Pro+v2024.01+x64+-+www.dprojects.org.rar/file" class="file">MiniOS7 Pro v2024.01 x64 - www.dprojects.org.rar</a>
+                    <a href="https://www.mediafire.com/file_premium/jfuhowrtfyvytvk/miniOS8_Pro_v2024.01_x64_-_www.dprojects.org.rar/file" class="file">MiniOS8 Pro v2024.01 x64 - www.dprojects.org.rar</a>
+                    <a href="https://www.mediafire.com/file/m4ewn8fwjfjclqn/MiniOS10_LTSB_v2024.01_x64_-_www.dprojects.org.rar/file" class="file">MiniOS10 LTSB v2024.01 x64 - www.dprojects.org.rar</a>
+                    <a href="https://www.mediafire.com/file/wcl2cfvhbv5260r/MiniOS10_LTSC-1809_v2024.01_x64_-_www.dprojects.org.rar/file" class="file">MiniOS10 LTSC-1809 v2024.01 x64 - www.dprojects.org.rar</a>
+                    <a href="https://www.mediafire.com/file/pn9qzaupimrm02a/MiniOS10_LTSC-21H2_v2024.01_x64_-_www.dprojects.org.rar/file" class="file">MiniOS10 LTSC-21H2 v2024.01 x64 - www.dprojects.org.rar</a>
+                    <a href="https://www.mediafire.com/file_premium/98dfr3c87hrpghg/MiniOS10_Pro_v2024.05_x64_-_www.dprojects.org.rar/file" class="file">MiniOS10 Pro v2024.01 x64 - www.dprojects.org.rar</a>
+                </div>
+            </div>
+            <div class="section" id="games-ps2">
+                <h2 onclick="showContent('games-ps2')">Games PS2</h2>
+                <input type="text" placeholder="Buscar en Games PS2..." oninput="searchInSection('games-ps2', this.value)">
+                <div class="content" style="display: none;">
+                    <a href="https://www.mediafire.com/download/d89eumdir7tuzib/Gta+sa+y+Cleo+by+Adrielito+Gamer.rar" class="file">GTA con mods [portable]</a>
+                    <a href="https://www.mediafire.com/file/dpe1lz6628iid3w/GTA.rar/file" class="file">GTA san andreas [Portable]</a>
+                    <a href="https://www.mediafire.com/file/9tp1pzfpdftdkx0/AppSetup_instuction%252Btutorial_x64-86.US.zip/file" class="file">God of War 2</a>
+                    <a href="https://mega.nz/file/NuBHiTBC#T71wbJb-W5-rlChf2kLGksRiCse8hwcNm65uogUsl8o" class="file">Resident Evil 4 Ultimate HD Edition</a>
+                    <a href="https://mega.nz/file/EI9SHaZT#U_rs1TgBq9nE9vw9A_BMtAqVxi6uY6eeaifzAQhs6IM" class="file">Need for speed most wanted</a>
+                </div>
+            </div>
+            <div class="donate-section">
+                <h2>¡Apoya mi trabajo!</h2>
+                <p>Si encuentras útiles mis herramientas y te gustaría apoyar mi trabajo, considera hacer una donación.</p>
+                <!-- Cambio de <button> a <a> con el atributo href -->
+                <a href="https://paypal.me/julian14133?country.x=CO&locale.x=es_XC" class="donate-button">Donar</a>
+                <div class="donation-options" style="display: none;">
+                    <p>Elige una opción de donación:</p>
+                    <a href="https://paypal.me/julian14133?country.x=CO&locale.x=es_XC" class="donate-option" target="_blank">Donar con PayPal</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-content" id="main-content">
+            <h1>Bienvenido a MundoMedia</h1>
+            <p>Somos tu fuente confiable de contenido en línea. Explora nuestras secciones para encontrar información, recursos y entretenimiento que se adapten a tus intereses.</p>
+            <div class="disclaimer">
+                <h2>Descargo de Responsabilidad</h2>
+                <p>
+                    MundoMedia proporciona enlaces a contenidos de terceros únicamente para fines de entretenimiento e información. No alojamos ni almacenamos ningún contenido en nuestros servidores. Todos los enlaces apuntan a contenidos que están disponibles públicamente en otros sitios web. No asumimos ninguna responsabilidad por la precisión, el cumplimiento de derechos de autor o la legalidad del contenido enlazado.
+                </p>
+                <p>
+                    Al utilizar este sitio, aceptas que cualquier contenido accedido a través de enlaces de terceros es responsabilidad del usuario y del sitio de terceros. Recomendamos a los usuarios verificar los términos de uso y las políticas de privacidad de cualquier sitio de terceros antes de acceder a sus contenidos.
+                </p>
+                <p>
+                    Si crees que algún enlace infringe tus derechos de autor o es inapropiado, por favor <a href="mailto:julianandresvallestero@proton.me">contáctanos</a> para que podamos revisar y, si es necesario, eliminar el enlace en cuestión.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
