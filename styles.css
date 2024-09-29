@@ -1,3 +1,4 @@
+/* Estilo general */
 body {
     background-color: #1a1a1a;
     color: #f5f5f5;
@@ -20,7 +21,7 @@ body {
     height: 100vh;
     overflow-y: auto;
     position: fixed;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
 .sidebar:hover {
@@ -28,7 +29,7 @@ body {
 }
 
 .sidebar h2 {
-    color: yellow;
+    color: #ffc700; /* Ajustado para mantener la misma paleta */
     margin-bottom: 10px;
 }
 
@@ -39,11 +40,11 @@ body {
     overflow-y: auto;
     height: 100vh; 
     background-color: #1c1c1c;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, margin-left 0.3s ease-in-out;
 }
 
 .main-content h1 {
-    color: yellow;
+    color: #ffc700;
     text-align: center;
 }
 
@@ -53,15 +54,16 @@ body {
     background-color: #333;
     border-radius: 12px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .section:hover {
     transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
 
 .section h2 {
-    color: yellow;
+    color: #ffc700;
 }
 
 /* Estilo de enlaces */
@@ -72,11 +74,12 @@ body {
     padding: 10px;
     border-radius: 8px; 
     margin: 5px 0;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .file:hover {
     background-color: #ffc700; 
+    color: #121212; /* Mejor contraste */
 }
 
 /* Estilo de la barra de búsqueda */
@@ -98,12 +101,12 @@ body {
 .search-bar:focus {
     outline: none; 
     background-color: #444; 
-    border-color: yellow; 
+    border-color: #ffc700; 
 }
 
 /* Botones */
 button, .donate-button {
-    background-color: yellow;
+    background-color: #ffc700;
     color: #121212;
     padding: 10px 20px;
     border: none;
@@ -118,11 +121,11 @@ button, .donate-button {
 }
 
 button:hover, .donate-button:hover {
-    background-color: #ffc700;
+    background-color: #ffd700;
     transform: scale(1.05);
 }
 
-/* Estilos para la barra de navegación */
+/* Barra de navegación */
 nav {
     position: fixed;
     top: 0;
@@ -134,15 +137,18 @@ nav {
 }
 
 nav a {
-    color: yellow;
+    color: #ffc700;
     text-decoration: none;
     margin-right: 15px;
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #fff;
 }
 
+/* Sección de donaciones */
 .donate-section {
     background-color: #333; 
     border: 1px solid #444;
@@ -155,7 +161,7 @@ nav a:hover {
 }
 
 .donate-section h2 {
-    color: yellow;
+    color: #ffc700;
     margin-bottom: 10px;
 }
 
@@ -185,24 +191,38 @@ nav a:hover {
     background-color: #45a049;
 }
 
-/* Estilos responsivos */
+/* Responsivo */
 @media (max-width: 768px) {
     .sidebar {
-        display: none; 
-        position: absolute; 
-        width: 100%; 
-        height: auto; 
+        transform: translateX(-100%); 
+        width: 70%; 
+        height: 100vh;
     }
 
     .sidebar.active {
-        display: block; 
+        transform: translateX(0); 
     }
 
     .main-content {
-        margin-left: 0; 
+        margin-left: 0;
     }
 
     #menu-toggle {
         display: block; 
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 999;
     }
 }
+
+/* Estilo para el botón de menú */
+#menu-toggle {
+    background: #ffc700;
+    color: #121212;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
