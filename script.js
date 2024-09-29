@@ -36,23 +36,37 @@ function generalSearch() {
     });
 }
 
-// Funciones del menú lateral
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar = document.querySelector('.sidebar');
-const links = document.querySelectorAll('.sidebar .file');
+// Funcionalidad de la barra lateral en dispositivos móviles
+const menuToggle = document.getElementById('menu-toggle'); 
+const sidebar = document.querySelector('.sidebar'); 
+const mainContent = document.querySelector('.main-content'); 
+const links = document.querySelectorAll('.sidebar .file'); 
 
+// Alternar la visibilidad de la barra lateral al hacer clic en el botón de menú
 menuToggle.addEventListener('click', () => {
-    sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+    sidebar.classList.toggle('active'); 
+    mainContent.classList.toggle('shifted'); 
 });
 
 links.forEach(link => {
     link.addEventListener('click', () => {
-        sidebar.style.display = 'none'; // Cerrar el menú
+        if (window.innerWidth <= 768) { 
+            sidebar.classList.remove('active'); 
+        }
     });
 });
 
+// Cerrar la barra lateral si se hace clic en cualquier lugar fuera de ella (en dispositivos móviles)
+document.addEventListener('click', (event) => {
+    if (window.innerWidth <= 768) {
+        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+            sidebar.classList.remove('active'); 
+        }
+    }
+});
+
 // Funcionalidad para copiar la dirección de la wallet
-document.getElementById('copy-button').addEventListener('click', function() {
+document.getElementById('copy-button').addEventListener('click', function () {
     const walletAddress = '1PpYBzQABU4woy2ShuPAnm6smC9REQxfHG';
     navigator.clipboard.writeText(walletAddress).then(() => {
         alert('Dirección copiada al portapapeles!');
@@ -60,3 +74,4 @@ document.getElementById('copy-button').addEventListener('click', function() {
         console.error('Error al copiar: ', err);
     });
 });
+
