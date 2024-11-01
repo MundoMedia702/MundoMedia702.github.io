@@ -8,7 +8,18 @@
     <link rel="icon" href="MUNDO.ico">
 </head>
 <body>
-
+    <div id="pantalla-carga">
+  <div id="mensaje-corredizo">Bienvenido a MundoMedia</div>
+</div>
+<script>
+    // Ocultar la pantalla de carga después de que la página cargue
+    window.addEventListener("load", function() {
+  setTimeout(function() {
+    document.getElementById("pantalla-carga").classList.add("oculto");
+    document.getElementById("contenido").classList.add("visible");
+  }, 3000); 
+});
+  </script>
     <div class="container">
         <button id="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
         <div class="sidebar" id="sidebar">
@@ -332,5 +343,13 @@
     </div>
 </div>
     <script src="script.js"></script>
+    <script>
+  document.querySelectorAll('a').forEach(link => {
+    // Si el enlace es externo, abrir en una nueva pestaña
+    if (link.href.startsWith('http') && !link.href.includes(window.location.hostname)) {
+      link.setAttribute('target', '_blank');
+    }
+  });
+</script>
 </body>
 </html>
