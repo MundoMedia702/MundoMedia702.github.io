@@ -75,3 +75,55 @@ document.getElementById('copy-button').addEventListener('click', function () {
     });
 });
 
+// mensaje
+window.addEventListener("load", function() {
+    const mensaje = document.getElementById("mensaje-corredizo");
+    const pantallaCarga = document.getElementById("pantalla-carga");
+    const contenido = document.getElementById("contenido");
+
+    const mensajeTexto = "HOLA... :)";
+    let i = 0;
+    
+    // Función para escribir el mensaje
+    function escribirMensaje() {
+        if (i < mensajeTexto.length) {
+            mensaje.textContent += mensajeTexto.charAt(i);
+            i++;
+            setTimeout(escribirMensaje, 100); 
+        } else {
+            setTimeout(borrarMensaje, 1000); 
+        }
+    }
+
+    // Función para borrar el mensaje
+    function borrarMensaje() {
+        let j = mensaje.textContent.length;
+
+        function eliminarTexto() {
+            if (j > 0) {
+                mensaje.textContent = mensaje.textContent.slice(0, -1);
+                j--;
+                setTimeout(eliminarTexto, 50); 
+            } else {
+                mostrarPagina();
+            }
+        }
+
+        eliminarTexto();
+    }
+
+    // Función para mostrar el contenido principal
+    function mostrarPagina() {
+        // Ocultar la pantalla de carga
+        pantallaCarga.style.opacity = '0';
+        setTimeout(() => {
+            pantallaCarga.style.display = 'none'; 
+        }, 1000); 
+
+        // Mostrar el contenido
+        contenido.classList.add("visible");
+    }
+
+    escribirMensaje(); 
+});
+
