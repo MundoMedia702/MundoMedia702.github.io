@@ -8,20 +8,13 @@
     <link rel="icon" href="MUNDO.ico">
 </head>
 <body>
+    
     <div id="pantalla-carga">
-  <div id="mensaje-corredizo">Bienvenido a MundoMedia</div>
+  <div id="mensaje-corredizo"></div>
 </div>
-<script>
-    // Ocultar la pantalla de carga después de que la página cargue
-    window.addEventListener("load", function() {
-  setTimeout(function() {
-    document.getElementById("pantalla-carga").classList.add("oculto");
-    document.getElementById("contenido").classList.add("visible");
-  }, 3000); 
-});
-  </script>
+    
     <div class="container">
-        <button id="menu-toggle" onclick="toggleMenu()">☰ Menú</button>
+        <button id="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="sidebar" id="sidebar">
             <h2>Secciones</h2>
             <a href="#libros" class="file">Libros</a>
