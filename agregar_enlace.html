@@ -6,87 +6,97 @@
     <title>Agregar Enlace</title>
     <style>
         body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0d0d0d; /* Fondo oscuro */
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: #1e1e1e; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('https://espacio.fundaciontelefonica.com/wp-content/uploads/2019/08/taller-familias-videojuegos.png'); 
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: #e0e0e0; 
+    color: #00ff00; 
 }
 
+.form-container {
+    background-color: rgba(20, 20, 20, 0.8); 
+    border: 2px solid #00ff00; 
+    border-radius: 5px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); 
+    font-size: 14px;
+}
 
-        .form-container {
-            background-color: rgba(30, 30, 30, 0.9); 
-            border: 3px solid #f39c12; 
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            width: 350px;
-            backdrop-filter: blur(10px); 
-        }
+h1 {
+    text-align: center;
+    color: #00ff00;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
 
-        h1 {
-            text-align: center;
-            color: #f39c12; 
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
-        }
+p {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
 
-        p {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+label {
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
 
-        label {
-            color: #e0e0e0;
-            font-weight: bold;
-        }
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #00ff00;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s;
+}
 
-        input[type="text"],
-        select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin: 10px 0;
-            border: 2px solid #f39c12; 
-            border-radius: 5px;
-            font-size: 14px;
-            background-color: #1a1a1a; 
-            color: #e0e0e0; 
-            transition: border-color 0.3s; 
-        }
+input[type="text"]:focus,
+select:focus {
+    border-color: #ff3333; 
+    background-color: #333333;
+    outline: none;
+}
 
-        input[type="text"]:focus,
-        select:focus {
-            border-color: #e67e22; 
-            outline: none; 
-        }
+input[type="submit"] {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-        input[type="submit"] {
-            background-color: #f39c12; 
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            transition: background-color 0.3s; 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-        }
+input[type="submit"]:hover {
+    background-color: #00cc00; 
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
 
-        input[type="submit"]:hover {
-            background-color: #e67e22; 
-        }
+input[type="submit"]:active {
+    background-color: #00b300; 
+    box-shadow: inset 0 0 5px rgba(0, 255, 0, 0.8);
+}
 
-        input[type="submit"]:active {
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); 
-        }
     </style>
 </head>
 <body>
@@ -106,7 +116,7 @@
                 <option value="libros">Libros</option>
                 <option value="peliculas">Películas</option>
                 <option value="onion">Onion</option>
-                <option value="Games PS2">Juegos</option>
+                <option value="Games PS2">Games PS2</option>
             </select>
 
             <input type="submit" value="Enviar">
