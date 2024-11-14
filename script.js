@@ -65,15 +65,7 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Funcionalidad para copiar la dirección de la wallet
-document.getElementById('copy-button').addEventListener('click', function () {
-    const walletAddress = '1PpYBzQABU4woy2ShuPAnm6smC9REQxfHG';
-    navigator.clipboard.writeText(walletAddress).then(() => {
-        alert('Dirección copiada al portapapeles!');
-    }, (err) => {
-        console.error('Error al copiar: ', err);
-    });
-});
+
 
 // mensaje
 window.addEventListener("load", function() {

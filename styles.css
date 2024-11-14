@@ -150,7 +150,7 @@ nav a:hover {
     color: #fff;
 }
 
-/* Estilo de la sección de donaciones */
+/*estilo donaciones*/
 .donate-section {
     background-color: #222;
     border: 1px solid #444;
@@ -173,26 +173,6 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.wallet-address {
-    font-weight: bold;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-}
-
-#copy-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-}
-
-#copy-button:hover {
-    background-color: #45a049;
-}
 
 .submit-button {
     background-color: #00FF00;
