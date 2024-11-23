@@ -403,6 +403,42 @@ body {
         font-size: 0.95rem;
     }
 }
+/*botones*/
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacio entre botones */
+            flex-wrap: wrap; /* Ajusta a múltiples líneas si es necesario */
+        }
+
+        /* Estilo general de los botones */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #00ff00;
+            border-radius: 50%;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button img {
+            width: 30px;
+            height: 30px;
+            filter: invert(100%); /* Hace los logos blancos para que encajen con el tema oscuro */
+        }
+
+        .button:hover {
+            background-color: #00ff00;
+            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        }
+
+        .button:hover img {
+            filter: invert(0); /* Hace los logos negros cuando el botón se activa */
+        }
 
 /* Responsivo */
 @media (max-width: 768px) {
