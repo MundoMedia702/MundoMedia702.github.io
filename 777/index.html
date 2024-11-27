@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas y Series</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Películas y Series</h1>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Buscar..." oninput="filterContent()">
+    </div>
+    <div class="container">
+        <!-- Películas -->
+        <div class="section">
+            <button class="section-button" data-section="movies" onclick="toggleSection('movies')">Películas</button>
+            <div id="movies" class="section-content">
+                <div class="movie" data-title="Snowden" 
+                     data-description="Narra los acontecimientos que siguieron a la publicación por parte del diario 'The Guardian' de los documentos clasificados que aportó el joven analista de la Agencia de Seguridad Nacional (NSA) Edward Snowden sobre el programa secreto de vigilancia mundial de la Agencia en el 2013, unos documentos que revelaban que espiaban a miles de millones de personas de todo el planeta."
+                     data-genres=" Drama, Historia, Crimen, Suspenso" 
+                     data-rating="4.0">
+                    <a href="https://dood.li/d/uz50910tialn" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FmMOu9DhZ4Bt6OpIMyfduU5dBRKx.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Snowden">
+                        <p class="movie-title">Snowden</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="No hables con extraños" 
+                     data-description="Cuando una familia estadounidense es invitada a pasar el fin de semana en la idílica finca de una familia británica con la que hicieron amistad durante las vacaciones, lo que comienza como unas vacaciones de ensueño pronto se convierte en una pesadilla psicológica."
+                     data-genres="Terror, Suspenso" 
+                     data-rating="4.0">
+                    <a href="https://dood.li/d/3m1auqmuo72f" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FrdGpSGWNnpHuouEJjXOkzbTyRJk.jpg&w=640&q=75" 
+                             class="lazy-image" alt="No hables con extraños">
+                        <p class="movie-title">No hables con extraños</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="El hoyo 2" 
+                     data-description="Después de que un misterioso líder impuso su ley en un brutal sistema de celdas verticales, una recién llegada desafía el dudoso método de distribución de alimentos en la prisión." 
+                     data-genres="Cine de terror, Thriller" 
+                     data-rating="3.0">
+                    <a href="https://hlswish.com/ch4pf7jov9oz" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F8cnfdskwEmS1HZhenEVYt9P0IYa.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="El hoyo 2">
+                        <p class="movie-title">El hoyo 2</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Beekeeper" 
+                     data-description="Adam Clay se embarca en la misión de matar a los estafadores que provocaron que su casera se suicidara tras robarle dinero para la beneficencia. Verona, la hija de la casera y agente del FBI, sospecha que el enigmático Adam no es quien asegura ser." 
+                     data-genres="Accion, Suspenso, Drama, Aventura, Película de misterio, Thriller" 
+                     data-rating="3.5">
+                    <a href="https://hlswish.com/lsam4v7nrsqu" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FgBdhYoROX6SHE3vVnBfEHI7Ojma.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Beekeeper">
+                        <p class="movie-title">Beekeeper</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="The Mechanic" 
+                     data-description="Bishop es un asesino a sueldo de élite con un estricto código de honor. Tras la muerte de su amigo Harry, Bishop toma como aprendiz al hijo de este, Steve." 
+                     data-genres="Acción, Drama, Thriller" 
+                     data-rating="3.5">
+                    <a href="https://hlswish.com/7fhs6p5tjf1l" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FmaW8lmTO0yuRACd9zTCXFaI3ZVZ.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="The Mechanic">
+                        <p class="movie-title">The Mechanic</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="madame web" 
+                     data-description="Cassandra Webb, también conocida como Madame Web, tiene un accidente que despierta sus poderes ocultos y le permite ver el futuro. Cassie salva a tres adolescentes, Julia, Anya y Mattie, que en el futuro se convertirán en heroínas con poderes arácnidos. Cassie se convierte en su mentora y las protege del misterioso Ezekiel Sims, quien busca evitar que descubran sus habilidades."
+                     data-genres=" Acción, Superhéroes" 
+                     data-rating="2.5">
+                    <a href="https://hlswish.com/ggvnjqx7t0jl" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fblq050GHBt0Fzx1j9FvohaEuknJ.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="madame web">
+                        <p class="movie-title">madame web</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Hellboy: El Hombre Torcido" 
+                     data-description="En la década de 1950, Hellboy y un agente novato de la BPRD, varados en la zona rural de Appalachia, descubren una pequeña comunidad embrujada por brujas, liderada por un demonio local con una conexión inquietante con el pasado de Hellboy: El Hombre Torcido" 
+                     data-genres="Terror Fantástico, Superhéroes" 
+                     data-rating="2.0">
+                    <a href="https://dood.li/d/hovuiy97s4up" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3dLwRfMIKvrufKiJADKbTGdAoqN.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Hellboy: El Hombre Torcido">
+                        <p class="movie-title">Hellboy: El Hombre Torcido</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Bandida: La Número Uno" 
+                     data-description="Criada en una famosa favela brasileña, una joven navega entre el amor y la delincuencia mientras se abre camino hacia el poder en medio de mortíferas rivalidades entre bandas y traiciones." 
+                     data-genres="Acción & Aventura, Drama, Crimen" 
+                     data-rating="3.0">
+                    <a href="https://hlswish.com/zoltfcy6ufl6" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FeVF4hqkBD1maZueHDEhhe02kNhj.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Bandida: La Número Uno">
+                        <p class="movie-title">Bandida: La Número Uno</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Detonados" 
+                     data-description="Nueve amigos, con un secreto oscuro, van de campamento al bosque. Tras una noche de fiesta, se despiertan con bombas suicidas adheridas a sus cuerpos, cada una de ellas con un temporizador distinto" 
+                     data-genres="Suspenso, Misterio, Thriller" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/nvoch1jrgj8i" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fzd1Uq8Iz6fhgs2ciAMABpcy45ON.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Detonados">
+                        <p class="movie-title">Detonados</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="El Cuervo" 
+                     data-description="El magnate de la música Roeg asesina a Eric y Shelly porque saben un oscuro secreto sobre él. Un espíritu guía le ofrece a Eric pasar la eternidad junto al alma de su amada si regresa a la Tierra y mata a Roeg, quien hizo un pacto con el demonio." 
+                     data-genres="Neo-noir, acción, drama, suspenso, fantasía" 
+                     data-rating="2.5">
+                    <a href="https://dood.li/d/31n6qy8yf1hi" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FuUUx4kN6uCvXnjGWOv79gUBxdYE.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="El Cuervo">
+                        <p class="movie-title">El Cuervo</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="El Duro" 
+                     data-description="Dalton, exluchador de UFC, acepta trabajar como encargado de seguridad en un bar de carretera de Florida. Aunque su propósito era alejarse de la violencia, la sangre y la acción van a estar más presentes que nunca en su vida." 
+                     data-genres="Acción, Remake, Wrestling/Lucha libre" 
+                     data-rating="4.5">
+                    <a href="https://streamwish.to/twuf4i3fyc2p" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FwmnVOIaTsGcRpZ9rLv2msbtqi3C.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="El Duro">
+                        <p class="movie-title">El Duro</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Entrenado para Matar" 
+                     data-description="Desde que perdió a su padre, Fukami fue criado por Maima, presidente de una importante organización en Japón" 
+                     data-genres="Acción" 
+                     data-rating="3.9">
+                    <a href="https://streamwish.to/w7lt3dczvdyp" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FuT49crqAK6qDWfoAERnFxqod1Ha.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Entrenado para Matar">
+                        <p class="movie-title">Entrenado para Matar</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Venganza Silenciosa" 
+                     data-description="Durante la noche de Navidad, un hombre ve morir a su hijo pequeño en un tiroteo entre pandillas. Al recuperarse de una herida que lo dejó mudo, el hombre se embarca en una venganza implacable" 
+                     data-genres="Acción, Crimen" 
+                     data-rating="3.9">
+                    <a href="https://supervideo.cc/vxnklz8tp00z" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fu5rCDIvbAMlBr3fMt57tDfkrV1o.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Venganza Silenciosa">
+                        <p class="movie-title">Venganza Silenciosa</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Moonfall" 
+                     data-description="El mundo se enfrenta a la posibilidad de la extinción porque una fuerza desconocida empuja a la luna de su órbita rumbo a la Tierra. Un equipo de astronautas asume la misión de evitar el apocalipsis" 
+                     data-genres="Ciencia Ficción" 
+                     data-rating="3.5">
+                    <a href="https://dood.li/d/884i1yuuym79" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FnRUN5ywlehfB8opryZkXwfYSGAl.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Moonfall">
+                        <p class="movie-title">Moonfall</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="La invasión" 
+                     data-description="Tres amigos que filman una serie online, descubren que los vecinos de su pueblo están siendo asesinados y reemplazados por criaturas que son perfectas copias de sus víctimas." 
+                     data-genres="Terror, Suspenso, Ciencia ficción" 
+                     data-rating="3.9">
+                    <a href="https://dood.li/d/572xi1kcban7" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FswVORIKIqn9OByYIFLAH154yhYJ.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="La invasión">
+                        <p class="movie-title">La invasión</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Alien:Covenant" 
+                     data-description="La tripulación de una nave colonia, con destino a un planeta remoto, descubre un paraíso inexplorado con una amenaza más allá de su imaginación, y debe intentar una angustiosa huida"
+                     data-genres="Ciencia ficción, Terror, Suspenso" 
+                     data-rating="4.0">                    
+                     <a href="https://dood.li/d/h0jr218ofe1m" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F245tgZ3mTHWs0NRiPSwPjKobKHf.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Alien:Covenant">
+                        <p class="movie-title">Alien:Covenant</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="La Generacion ECO" 
+                     data-description="Cinco postgraduados creen que la mejor manera de vengarse de la economía injusta y vivir la vida que siempre han querido es robar a los ricos para su propio beneficio." 
+                     data-genres="Deportes, Drama" 
+                     data-rating="3.5">
+                    <a href="https://playerwish.com/bsv60hxhe0kv" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FhPfCHs77qlsCTvrILolIbh94tv5.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="La Generacion ECO">
+                        <p class="movie-title">La Generacion ECO</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Infinito" 
+                     data-description="Evan McCauley tiene habilidades que nunca aprendió y recuerdos de lugares que nunca ha visitado. Automedicado y al borde de un colapso mental, un grupo secreto que se hace llamar Infinitos acuden a su rescate, revelando que sus recuerdos son reales." 
+                     data-genres="Ciencia ficción, Acción, Aventura, Suspenso" 
+                     data-rating="4.0">
+                    <a href="https://playerwish.com/ut0jsvg84vtt" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FmLvjQ0IIdzZfQzQXULI7sIVxd8V.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Infinito">
+                        <p class="movie-title">Infinito</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Transformers Uno" 
+                     data-description="La esperada historia del origen de cómo los personajes más icónicos del universo Transformers, Orion Pax y D-16, pasaron de ser hermanos de armas a convertirse en los enemigos jurados Optimus Prime y Megatron." 
+                     data-genres="Animación, Ciencia ficción, Aventura, Familia" 
+                     data-rating="4.5">
+                    <a href="https://dood.li/d/4i4drnug9729" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F1jzVCZxBmgvpGILuEU8icfX77Io.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Transformers Uno">
+                        <p class="movie-title">Transformers Uno</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Rebel Ridge" 
+                     data-description="Un exmarine debe enfrentarse a la corrupción en un pequeño pueblo cuando la policía le confisca injustamente la bolsa con el dinero para pagar la fianza de su primo." 
+                     data-genres="Crimen, Acción, Suspenso, Drama" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/8qu73awrg08l" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FlH3uawGaDUEV6oJNc5No4n8IQPA.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Rebel Ridge">
+                        <p class="movie-title">Rebel Ridge</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Venganza a golpes" 
+                     data-description="Kai Jin, un joven chef de Chinatown en la actual San Francisco, se ve envuelto en la búsqueda de la Tríada China de poderes ancestrales mortales conocidos como el Wu Xing" 
+                     data-genres="Acción, Fantasía" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/lqnvaip9ib0x" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F1pOdSYjmnX61Nh9sMyztwnPJe98.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Venganza a golpes">
+                        <p class="movie-title">Venganza a golpes</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="The King's Man: El Origen" 
+                     data-description="Cuando un grupo formado por los tiranos y las mentes criminales más malvadas de la historia se une para desencadenar una guerra que matará a millones de personas, un hombre tendrá que luchar a contrarreloj para detenerlos. Tercera entrega de la saga 'Kingsman', ambientada muchos años antes de las anteriores y explicando el origen de la agencia." 
+                     data-genres=" Acción, Aventura, Suspenso" 
+                     data-rating="3.5">
+                    <a href="https://dood.li/d/5vy011xelqvy" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3vBuTxmO4fqbZiZe8i9cqmfiUh6.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="The King's Man: El Origen">
+                        <p class="movie-title">The King's Man: El Origen</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Matrix" 
+                     data-description="Un hacker informático aprende de misteriosos rebeldes la verdadera naturaleza de su realidad y su papel en la guerra contra sus controladores." 
+                     data-genres="Acción, Ciencia ficción" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/xxttlripr7l0" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FqK76PKQLd6zlMn0u83Ej9YQOqPL.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Matrix">
+                        <p class="movie-title">Matrix</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Matrix:Recargado" 
+                     data-description="Neo y sus aliados corren contra el tiempo antes de que las máquinas descubran la ciudad de Zion y la destruyan. Mientras busca la verdad sobre la Matrix, Neo debe salvar a Trinity de un oscuro destino." 
+                     data-genres="Aventura, Acción, Suspenso, Ciencia ficción" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/5v6kbk9ikmdn" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FayZkaN2f3ASjWW8ooCfuJT3T8Va.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Matrix:Recargado">
+                        <p class="movie-title">Matrix:Recargado</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Cóctel explosivo" 
+                     data-description="Eva (Karen Gillan) era lo más importante en la turbulenta vida de su madre, Scarlet (Lena Headey). Pero sus enemigos obligaron a Scarlet a huir abandonándolo todo, incluida a su hija. Años más tarde, Eva se convierte en una asesina a sangre fría siguiendo los pasos de su madre. Después de perder el control en una misión, poniendo a una inocente niña de 8 años en peligro, Eva no tiene más remedio que enfrentarse sin escrúpulos a sus antiguos compinches. Scarlet y su banda no tienen más remedio que volver para intentar ayudarla." 
+                     data-genres=" Acción, Crimen, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/1904pi8bel1x" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F54rcNkxmG3EEBU5GuI3NL0W6gz.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Cóctel explosivo">
+                        <p class="movie-title">Cóctel explosivo</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Control total" 
+                     data-description="Jerry Shaw, un joven inteligente pero inadaptado cuyo hermano gemelo acaba de morir en extrañas circustancias, y Rachel Holloman, una joven madre soltera cuyo hijo está en peligro, se ven de repente juntos e involucrados en una complicada trama de terrorismo que gira en torno a una misteriosa voz que parece controlar sus vidas." 
+                     data-genres=" Misterio, Suspenso, Acción" 
+                     data-rating="3.0">
+                    <a href="https://filelions.site/f/evwlmgmybwvb" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F8btk8C03616fIzjgDuhtvVq5gkx.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Control total">
+                        <p class="movie-title">Control total</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Corazones De Hierro" 
+                     data-description="Abril de 1945, la guerra está a punto de acabar. Al mando del veterano sargento Wardaddy (Brad Pitt), una brigada de cinco soldados americanos a bordo de un tanque -el Fury- ha de luchar contra un ejército nazi al borde de la desesperación, pues los alemanes saben que su derrota estaba ya cantada por aquel entonces." 
+                     data-genres=" Guerra, Drama, Acción" 
+                     data-rating="4.0">
+                    <a href="https://streamwish.to/2bvlr3i0wrhn" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FkbtH5G8L8REzy72LkLmKYoBVaGv.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Corazones De Hierro">
+                        <p class="movie-title">Corazones De Hierro</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Atómica" 
+                     data-description="Año 1989, el muro de Berlín está a punto de caer. Un agente del MI6 encubierto aparece muerto y la espía Lorraine Broughton debe encontrar por todos los medios una lista que el agente estaba intentando hacer llegar a Occidente, y en la que figuran los nombres de todos los agentes encubiertos que trabajan en Berlín oriental." 
+                     data-genres=" Acción, Aventura, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://filelions.site/f/dc4b5pdntfbx" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F9DRFozlq1IMD7aMLzdRzWEEH6SH.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Atómica">
+                        <p class="movie-title">Atómica</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Los feos" 
+                     data-description="300 años en el futuro, la humanidad está dividida en dos clases:los feos y los guapos. Al cumplir 16 años, todos los jóvenes se someten a una cirugía estética que los convierte de Uglies en Pretties. La operación de Tally Youngblood (Joes King) está a punto de realizarse inminente, pero entonces conoce a la rebelde Shay, que huye de la operación forzosa. Ahora Tally debe encontrar a su amiga Shay y a las autoridades si quiere convertirse ella misma en una Pretty. Pero en su búsqueda de Shay, descubre la verdad sobre la operación." 
+                     data-genres=" Drama, Ciencia ficción" 
+                     data-rating="2.0">
+                    <a href="https://dood.li/d/n7i2u0v2b8hg" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FabNsPyjwSYwOVsx2m0mWrq22xGk.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Los feos">
+                        <p class="movie-title">Los feos</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="S.O.S: Alarma en las alturas" 
+                     data-description="Dos hermanas que viven vidas separadas en diferentes continentes se reencuentran en una isla mediterránea. Las dos apenas tienen tiempo para unirse y revivir los lazos familiares cuando Kate, la mayor, se encuentra con un grupo de lugareños y acepta un emocionante paseo en un globo aerostático." 
+                     data-genres="Aventura, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/zwozp8kf8rij" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FcqLekREuHyuX5Xe3wvRnERS8Hia.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="S.O.S: Alarma en las alturas">
+                        <p class="movie-title">S.O.S: Alarma en las alturas</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Luz Negra" 
+                     data-description="Liam Neeson interpreta a Travis Block, un sombrío agente del gobierno que se especializa en eliminar agentes cuyas tapaderas han sido expuestas y descubre una conspiración mortal dentro de sus propias filas que alcanza los más altos niveles de poder." 
+                     data-genres="Acción, Suspenso, Drama, Aventura" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/o5miun2z9s45" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FtEiLdCrQi4yCdgNYnAFRD14VTJP.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Luz Negra">
+                        <p class="movie-title">Luz Negra</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Blue Lock Película" 
+                     data-description="Deep in a secluded forest, Marko lives in isolation under the watchful eye of his overprotective father, who is determined to keep his young son safe from the Evil Ones. Deeply lonely, and increasingly curious about the outside world, Marko yearns to uncover the secrets of life beyond the forest and begins venturing further from home. But after a cruel turn of events grants his wish sooner than he ever imagined, Marko is forced to flee and embark on a grim journey filled with unknown dangers and a glimpse into a world forever changed." 
+                     data-genres="Ciencia ficción, Drama, Aventura, Terror" 
+                     data-rating="4.5">
+                    <a href="https://dood.li/d/l0xyds1t01v4" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FAanDSgj7uONzY3vUw7ayEXs0HxE.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="M">
+                        <p class="movie-title">M</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Igor Grom Contra El Doctor Peste" 
+                     data-description="El jefe de policía, Igor Grom, es conocido en San Petersburgo por su carácter incisivo y su actitud irreconciliable hacia los criminales. Pero todo cambia con la aparición de una persona con la máscara del Plague Doctor que asesina a gente que ha escapado de la justicia por dinero o estatus social" 
+                     data-genres="Acción, Aventura" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/xkuvm6b91kr3" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FzI4yOVjcC51FNI1K3H5poIfm8Wn.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Igor Grom Contra El Doctor Peste">
+                        <p class="movie-title">Igor Grom Contra El Doctor Peste</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Como me converti en superhéroe" 
+                     data-description="En un mundo de humanos y superhéroes, un solitario policía y una detective brillante se unen para desentrañar una oscura trama para extraer superpoderes." 
+                     data-genres=" Ciencia ficción, Aventura, Acción, Comedia, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/rrgq5aiqvhac" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F1tcQdrmvVooaZs6niLIX1DnaZxB.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Como me converti en superhéroe">
+                        <p class="movie-title">Como me converti en superhéroe</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Hackers: Piratas Informáticos" 
+                     data-description="Un grupo de adolescentes cuya afición es piratear sistemas informáticos por diversión descubren los planes de un hacker para cometer un delito." 
+                     data-genres=" Acción, Crimen, Suspenso, Drama" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/xudg6ulqp64z" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F1INXMUzeL6ffzNierJdu5YQf1Ek.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Hackers: Piratas Informáticos">
+                        <p class="movie-title">Hackers: Piratas Informáticos</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Hacker: Amenaza en la red" 
+                     data-description="Thriller cibernético en el que varios agentes norteamericanos y chinos, con ayuda de un convicto liberado, se unen para detener a un misterioso hacker. Todo comienza cuando los gobiernos de Estados Unidos y China se ven obligados a cooperar por el bien de la seguridad nacional de ambas potencias. El motivo: una fuerte amenaza informática está poniendo en riesgo las vidas y el futuro de la población; delitos informáticos de alto nivel para los que deberán recurrir a sus mejores agentes de campo si quieren llegar a tiempo para evitar lo peor." 
+                     data-genres="Crimen, Suspenso, Acción" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/mska1tsbxrle" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fc9FRZfZ3LWMSn6oGuxxXPHkSjH5.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Hacker: Amenaza en la red">
+                        <p class="movie-title">Hacker: Amenaza en la red</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Bikini Hackers" 
+                     data-description="A group of women hatch a detailed plan to take down the top global financial systems. They will let nothing and no one get in their way." 
+                     data-genres="Comedia, Crimen" 
+                     data-rating="2.5">
+                    <a href="https://dood.li/d/awzhcey3v79a" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FjE8PHhIVQotajOBPSEpu2UUPPGz.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Bikini Hackers">
+                        <p class="movie-title">Bikini Hackers</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Privacidad violada" 
+                     data-description="Una joven encuentra su vida patas arriba cuando rechaza los avances de un hacker adolescente. Cuando él pone su vida patas arriba, ella debe encontrar una manera de defenderse" 
+                     data-genres="Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/mxkz7zjwjzmn" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FgtopYMnkx3POKgV1pOUSi08yxTs.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Privacidad violada">
+                        <p class="movie-title">Privacidad violada</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Bounty Killer" 
+                     data-description="Ya han pasado 20 años desde que las corporaciones se hicieron cargo los gobiernos del mundo. Su sed de poder y los beneficios dirigidos a las guerras corporativas arrasó con la sociedad tal como la conocemos. Nacido de las cenizas, el Consejo de los Nueve se levantó como un nuevo orden para esta edad oscura para vengar la destrucción irresponsable de las corporaciones. El resultado es los Bounty Killer. De aficionados salvajes a asesinos elegantes, el Bounty Killer ahora compiten por número de muertos, la fama y un montón de grasa de dinero en efectivo. Están terminando la plaga de la codicia empresarial por exterminar a los CEO y brindar a los sobrevivientes del apocalipsis con la retribución. Estos son los nuevos héroes. Esta es la era de los Bounty Killer." 
+                     data-genres="Acción, Ciencia ficción" 
+                     data-rating="3.0">
+                    <a href="https://dood.ws/d/ez9sygd52t96" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FbG7wdte8enWVc1uuLX6Ys7ckxwd.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Bounty Killer">
+                        <p class="movie-title">Bounty Killer</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Corre, escóndete, pelea" 
+                     data-description="Una chica de 17 años usa su ingenio, habilidades de supervivencia y compasion para pelear por su vida, y la de sus companeros de clase, contra un grupo de tiradores en su escuela." 
+                     data-genres=" Acción, Crimen, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://dood.li/d/oc0zmtkkriac" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FajTNz4ijvK2djAKHhCDc0xat3hh.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Corre, escóndete, pelea">
+                        <p class="movie-title">Corre, escóndete, pelea</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Atlas" 
+                     data-description="Walter es un hombre de mudanzas de 60 años para desalojos forzosos. Reconoce en uno de los inquilinos a punto de ser desalojados a su hijo separado, Jan. Para ayudar a Jan, Walter tiene que confrontar no solo a su jefe corrupto sino también a su propio pasado." 
+                     data-genres="Drama" 
+                     data-rating="3.0">
+                    <a href="https://michaelapplysome.com/e/i6nul7bzmfsh" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FxP9Da09itvve7r3Lj7twji8eQ0S.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Atlas">
+                        <p class="movie-title">Atlas</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Duna:Parte dos" 
+                     data-description="Sigue la mítica jornada de Paul Atreides mientras se une con Chani y los Fremen en su camino hacia la venganza contra los conspiradores que destruyeron a su familia. Enfrentado a una elección entre el amor de su vida y el destino del universo conocido, Paul se esfuerza por prevenir un terrible futuro que solo él puede prever." 
+                     data-genres="Ciencia ficción, Aventura" 
+                     data-rating="4.0">
+                    <a href="https://d000d.com/d/598rf38uebk2" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FxCHmhHeO7aOCMlzcNukGH6Q7EiD.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Duna:Parte dos">
+                        <p class="movie-title">Duna:Parte dos</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Five Nights at Freddy’s" 
+                     data-description="Un guardia de seguridad con problemas comienza a trabajar en Freddy Fazbear's Pizza. Mientras pasa su primera noche en el trabajo, se da cuenta de que el turno de noche en Freddy's no será tan fácil de superar." 
+                     data-genres="Terror, Misterio" 
+                     data-rating="4.8">
+                    <a href="https://filelions.site/f/s6hveo8yfrm7" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Ft6RSJ1z8bDEYpk4fLwxfkXciUak.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Five Nights at Freddy’s">
+                        <p class="movie-title">Five Nights at Freddy’s</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Un día para sobrevivir" 
+                     data-description="En “The Grey”, el personaje interpretado por Liam Neeson es el líder de un indisciplinado grupo de trabajadores de una refinería cuyo avión se estrella en las remotas montañas de Alaska. Los supervivientes, expuestos a heridas mortales y un tiempo inclemente, disponen de pocos días para escapar de los gélidos elementos. Y por si el terrible frío fuera poco enemigo, una manada de lobos salvajes, amenazantes y sanguinarios, persiguen incansablemente a sus presas humanas. A medida que las indefensas víctimas caen una a una, las posibilidades de supervivencia del último de estos hombres son cada vez más remota" 
+                     data-genres=" Drama, Suspenso, Acción, Aventura" 
+                     data-rating="3.8">
+                    <a href="https://supervideo.cc/f5fvp1b5l3ff" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FqrLan9yN5LJbJYozrr5VarL1FVh.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Un día para sobrevivir">
+                        <p class="movie-title">Un día para sobrevivir</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Upgrade:Máquina asesina" 
+                     data-description="Tras ver cómo su mujer es asesinada tras un accidente que le deja parapléjico, un hombre se somete a una operación que le permite volver a caminar para así poder vengar a su esposa." 
+                     data-genres="Acción, Suspenso, Ciencia ficción" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/7env8fl9hyrn" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FwoLGROUdPWdBnLVFKYdGD3kFkPY.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Upgrade:Máquina asesina">
+                        <p class="movie-title">Upgrade:Máquina asesina</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Hackers:Ningún sistema es seguro" 
+                     data-description="Benjamin, un joven alemán genio de las computadoras, se une a un grupo de hackers subversivo que quiere hacerse notar en el escenario del mundo" 
+                     data-genres="Suspenso" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/kw1ysrw6vixi" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FhdCt77CmKXe1oLJ2vH1UtNRa4XH.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Hackers:Ningún sistema es seguro">
+                        <p class="movie-title">Hackers:Ningún sistema es seguro</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Hacker" 
+                     data-description="Benjamin, de trece años, descubre que su madre no murió en un accidente como le habían hecho creer. Las pistas lo conducen a funcionarios de alto rango del Servicio Secreto Danés, y le dicen que no debe confiar en nadie." 
+                     data-genres="Acción, Familia" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/d60ukgk5j0sl" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fbsgs5bi0P0cHp5sdGfzoomMKYmK.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Hacker">
+                        <p class="movie-title">Hacker</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Mentes poderosas" 
+                     data-description="Después de que una enfermedad matara al 98% de los niños y jóvenes de los Estados Unidos, el 2% que consiguió sobrevivir ha desarrollado superpoderes, pero los han encerrado en campos de internamiento al ser declarados una amenaza. Una de esas niñas de 16 años, Ruby, consigue escapar de su campamento y se une a un grupo de adolescentes que huyen de las fuerzas del gobierno." 
+                     data-genres="Acción, Aventura, Drama" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/7081bncim8up" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FtkwFkWJNMA5kDWcMQnXMXH5LI4G.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Mentes poderosas">
+                        <p class="movie-title">Mentes poderosas</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Día de entrenamiento" 
+                     data-description="Un policía novato pasa su primer día como oficial de narcóticos de Los Ángeles con un detective deshonesto que no es lo que parece ser" 
+                     data-genres="Acción, Crimen, Drama" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/fgt7s6z38q58" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fnagh5PjkfBnDf5SKXyHupWu4yod.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Día de entrenamiento">
+                        <p class="movie-title">Día de entrenamiento</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Amigos De Armas" 
+                     data-description="Con la guerra en Irak en toda su furia, un joven ofrece a su amigo de la infancia la oportunidad de ganar mucho dinero al convertirse en un vendedor internacional de armas. Juntos, explotan una iniciativa del gobierno que permite a las empresas de participar en contratos militares. Pero pronto se verán involucrados en un asunto de alto nivel, después de obtener un contrato de 300 millones de dólares para abastecer a las fuerzas afganas, que los pone frente a personas sombrías." 
+                     data-genres="Comedia, Crimen, Drama" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/7mqyj0c78rpl" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FzbuZYpGlXwkSlOMJ4IbUEHxZ03h.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Amigos De Armas">
+                        <p class="movie-title">Amigos De Armas</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="8 Mile:Calle de ilusiones" 
+                     data-description="La gente de Detroit conoce al limite de la Ciudad como 8 Mile. Pero este límite no solamente es físico sino que es una barrera psicologica que separa a Jimmy Smith de lo que el quiere llegar a ser. 8 Mile Calle de las Ilusiones es una provocativa refleión de lo que implica una semana para la vida de Jimmy. Esta película es estelarizada por el multi-premiado artista EMINEM en su primer papel protagónico jacompañado por Kim Basinger como su madre." 
+                     data-genres="Drama, Música" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/rq60nbg1rtdw" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FbRSMRkf06aUeZcmr5Cyxuv5vk4T.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="8 Mile:Calle de ilusiones">
+                        <p class="movie-title">8 Mile:Calle de ilusiones</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Eliminar Amigo" 
+                     data-description="Mientras están chateando una noche, seis amigos reciben por Skype un mensaje de Laura Barns, una joven estudiante que se había suicidado un año antes tras ser humillada en Internet por un video sexual en el que aparecía borracha una noche. Al principio los amigos piensan que es una broma, pero cuando la persona con la que chatean comienza a revelar sus secretos más íntimos, se dan cuenta de que el asunto es grave." 
+                     data-genres="Terror, Misterio, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://swhoi.com/0pvrsq85loau" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FpzxHNiKjHL8Sz7DZ7POXXqohxet.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Eliminar Amigo">
+                        <p class="movie-title">Eliminar Amigo</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Eliminar Amigo2" 
+                     data-description="Un veinteañero encuentra archivos escondidos en la memoria caché de su nuevo ordenador, lo que le lleva al fondo de la Dark Web. De los creadores de 'Unfriended', este thriller ocurre en tiempo real a través de la pantalla del ordenador. Un aviso para la era digital." 
+                     data-genres="Terror, Misterio, Suspenso" 
+                     data-rating="3.0">
+                    <a href="https://swhoi.com/hgl6b1nooax5" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FdQM2LDOmolIGt7WzcHl6ZSUAdci.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Eliminar Amigo2">
+                        <p class="movie-title">Eliminar Amigo2</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="MR-9:Mision Mortal" 
+                     data-description="Masud Rana es un agente secreto con el nombre en clave MR-9 de la Agencia de Contrainteligencia de Bangladesh, que forma equipo con un agente de la CIA para acabar con una organización criminal internacional dirigida por un despiadado hombre de negocios." 
+                     data-genres="Acción, Drama, Suspenso" 
+                     data-rating="4.8">
+                    <a href="https://861635218.tapecontent.net/radosgw/GMxl10xO6Ls1z9o/_0eJ91gqi33x1oSMkqFCHGByb7RlBmV53aSt_ICrN54I-9cEqKCxmLAkflS8F4MVhOyy6A3KjrSk4uHFWKBJaLx1rSt9oD1RluxKlFJyM4cmi21XQrTauFZXPF3adWoqO3GCKgDIq979o-2jGFRfisTY-7TdCbuJYu1EBG0vU-bYIT4yqaGrBdwGFvOblrDcR50u1fPzb_P6chQc9JZQQN8fgB549sPo_y4FPGLI-R03-h7_BgO5BaWUqOJRe1Ue7GgW31bhc57t7jTt_XnIoNyI9CNhl1BybH5sQsJ0Cd49r385XMGeB4YPvbTTxJhta6qVadm_4FrkS5DT/269655--7037d721-7a99-43b6-baa7-318a133bc943--wvzj--2359764-streamtape.mp4?stream=1" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FeuAVHzSzZY14H7pnInO2ANXIaKB.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="MR-9:Mision Mortal">
+                        <p class="movie-title">MR-9:Mision Mortal</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Mamá y Papá" 
+                     data-description="Una misteriosa epidemia en forma de locura masiva provoca que los padres ataquen violentamente a sus hijos. Carly y Joshua tratarán de sobrevivir durante tan aciaga jornada, amenazados por unos progenitores que poseen los rasgos de Nicolas Cage y Selma Blair." 
+                     data-genres="Comedia, Terror" 
+                     data-rating="3.0">
+                    <a href="https://filelions.site/f/ojo7ea2bjosw" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fy9Zp949JZCwDGz4BtBO5h2pHigz.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Mamá y Papá">
+                        <p class="movie-title">Mamá y Papá</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Amigos con beneficios" 
+                     data-description="Jamie es una joven cazatalentos que convence a Dylan para que se vaya a trabajar a Nueva York como director artístico de la revista GQ. Una vez allí los dos, solteros y atractivos, entablan una relación estrictamente sexual sin dejar por ello de ser amigos. Naturalmente, esta anómala relación no les traerá más que complicaciones." 
+                     data-genres="Romance, Comedia" 
+                     data-rating="3.0">
+                    <a href="https://swhoi.com/kw1ysrw6vixi" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfGPbQpNahUvixeS3l1s4NUoE3bj.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Amigos con beneficios">
+                        <p class="movie-title">Amigos con beneficios</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Proyecto X" 
+                     data-description="Tres estudiantes de un instituto deciden organizar una fiesta salvaje en casa de uno de ellos, promocionándola en las redes sociales como la fiesta más loca de la temporada. Además, los chicos deciden grabarla para luego publicarla en la red. Pero, poco a poco, irán surgiendo una serie de complicaciones imprevistas..." 
+                     data-genres="Comedia" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/3jz7sl96ieq7" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FowF9NIcQOPFAOjp2pni8BsVlnRq.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Proyecto X">
+                        <p class="movie-title">Proyecto X</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="¡Te atrapé!" 
+                     data-description="Un mes al año, cinco amigos de lo más competitivos ponen en marcha el juego del tag, al que han estado jugando desde el instituto, sin límite alguno, arriesgando en ellos sus relaciones y trabajos para lograr derrotar al resto. Este año, el juego coincide con la boda del único jugador invicto, que finalmente puede ser presa fácil. Pero él sabe que vendrán… y está preparado." 
+                     data-genres="Comedia, Acción" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/2ais6oypqkm7" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3Cbn5vBwrC0UEZZGYuVu0kmf23h.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="¡Te atrapé!">
+                        <p class="movie-title">¡Te atrapé!</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Música, Amigos y Fiesta" 
+                     data-description="La película sigue a un DJ joven tratando de triunfar en la industria musical. A través de los obstáculos que encuentra en su camino y con la influencia de un carismático productor musical, el aspirante a DJ se guía en el camino que lo lleva al éxito." 
+                     data-genres="Drama, Música, Romance, Comedia" 
+                     data-rating="4.8">
+                    <a href="https://d000d.com/d/puv4sja2tqd0" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F4iUAMj3iieLAVyKSkhOy0rSAomV.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Música, Amigos y Fiesta">
+                        <p class="movie-title">Música, Amigos y Fiesta</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="A La Mierda Con Los Zombis" 
+                     data-description="Tres exploradores, amigos de toda la vida, unen sus fuerzas con la agresiva camarera de un bar para formar el equipo de héroes menos probable del mundo. Cuando su pacífico pueblo es asolado por una invasión de zombies, lucharán por la insignia de sus vidas y pondrán a prueba sus habilidades como exploradores para salvar a la humanidad del ataque de los no muertos." 
+                     data-genres="Comedia, Terror" 
+                     data-rating="3.0">
+                    <a href="https://swhoi.com/jy2999ej9djy" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FqxYhEeYxRb4MDwTCnCR6QD82gb1.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="A La Mierda Con Los Zombis">
+                        <p class="movie-title">A La Mierda Con Los Zombis</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Dos extraños amantes" 
+                     data-description="Alvy Singer, un cuarentón bastante neurótico, trabaja como humorista en clubs nocturnos. Tras romper con Annie, reflexiona sobre su vida, rememorando sus amores, sus matrimonios, pero sobre todo su relación con Annie. Al final, llega a la conclusión de que son sus manías y obsesiones las que siempre acaban arruinando su relación con las mujeres." 
+                     data-genres="Comedia, Drama, Romance" 
+                     data-rating="4.8">
+                    <a href="https://d000d.com/d/i53yt9uy2drw" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F8zsJ5bgIjOBc9YGFE7jVffDom0Z.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Dos extraños amantes">
+                        <p class="movie-title">Dos extraños amantes</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Intocable" 
+                     data-description="Philippe, un aristócrata que se ha quedado tetrapléjico a causa de un accidente de parapente, contrata como cuidador a domicilio a Driss, un inmigrante de un barrio marginal recién salido de la cárcel. Aunque, a primera vista, no parece la persona más indicada, los dos acaban logrando que convivan Vivaldi y Earth Wind and Fire, la elocuencia y la hilaridad, los trajes de etiqueta y el chándal. Dos mundos enfrentados que, poco a poco, congenian hasta forjar una amistad tan disparatada, divertida y sólida como inesperada, una relación única en su especie de la que saltan chispas." 
+                     data-genres="Drama, Comedia" 
+                     data-rating="4.8">
+                    <a href="https://dood.wf/d/x42mubfnd6rd" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FedPWyHqknFuxFY3sdmC3LtJITWC.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Intocable">
+                        <p class="movie-title">Intocable</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Por eso lo llaman amor" 
+                     data-description="El comediante nacido en Pakistán, Kumail Nanjiani, y la estudiante de posgrado Emily Gardner se enamoran pero luchan mientras sus culturas chocan. Cuando Emily contrae una misteriosa enfermedad, Kumail se ve obligado a enfrentar a sus padres, las expectativas de su familia y sus verdaderos sentimientos." 
+                     data-genres="Comedia, Drama, Romance" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/h9c1h900913s" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F181e4wDYjhRBKmBzuhId4CJHZQc.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Por eso lo llaman amor">
+                        <p class="movie-title">Por eso lo llaman amor</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Noche de juegos" 
+                     data-description="Max y Annie, una pareja, organizan semanalmente una noche de juegos con sus amigos. En una de esas noches, Brooks, el hermano de Max, organiza una fiesta temática de Crimen misterioso con falsos criminales y agentes federales. Sin embargo, cuando Brooks es secuestrado, los jugadores deben resolver el caso para ganar."
+                     data-genres="Acción, Comedia" 
+                     data-rating="4.3">
+                    <a href="https://swhoi.com/lbkkxjznw1q5" target="_blank">
+                        <img data-src="https://cuevana.pro/resize/200/storage/21817/PWTDmGKIBJ7dBlUsnRjwFh0DYGcwVgzn3iWI50Ku.jpg" 
+                             class="lazy-image" alt="Noche de juegos">
+                        <p class="movie-title">Noche de juegos</p> 
+                    </a>
+                </div>
+                <div class="movie" data-title="Una noche loca" 
+                     data-description="Jeff Chang es un brillante estudiante que está a punto de cumplir 21 años. En la noche previa a una importante entrevista con una facultad de medicina donde Jeff quiere estudiar, dos amigos suyos lo llevan a tomar una cerveza, pero la noche no terminará como cabía esperar." 
+                     data-genres="Comedia" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/kceaegqedcmn" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F33g7cePX7F2BvvxfjrTwSVCseol.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Una noche loca">
+                        <p class="movie-title">Una noche loca</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="¿Que paso ayer?" 
+                     data-description="El novio y tres amigos organizan una despedida de soltero en Las Vegas. Como era de esperar, a la mañana siguiente tienen una resaca tan monumental que no pueden recordar nada de lo ocurrido la noche anterior. Lo más extraordinario es que el novio ha desaparecido y en la suite del hotel se encuentran un tigre y un bebé." 
+                     data-genres="Comedia" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/rdu453z8mkqg" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Frqeim09TdaflSvPNVnCTBjUHlKu.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="¿Que paso ayer?">
+                        <p class="movie-title">¿Que paso ayer?</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="¿Que paso ayer? II" 
+                     data-description="Alan, Stu y Phil vuelven a despertarse en otra habitación de otro hotel y, para no perder la costumbre, en esta ocasión tampoco recuerdan nada. Esta vez sólo saben que están en Tailandia, adonde han viajado, junto a Doug, para asistir a la boda de Stu con Lauren. El principal problema: el hermano menor de Lauren, Teddy, ha desaparecido. Y para encontrarlo intentarán recomponer su noche anterior, que al parecer ha contado con monos, monjes, transexuales... y Chow, claro." 
+                     data-genres="Comedia" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/2jjrs43id2r1" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FjQfURiv7Ho6ozviSRv519jXSpHD.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="¿Que paso ayer?">
+                        <p class="movie-title">¿Que paso ayer? II</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="¿Que paso ayer? III" 
+                     data-description="Tras la inesperada muerte de su padre, Alan es llevado por sus amigos Phil, Stu y Doug a un centro especializado para que mejore. Esta vez no hay boda ni fiesta de despedida, pues que cuando estos chicos salen a la carretera, y sobre todo cuando aparece Chow… la suerte está echada." 
+                     data-genres="Comedia" 
+                     data-rating="4.8">
+                    <a href="https://swhoi.com/ehkosf8zq08u" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FjxhkMvcdbk9RhobvURI1HeVrp3E.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="¿Que paso ayer?">
+                        <p class="movie-title">¿Que paso ayer? III</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Quiero matar a mi jefe" 
+                     data-description="Para Nick, Kurt y Dale, la única solución para hacer su rutina diaria más tolerable sería hacer desaparecer a sus insoportables jefes. Con la ayuda de unas copas de más y el consejo poco fiable de un expresidiario buscavidas, los tres idean un enrevesado e infalible plan para deshacerse para siempre de sus superiores. El único problema es que el plan es tan infalible como el cerebro que lo concibe." 
+                     data-genres="Comedia, Crimen" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/nsoysnjcu4ym" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FrajhPyFtH3EJkb9S09d56cn3JiM.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Una noche loca">
+                        <p class="movie-title">Quiero matar a mi jefe</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Quiero matar a mi jefe 2" 
+                     data-description="Secuela de Quiero matar a mi jefe En esta ocasión, Nick, Dalee y Kurt han formado su propia empresa y como consecuencia de ello, ¡no tienen jefe! Pero el trío protagonista tendrá que volver a idear un plan maestro parecido al de la anterior película. Esta vez, el objetivo es un inversor que les ha fastidiado sus planes de negocio. Así que deciden secuestrar a su hijo para poder pedirle un rescate al inversor y así recuperar las riendas de su empresa." 
+                     data-genres="Comedia, Crimen" 
+                     data-rating="4.0">
+                    <a href="https://swhoi.com/4pask1hpbbwr" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Frh1yOUPJCPb64jVF56qPASP7gda.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Una noche loca">
+                        <p class="movie-title">Quiero matar a mi jefe 2</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Deadpool & Wolverine" 
+                     data-description="Un Wade Wilson apático se esfuerza en la vida civil. Sus días como el mercenario moralmente flexible Deadpool quedaron atrás. Cuando su mundo natal se enfrenta a una amenaza existencial, Wade debe, a regañadientes, volver a la acción junto a un reacio Wolverine." 
+                     data-genres="Acción, Comedia, Ciencia ficción" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/pmyimbdayzr0" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F9TFSqghEHrlBMRR63yTx80Orxva.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Deadpool & Wolverine">
+                        <p class="movie-title">Deadpool & Wolverine</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="The Shade(subtitulado)" 
+                     data-description="Twenty-year-old Ryan struggles with a debilitating anxiety disorder following his father's death. Together with his two brothers, he must fight to break the destructive cycle threatening their family as ancient darkness closes in on them." 
+                     data-genres="Drama, Terror, Suspenso" 
+                     data-rating="2.0">
+                    <a href="https://dood.li/d/7ogoqpb9c2ff" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fi9SQgIW6vWjGpToHDOrI2gQYoCN.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="The Shade(subtitulado)">
+                        <p class="movie-title">The Shade(subtitulado)</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="La sustancia" 
+                     data-description="Elisabeth Sparkle, una celebridad en decadencia, decide usar una droga del mercado negro que replica células y crea temporalmente una versión más joven y mejor de ella misma." 
+                     data-genres="Drama, Terror, Ciencia ficción" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/r2y091apu520" target="_blank">
+                        <img data-src="https://cuevana.pro/resize/200/storage/88686/6YIsQpbJPMScbpHN3LRSQxc3CSsT1r2x7cdGE8Z5.jpg" 
+                             class="lazy-image" alt="La sustancia">
+                        <p class="movie-title">La sustancia</p> <!-- poner imagen -->
+                    </a>
+                </div>
+                <div class="movie" data-title="The Mouse Trap" 
+                     data-description="Es el 21 cumpleaños de Alex, pero está atrapada en la sala de máquinas recreativas en un turno de noche, así que sus amigos deciden darle una sorpresa, pero un asesino enmascarado vestido de Mickey Mouse decide jugar un juego propio con ellos al que ella debe sobrevivir. Primera película de terror creada tras le caída de Mickey Mouse en el dominio público en su versión de Steamboat Willie de 1928." 
+                     data-genres="Terror, Suspenso" 
+                     data-rating="2.5">
+                    <a href="https://dood.li/d/v1t6craxsxxv" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3ovFaFeojLFIl5ClqhtgYMDS8sE.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="The Mouse Trap">
+                        <p class="movie-title">The Mouse Trap</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Terapia del miedo" 
+                     data-description="Después de participar en una sesión de hipnosis, Clara (Cléo Pires) entra gradualmente en un estado catatónico que parece incurable con los métodos tradicionales. Ante esto, su hermana gemela, Fernanda (Cléo Pires) descubre una terapia que acaba haciendo que Clara entre en un universo sobrenatural que saca a la luz una trágica y oscura historia del pasado. Tu única posibilidad de volver a la realidad es con la ayuda de Fernanda, quien tendrá que afrontar sus miedos e ir más allá de los límites de la vida." 
+                     data-genres="Misterio, Terror, Suspenso" 
+                     data-rating="4.0">
+                    <a href="https://playerwish.com/afnawl6qts0o" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FhVDAHXlxohpmGt9MIasisD6XASi.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Terapia del miedo">
+                        <p class="movie-title">Terapia del miedo</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Bagman" 
+                     data-description="Durante siglos, los padres han advertido a sus hijos sobre el temible Hombre del Saco, un ser maligno que rapta a niños inocentes y los aparta para siempre de sus familias. Patrick (Sam Claflin) escapó de sus garras por los pelos en su infancia, pero el trauma que le generó aquel encuentro le ha perseguido desde entonces. Tras mudarse a su antigua casa familiar con su esposa e hijo, Patrick descubrirá que la tenebrosa criatura continúa allí, acechando sus pesadillas y amenazando con arrebatarle aquello que más quiere en el mundo." 
+                     data-genres=" Terror, Suspenso" 
+                     data-rating="4.0">
+                    <a href="https://dood.li/d/k2k4pprtyb1f" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F1LXFDQNV90eemUDtKJs9u34moAg.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Bagman">
+                        <p class="movie-title">Bagman</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Nyctophobia" 
+                     data-description="Las hermanas gemelas Rose y Azalea y su amigo Brooks se encuentran atrapadas en un apagón sobrenatural en el que los monstruos son reales. Su única esperanza de supervivencia proviene de la luz de su teléfono móvil." 
+                     data-genres="Terror" 
+                     data-rating="2.0">
+                    <a href="https://dood.li/d/np4fe7un12uq" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FpNRzv6QLNenx7in2VKLuHjOoXEB.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Nyctophobia">
+                        <p class="movie-title">Nyctophobia</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Beetlejuice Beetlejuice" 
+                     data-description="Después de una tragedia familiar, tres generaciones de la familia Deetz regresan a su hogar en Winter River. La vida de Lydia, que aún sigue atormentada por Beetlejuice, da un vuelco cuando su hija adolescente, Astrid, abre accidentalmente el portal al más allá." 
+                     data-genres="Comedia, Fantasía, Terror" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/tappbmvugjwk" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FkWJw7dCWHcfMLr0irTHAPIKrJ4I.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Beetlejuice Beetlejuice">
+                        <p class="movie-title">Beetlejuice Beetlejuice</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="No hables con extraños" 
+                     data-description="Emily es una mujer emocionalmente inestable que viaja hasta Irlanda para encontrarse con un misterioso hombre con la esperanza de descubrir el origen detrás de la maldición de su familia." 
+                     data-genres="Terror, Misterio, Suspenso" 
+                     data-rating="4.0">
+                    <a href="https://dood.li/d/s6xvcy0c3xj2" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfuN8gkmiZlZMqrdo5QUgWrSkJd9.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="No hables con extraños">
+                        <p class="movie-title">No hables con extraños</p>
+                    </a>
+                </div>
+                <div class="movie" data-title="Subservience" 
+                     data-description="Un padre en apuros compra una SIM doméstica para que le ayude a cuidar de su casa y su familia. Esta empezará a cobrar conciencia y se volverá letal." 
+                     data-genres="Ciencia ficción, Suspenso, Terror" 
+                     data-rating="4.8">
+                    <a href="https://dood.li/d/xr6d9ev3673q" target="_blank">
+                        <img data-src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Ftv4uKiEC91eePxpqiiHUlwpph2t.jpg&w=3840&q=75" 
+                             class="lazy-image" alt="Subservience">
+                        <p class="movie-title">Subservience</p>
+                    </a>
+                </div>
+                <!-- Añade más películas aquí -->
+            </div>
+        </div>
+        <!-- Series -->
+        <div class="section">
+            <button class="section-button" data-section="series" onclick="toggleSection('series')">Series</button>
+            <div id="series" class="section-content">
+                <div class="series" data-title="Breaking Bad" 
+                     data-description="Tras cumplir 50 años, Walter White, un profesor de química de un instituto de Albuquerque, Nuevo México, se entera de que tiene un cáncer de pulmón incurable. Casado con Skyler y con un hijo discapacitado, la brutal noticia lo impulsa a dar un drástico cambio a su vida: decide, con la ayuda de un antiguo alumno, fabricar anfetaminas y ponerlas a la venta. Lo que pretende es liberar a su familia de problemas económicos cuando se produzca el fatal desenlace." 
+                     data-genres="Drama, Crimen"
+                     data-rating="4.8">
+                    <a href="1233/breaking bad.html" target="_blank">
+                        <img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FaAR6JVgMiveng1dzsVq9eIDq7Gr.jpg&w=640&q=75" 
+                             alt="Breaking Bad" loading="lazy">
+                        <p>Breaking Bad</p>
+                    </a>
+                </div>
+                <div class="series" data-title="Mr. Robot" 
+                     data-description="Elliot Anderson es un joven y brillante programador con problemas para las relaciones sociales que durante el día trabaja como técnico de ciberseguridad de una importante empresa informática y por la noche es un desinteresado justiciero cibernético, que se verá envuelto en una oscura trama." 
+                     data-genres="Comedia"
+                     data-rating="4.8">
+                    <a href="robot/mr_robot.html" target="_blank">
+                        <img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FmXxD21JhhW3kRGCSFifWs2xJXbT.jpg&w=256&q=75" 
+                             alt="Mr. Robot" loading="lazy">
+                        <p>Mr. Robot</p>
+                    </a>
+                </div>
+                <div class="series" data-title="Arcane" 
+                     data-description="Mientras la discordia separa las ciudades gemelas de Piltóver y Zaun, dos hermanas se enfrentan en una guerra feroz entre tecnologías mágicas y convicciones opuestas." 
+                     data-genres=" Animación, Ciencia ficción, Fantasía, Acción, Aventura, Misterio, Drama, Guerra"
+                     data-rating="4.8">
+                    <a href="Arcane/arcane.html" target="_blank">
+                        <img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fabf8tHznhSvl9BAElD2cQeRr7do.jpg&w=3840&q=75" 
+                             alt="Arcane" loading="lazy">
+                        <p>Arcane</p>
+                    </a>
+                </div>
+                <!-- Añade más series aquí -->
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
