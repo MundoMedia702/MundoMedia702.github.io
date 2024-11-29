@@ -33,9 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterContent = () => {
         const query = document.getElementById("searchBar").value.toLowerCase();
         const items = document.querySelectorAll(".movie, .series");
+        
         items.forEach(item => {
-            const title = item.querySelector("p").textContent.toLowerCase();
-            item.style.display = title.includes(query) ? "block" : "none";
+            const title = item.dataset.title?.toLowerCase() || ""; // Obtener título
+            const genres = item.dataset.genres?.toLowerCase() || ""; // Obtener géneros
+            const description = item.dataset.description?.toLowerCase() || ""; // Opcional: incluir descripción
+
+            // Mostrar si la búsqueda coincide con título, géneros o descripción
+            if (title.includes(query) || genres.includes(query) || description.includes(query)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
         });
     };
 
