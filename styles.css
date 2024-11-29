@@ -459,6 +459,7 @@ body {
         transform: translateX(0);
     }
 
+    /* Contenido principal */
     .main-content {
         margin-left: 0; 
         padding: 10px;
@@ -471,7 +472,7 @@ body {
         cursor: pointer;
         position: fixed;
         top: 10px;
-        left: 15px;
+        right: 15px; /* Cambiado de left a right */
         z-index: 1000; 
         padding: 10px;
         border-radius: 5px;
@@ -491,6 +492,7 @@ body {
         background-color: #00b300; 
     }
 
+    /* Estilo de texto dentro del sidebar */
     .sidebar h2 {
         font-size: 1.2rem; 
     }
@@ -499,10 +501,12 @@ body {
         font-size: 1rem; 
     }
 
+    /* Espaciado cuando la barra lateral está activa */
     .main-content.active {
         margin-left: 70%;
     }
 
+    /* Ajustes para encabezados y textos */
     .main-content h1 {
         font-size: 1.8rem;
     }
@@ -510,6 +514,12 @@ body {
     .section h2 {
         font-size: 1.2rem; 
     }
+
+    .file {
+        font-size: 0.9rem;
+    }
+}
+
 
     .file {
         font-size: 0.9rem;
