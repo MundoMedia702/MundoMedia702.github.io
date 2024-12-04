@@ -29,24 +29,61 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Filtrar contenido
-    const filterContent = () => {
-        const query = document.getElementById("searchBar").value.toLowerCase();
-        const items = document.querySelectorAll(".movie, .series");
-        
-        items.forEach(item => {
-            const title = item.dataset.title?.toLowerCase() || ""; // Obtener título
-            const genres = item.dataset.genres?.toLowerCase() || ""; // Obtener géneros
-            const description = item.dataset.description?.toLowerCase() || ""; // Opcional: incluir descripción
+    // Función para calcular la distancia de Levenshtein
+const levenshteinDistance = (a, b) => {
+    const matrix = Array.from({ length: a.length + 1 }, () => []);
+    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
 
-            // Mostrar si la búsqueda coincide con título, géneros o descripción
-            if (title.includes(query) || genres.includes(query) || description.includes(query)) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
+    for (let i = 1; i <= a.length; i++) {
+        for (let j = 1; j <= b.length; j++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[i][j] = Math.min(
+                matrix[i - 1][j] + 1, // Inserción
+                matrix[i][j - 1] + 1, // Eliminación
+                matrix[i - 1][j - 1] + cost // Sustitución
+            );
+        }
+    }
+    return matrix[a.length][b.length];
+};
+
+// Función para filtrar contenido
+const filterContent = () => {
+    const query = document.getElementById("searchBar").value.toLowerCase().trim();
+    const items = document.querySelectorAll(".movie, .series");
+
+    items.forEach(item => {
+        const title = item.dataset.title?.toLowerCase() || ""; // Obtener título
+        const genres = item.dataset.genres?.toLowerCase().split(",") || []; // Obtener géneros como array
+        const description = item.dataset.description?.toLowerCase() || ""; // Obtener descripción
+
+        // Calcular similitud con el título
+        const titleDistance = levenshteinDistance(query, title);
+        const maxTitleDistance = Math.floor(title.length * 0.3); // 30% de diferencia permitida
+
+        // Calcular similitud con los géneros
+        const genreMatch = genres.some(genre => {
+            const genreDistance = levenshteinDistance(query, genre.trim());
+            const maxGenreDistance = Math.floor(genre.length * 0.3); // 30% de diferencia permitida
+            return genreDistance <= maxGenreDistance;
         });
-    };
+
+        // Mostrar si hay coincidencia en título, géneros o palabra clave en descripción
+        if (
+            titleDistance <= maxTitleDistance || 
+            genreMatch || 
+            description.includes(query)
+        ) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+};
+
+// Agregar evento al buscador
+document.getElementById("searchBar").addEventListener("input", filterContent);
 
     // Exponer funciones globalmente
     window.toggleSection = toggleSection;
