@@ -1,0 +1,113 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1c1c28, #10101a); /* Tonos oscuros metálicos */
+    color: #d9d9e8; /* Blanco tenue */
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed; /* Fondo estático */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #3c3c5c, #242435); /* Tonos metálicos azulados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #6a6a91;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #d9d9e8;
+    text-shadow: 0 0 10px #6e5fbf, 0 0 20px #3a3480; /* Brillo morado */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6e5fbf; /* Morado suave */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.back-button:hover {
+    color: #9a88ff; /* Morado más brillante */
+    text-shadow: 0 0 10px #9a88ff;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    border: 2px solid #6e5fbf; /* Borde morado brillante */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(110, 95, 191, 0.5); /* Resplandor suave */
+    overflow: hidden;
+    background: rgba(24, 24, 35, 0.9); /* Fondo oscuro translúcido */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Descripción del episodio */
+.episode-description {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.episode-description h2 {
+    font-size: 1.8rem;
+    color: #9a88ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #6e5fbf, 0 0 15px #3a3480;
+}
+
+.episode-description p {
+    font-size: 1rem;
+    color: #d9d9e8;
+    text-shadow: 0 0 5px rgba(110, 95, 191, 0.5);
+}
+
+/* Navegación */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-buttons .next-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #242435;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6e5fbf, #9a88ff); /* Morados degradados */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(110, 95, 191, 0.6), 0 0 20px #3a3480; /* Resplandor */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.navigation-buttons .next-button:hover {
+    transform: translateY(-3px); /* Eleva el botón */
+    box-shadow: 0 8px 20px rgba(110, 95, 191, 0.8), 0 0 30px #9a88ff;
+}
+
+.navigation-buttons .next-button:active {
+    transform: translateY(1px); /* Reduce al presionar */
+    box-shadow: 0 4px 10px rgba(110, 95, 191, 0.6);
+}
