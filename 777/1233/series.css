@@ -1,8 +1,8 @@
 /* General */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
-    color: #00ff00;
+    background-color: #101d1c; /* Verde oscuro */
+    color: #f5f5f5; /* Blanco humo */
     margin: 0;
     padding: 0;
 }
@@ -10,8 +10,8 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0a0a0a;
-    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+    background-color: #0e2925; /* Verde químico oscuro */
+    box-shadow: 0 2px 10px rgba(255, 235, 59, 0.5); /* Sombra amarilla */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -19,23 +19,23 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
+    color: #ffee58; /* Amarillo químico */
+    text-shadow: 0 0 5px #ffee58;
 }
 
 .back-button {
     display: inline-block;
     margin-top: 10px;
-    color: #00ff00;
+    color: #ffee58;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
 .back-button:hover {
-    color: #ffffff;
+    color: #f5f5f5; /* Blanco humo */
 }
 
 /* Episodios */
@@ -54,20 +54,21 @@ header h1 {
     gap: 20px;
     width: 90%;
     max-width: 800px;
-    background-color: #0a0a0a;
+    background-color: #112e2b; /* Verde más oscuro */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #00ff00;
-    word-wrap: break-word; /* Evitar desbordamientos de texto */
-    overflow-wrap: break-word; /* Evitar desbordamientos de texto */
+    border: 2px solid #ffee58; /* Borde amarillo */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .episode img {
     width: 200px;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px #00ff00;
-    max-width: 100%; /* Ajuste dinámico del tamaño de imagen */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    max-width: 100%;
 }
 
 .episode-info {
@@ -77,22 +78,22 @@ header h1 {
 
 .episode-info h2 {
     margin: 0;
-    font-size: 1.5rem;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
+    font-size: 1.8rem;
+    color: #ffee58;
+    text-shadow: 0 0 5px #ffee58;
 }
 
 .episode-info p {
     margin: 10px 0;
-    color: #00ff00;
+    color: #f5f5f5;
     font-size: 1rem;
 }
 
 .watch-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00ff00;
-    color: #000000;
+    background-color: #ffee58; /* Amarillo Breaking Bad */
+    color: #000000; /* Negro */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -100,17 +101,18 @@ header h1 {
 }
 
 .watch-button:hover {
-    background-color: #ffffff;
+    background-color: #f5f5f5; /* Blanco humo */
+    color: #101d1c; /* Verde oscuro */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .episode {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
         width: 100%;
         gap: 10px;
@@ -119,16 +121,16 @@ header h1 {
     .episode img {
         width: 100%;
         max-width: 300px;
-        margin-bottom: 10px; /* Espacio debajo de la imagen */
+        margin-bottom: 10px;
     }
 
     .episode-info h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .watch-button {
-        font-size: 0.9rem;
-        padding: 8px 15px;
+        font-size: 1rem;
+        padding: 10px 15px;
     }
 }
 
@@ -138,7 +140,7 @@ header h1 {
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .episodes-container {
@@ -153,15 +155,15 @@ header h1 {
     .episode img {
         max-width: 100%;
         height: auto;
-        margin-bottom: 10px; /* Espacio debajo de la imagen */
+        margin-bottom: 10px;
     }
 
     .episode-info h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .watch-button {
-        font-size: 0.8rem;
-        padding: 6px 10px;
+        font-size: 0.9rem;
+        padding: 8px 10px;
     }
 }

@@ -1,8 +1,8 @@
 /* General */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
-    color: #00ff00;
+    background-color: #101d1c; /* Verde oscuro */
+    color: #f5f5f5; /* Blanco humo */
     margin: 0;
     padding: 0;
 }
@@ -10,29 +10,29 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0a0a0a;
-    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+    background-color: #0e2925; /* Verde químico oscuro */
+    box-shadow: 0 2px 10px rgba(255, 235, 59, 0.5); /* Sombra amarilla */
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
+    color: #ffee58; /* Amarillo químico */
+    text-shadow: 0 0 5px #ffee58;
 }
 
 .back-button {
     display: inline-block;
     margin-top: 10px;
-    color: #00ff00;
+    color: #ffee58;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
 .back-button:hover {
-    color: #ffffff;
+    color: #f5f5f5; /* Blanco humo */
 }
 
 /* Reproductor */
@@ -42,9 +42,9 @@ header h1 {
     max-width: 800px;
     height: 450px;
     margin: 20px auto;
-    border: 2px solid #00ff00;
+    border: 2px solid #ffee58; /* Amarillo Breaking Bad */
     border-radius: 10px;
-    box-shadow: 0 0 15px #00ff00;
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
     overflow: hidden;
 }
 
@@ -63,20 +63,21 @@ iframe {
 }
 
 .episode-description h2 {
-    font-size: 1.5rem;
-    color: #00ff00;
+    font-size: 1.8rem;
+    color: #ffee58; /* Amarillo */
     margin-bottom: 10px;
-    text-shadow: 0 0 5px #00ff00;
+    text-shadow: 0 0 5px #ffee58;
 }
 
 .episode-description p {
     font-size: 1rem;
-    color: #00ff00;
-    text-shadow: 0 0 3px #00ff00;
+    color: #f5f5f5; /* Blanco humo */
+    text-shadow: 0 0 3px rgba(255, 235, 59, 0.5); /* Sombra amarilla suave */
 }
 
+/* Botones de navegación */
 .navigation-buttons {
-    text-align: center; /* Centra el botón */
+    text-align: center;
     margin-top: 20px;
 }
 
@@ -85,25 +86,25 @@ iframe {
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
-    color: #00ff00; /* Verde neón */
+    color: #ffee58; /* Amarillo */
     text-decoration: none;
-    background: #000000; /* Fondo negro puro */
-    border: 2px solid #00ff00; /* Borde verde neón */
+    background: #101d1c; /* Fondo verde oscuro */
+    border: 2px solid #ffee58; /* Borde amarillo */
     border-radius: 8px;
-    box-shadow: 0 0 8px #00ff00, 0 0 20px #008f00; /* Resplandor verde */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    letter-spacing: 2px; /* Espaciado entre letras */
+    box-shadow: 0 0 8px rgba(255, 235, 59, 0.5), 0 0 20px rgba(255, 235, 59, 0.3); /* Resplandor amarillo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .navigation-buttons .next-button:hover {
-    background: #00ff00; /* Fondo verde al pasar el cursor */
-    color: #000000; /* Texto negro para contraste */
+    background: #ffee58; /* Fondo amarillo */
+    color: #101d1c; /* Texto verde oscuro */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.7), 0 0 30px rgba(255, 235, 59, 0.5);
 }
 
 .navigation-buttons .next-button:active {
     transform: scale(0.95); /* Reduce el tamaño al hacer clic */
-    box-shadow: 0 0 10px #008f00, 0 0 20px #004f00;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5), 0 0 20px rgba(255, 235, 59, 0.3);
 }

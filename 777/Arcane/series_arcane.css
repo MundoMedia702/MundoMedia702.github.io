@@ -1,8 +1,8 @@
 /* General */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
-    color: #00ff00;
+    font-family: 'Lora', serif; /* Fuente con un toque clásico y elegante */
+    background-color: #1a1a2e; /* Fondo oscuro con tonos azulados */
+    color: #f1f1f1; /* Texto claro */
     margin: 0;
     padding: 0;
 }
@@ -10,32 +10,33 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0a0a0a;
-    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+    background-color: #16213e; /* Azul oscuro místico */
+    box-shadow: 0 2px 10px rgba(0, 112, 192, 0.5); /* Sombra azul vibrante */
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 2px solid #e94560; /* Detalle en rojo Arcane */
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
+    color: #e94560; /* Rojo vibrante */
+    text-shadow: 0 0 10px #e94560, 0 0 20px #6a0572; /* Resplandor rojo y morado */
 }
 
 .back-button {
     display: inline-block;
     margin-top: 10px;
-    color: #00ff00;
+    color: #00adb5; /* Azul verdoso */
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
 .back-button:hover {
-    color: #ffffff;
+    color: #f1f1f1; /* Blanco */
 }
 
 /* Episodios */
@@ -54,11 +55,10 @@ header h1 {
     gap: 20px;
     width: 90%;
     max-width: 800px;
-    background-color: #0a0a0a;
+    background-color: #0f3460; /* Azul profundo */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #00ff00;
-    word-wrap: break-word; /* Evitar desbordamientos de texto */
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.5), 0 0 20px rgba(106, 5, 114, 0.5); /* Resplandor rojo y morado */
     overflow-wrap: break-word; /* Evitar desbordamientos de texto */
 }
 
@@ -66,7 +66,7 @@ header h1 {
     width: 200px;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px #00ff00;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.5); /* Resplandor rojo */
     max-width: 100%; /* Ajuste dinámico del tamaño de imagen */
 }
 
@@ -77,30 +77,32 @@ header h1 {
 
 .episode-info h2 {
     margin: 0;
-    font-size: 1.5rem;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00;
+    font-size: 1.8rem;
+    color: #e94560; /* Rojo vibrante */
+    text-shadow: 0 0 10px #e94560, 0 0 15px #6a0572; /* Resplandor */
 }
 
 .episode-info p {
     margin: 10px 0;
-    color: #00ff00;
+    color: #f1f1f1; /* Texto claro */
     font-size: 1rem;
 }
 
+/* Botón de ver episodio */
 .watch-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00ff00;
-    color: #000000;
+    background-color: #e94560; /* Rojo Arcane */
+    color: #f1f1f1; /* Blanco */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
 .watch-button:hover {
-    background-color: #ffffff;
+    background-color: #6a0572; /* Morado oscuro */
+    transform: scale(1.1); /* Efecto de zoom */
 }
 
 /* Responsive Design */
@@ -123,12 +125,12 @@ header h1 {
     }
 
     .episode-info h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .watch-button {
-        font-size: 0.9rem;
-        padding: 8px 15px;
+        font-size: 1rem;
+        padding: 10px 15px;
     }
 }
 
@@ -157,11 +159,11 @@ header h1 {
     }
 
     .episode-info h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .watch-button {
-        font-size: 0.8rem;
-        padding: 6px 10px;
+        font-size: 0.9rem;
+        padding: 8px 10px;
     }
 }
