@@ -1,0 +1,119 @@
+/* General */
+body {
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Tonos oscuros de neón */
+    color: #c0c0c0; /* Gris metálico */
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e); /* Degradado azul y púrpura */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #ff005f; /* Detalle neón */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: #00d4ff; /* Azul brillante */
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #ff005f; /* Resplandor neón */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff005f; /* Rosa neón */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.back-button:hover {
+    color: #ffffff; /* Blanco brillante */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ff005f;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    border: 2px solid #00d4ff; /* Borde neón */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 64, 0.7), 0 0 20px #00d4ff; /* Sombra azul */
+    overflow: hidden;
+    background: rgba(10, 10, 40, 0.9); /* Fondo oscuro translúcido */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Descripción del partido */
+.episode-description {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(20, 20, 50, 0.8); /* Fondo translúcido */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 64, 0.7);
+}
+
+.episode-description h2 {
+    font-size: 1.8rem;
+    color: #ff005f; /* Rosa brillante */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #ff005f, 0 0 15px #00d4ff; /* Efecto de resplandor */
+}
+
+.episode-description p {
+    font-size: 1rem;
+    color: #c0c0c0; /* Gris metálico */
+    text-shadow: 0 0 5px rgba(40, 40, 80, 0.5);
+}
+
+/* Navegación */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-buttons .next-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0f0c29; /* Fondo oscuro */
+    text-decoration: none;
+    background: linear-gradient(135deg, #00d4ff, #ff005f); /* Degradado futurista */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 64, 0.7), 0 0 20px #00d4ff; /* Resplandor dinámico */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.navigation-buttons .next-button:hover {
+    transform: translateY(-3px); /* Eleva el botón */
+    box-shadow: 0 8px 20px rgba(0, 0, 64, 0.8), 0 0 30px #ff005f; /* Mayor resplandor */
+}
+
+.navigation-buttons .next-button:active {
+    transform: translateY(1px); /* Reduce al presionar */
+    box-shadow: 0 4px 10px rgba(0, 0, 64, 0.7);
+}

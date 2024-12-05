@@ -1,0 +1,178 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    background-color: #0c0c0c; /* Negro profundo */
+    color: #e0e0e0; /* Gris claro para contraste */
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(135deg, #2c3e50, #1a1a1a); /* Fondo futurista degradado */
+    background-attachment: fixed;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b2f; /* Negro con un toque azulado */
+    box-shadow: 0 2px 15px rgba(0, 255, 255, 0.4); /* Resplandor cian */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #ff007f; /* Rosa neón */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #00fff0; /* Cian neón */
+    text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0; /* Resplandor neón */
+    letter-spacing: 0.15em; /* Espaciado para mayor impacto */
+}
+
+/* Botón de regresar */
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00fff0; /* Cian neón */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.back-button:hover {
+    color: #ff007f; /* Rosa neón */
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f; /* Resplandor rosa */
+}
+
+/* Episodios */
+.episodes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.episode {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(20, 20, 30, 0.9); /* Fondo oscuro translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3); /* Resplandor cian */
+    border: 1px solid #ff007f; /* Borde rosa neón */
+}
+
+.episode img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.6); /* Resplandor rosa */
+    max-width: 100%;
+}
+
+.episode-info {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.episode-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #00fff0; /* Cian neón */
+    text-shadow: 0 0 5px #00fff0, 0 0 10px #00fff0; /* Resplandor neón */
+}
+
+.episode-info p {
+    margin: 10px 0;
+    color: #a0a0a0; /* Gris cálido */
+    font-size: 1rem;
+}
+
+/* Botón de ver episodio */
+.watch-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff007f; /* Rosa neón */
+    color: #1b1b2f; /* Negro azulado */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.7); /* Resplandor rosa */
+}
+
+.watch-button:hover {
+    background-color: #00fff0; /* Cian neón */
+    color: #0c0c0c; /* Negro profundo */
+    transform: scale(1.1); /* Efecto de zoom */
+    box-shadow: 0 0 20px #00fff0; /* Resplandor cian */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .episode {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .episode img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .episode-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .watch-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .episodes-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .episode {
+        padding: 15px;
+    }
+
+    .episode img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .episode-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .watch-button {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
