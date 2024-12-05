@@ -1,0 +1,119 @@
+/* General */
+body {
+    font-family: 'Roboto Slab', serif; /* Fuente moderna */
+    background: linear-gradient(135deg, #102510, #0a1a0a); /* Tonos verdes oscuros para mejor legibilidad */
+    color: #ffffff; /* Blanco para buen contraste */
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #0d1f0d, #092709); /* Verdes oscuros y uniformes */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #d4af37; /* Detalle dorado */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #d4af37; /* Dorado deportivo */
+    text-shadow: 0 0 10px #0b3d00, 0 0 20px #004d00; /* Resplandor inspirado en luces de estadio */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #d4af37; /* Dorado */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.back-button:hover {
+    color: #ffe680; /* Dorado más claro */
+    text-shadow: 0 0 10px #ffe680;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    border: 2px solid #d4af37; /* Borde dorado */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 64, 0, 0.7); /* Sombra verde */
+    overflow: hidden;
+    background: rgba(10, 60, 10, 0.9); /* Fondo oscuro translúcido */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Descripción del partido */
+.episode-description {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(15, 30, 15, 0.8); /* Fondo verde oscuro translúcido */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 64, 0, 0.7);
+}
+
+.episode-description h2 {
+    font-size: 1.8rem;
+    color: #ffe680; /* Dorado más brillante */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #d4af37, 0 0 15px #004d00;
+}
+
+.episode-description p {
+    font-size: 1rem;
+    color: #e8e8e8; /* Blanco ligeramente apagado */
+    text-shadow: 0 0 5px rgba(10, 60, 10, 0.5);
+}
+
+/* Navegación */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-buttons .next-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #004d00;
+    text-decoration: none;
+    background: linear-gradient(135deg, #d4af37, #ffe680); /* Tonos dorados degradados */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 64, 0, 0.7), 0 0 20px #004d00; /* Resplandor dinámico */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.navigation-buttons .next-button:hover {
+    transform: translateY(-3px); /* Eleva el botón */
+    box-shadow: 0 8px 20px rgba(0, 64, 0, 0.8), 0 0 30px #d4af37;
+}
+
+.navigation-buttons .next-button:active {
+    transform: translateY(1px); /* Reduce al presionar */
+    box-shadow: 0 4px 10px rgba(0, 64, 0, 0.7);
+}
