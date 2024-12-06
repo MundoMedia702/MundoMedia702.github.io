@@ -1,0 +1,178 @@
+/* General */
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #1a1a1a; /* Negro grisáceo */
+    color: #f5f5f5; /* Blanco apagado */
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.example.com/dark-blood-pattern.jpg'); /* Textura inspirada en sangre (opcional) */
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3b0000; /* Rojo sangre */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); /* Sombra intensa */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #660000; /* Detalle rojo oscuro */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #f5f5f5; /* Blanco apagado */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra suave */
+    letter-spacing: 0.1em; /* Espaciado */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #f5f5f5; /* Blanco apagado */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #e60000; /* Rojo sangre */
+}
+
+/* Episodios */
+.episodes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.episode {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: #262626; /* Gris oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Sombra intensa */
+    border: 1px solid #660000; /* Detalle rojo oscuro */
+}
+
+.episode img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra */
+    max-width: 100%;
+    border: 2px solid #660000; /* Marco rojo oscuro */
+}
+
+.episode-info {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.episode-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #e60000; /* Rojo sangre */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra suave */
+    font-weight: bold;
+}
+
+.episode-info p {
+    margin: 10px 0;
+    color: #cccccc; /* Gris claro */
+    font-size: 1rem;
+}
+
+/* Botón de ver episodio */
+.watch-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e60000; /* Rojo sangre */
+    color: #1a1a1a; /* Negro grisáceo */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra */
+}
+
+.watch-button:hover {
+    background-color: #ff3333; /* Rojo brillante */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .episode {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .episode img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px; /* Espacio debajo de la imagen */
+    }
+
+    .episode-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .watch-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .episodes-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .episode {
+        padding: 15px;
+    }
+
+    .episode img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .episode-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .watch-button {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
