@@ -59,22 +59,26 @@ const filterContent = () => {
         const queryWords = query.split(" ");
         const titleWords = title.split(" ");
 
+        // Coincidencias por palabras individuales
         const wordMatch = queryWords.some(queryWord =>
-            titleWords.some(titleWord =>
-                levenshteinDistance(queryWord, titleWord) <= Math.max(2, Math.floor(titleWord.length * 0.3))
-            )
+            titleWords.some(titleWord => {
+                const isSubstring = titleWord.includes(queryWord);
+                const isSimilar = levenshteinDistance(queryWord, titleWord) <= Math.max(2, Math.floor(titleWord.length * 0.3));
+                return isSubstring || isSimilar;
+            })
         );
 
+        // Coincidencia exacta en géneros
         const genreMatch = genres.some(genre => {
             const genreDistance = levenshteinDistance(query, genre.trim());
             const maxGenreDistance = Math.max(2, Math.floor(genre.length * 0.3));
-            return genreDistance <= maxGenreDistance;
+            return genre.includes(query) || genreDistance <= maxGenreDistance;
         });
 
-        const descriptionMatch = description.split(" ").some(word =>
-            levenshteinDistance(query, word) <= Math.max(2, Math.floor(word.length * 0.3))
-        );
+        // Coincidencias parciales en descripción
+        const descriptionMatch = description.includes(query);
 
+        // Mostrar el artículo si cumple alguna de las condiciones
         if (wordMatch || genreMatch || descriptionMatch) {
             item.style.display = "block";
         } else {
@@ -83,8 +87,9 @@ const filterContent = () => {
     });
 };
 
+// Agregar evento al buscador
 document.getElementById("searchBar").addEventListener("input", filterContent);
-
+    
     // Exponer funciones globalmente
     window.toggleSection = toggleSection;
     window.filterContent = filterContent;
