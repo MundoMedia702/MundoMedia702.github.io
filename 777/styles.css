@@ -1,8 +1,8 @@
 /*estilos jenerales*/
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #121212;
-    color: #b0bec5;
+    font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+    color: #e5e5e5;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -10,10 +10,13 @@ body {
 }
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     padding: 1em;
     background: #1c1c1c;
     box-shadow: 0 2px 10px rgba(84, 110, 122, 0.5);
+    text-align: center; 
 }
 
 header h1 {
@@ -24,34 +27,36 @@ header h1 {
     color: #90a4ae;
 }
 
+
 /* Barra de búsqueda */
 .search-bar {
+    margin: 100px 0 20px; 
     display: flex;
     justify-content: center;
-    margin: 20px 0;
 }
 
 .search-bar input {
     padding: 10px;
-    width: 50%;
-    border: 1px solid #37474f;
-    border-radius: 5px;
-    background-color: #1c1c1c;
-    color: #b0bec5;
+    width: 60%;
+    border: none;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
     outline: none;
-    box-shadow: 0 0 10px #546e7a;
-    transition: 0.3s;
+    transition: all 0.3s;
+    font-size: 1rem;
 }
 
 .search-bar input:focus {
-    box-shadow: 0 0 20px #90a4ae;
+    width: 70%;
+    background-color: #444;
 }
 
 /* Contenedor general */
 .container {
-    margin: 20px auto;
-    width: 90%;
-    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* Botones de sección */
@@ -79,13 +84,14 @@ header h1 {
 
 /* Sección de contenido */
 .section-content {
-    display: none; /* Oculta por defecto */
+    display: flex; 
     margin-top: 10px;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 20px;
+    gap: 15px;
+    padding: 10px 0;
 }
 
 .section-content::-webkit-scrollbar {
@@ -102,25 +108,26 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px; /* Ancho fijo */
-    background-color: #1e1e1e;
+    width: 200px; 
+    background-color: #222;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 0 10px #546e7a;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 200px;
 }
 
 .section-content .movie:hover, 
 .section-content .series:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px #90a4ae;
+    box-shadow: 0 4px 20px rgba(229, 9, 20, 0.5);
 }
 
 .section-content img {
-    width: 200px; /* Ancho fijo */
-    height: 300px; /* Altura fija */
-    object-fit: cover; /* Asegura que las imágenes se recorten para encajar */
-    border-radius: 10px;
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;
     box-shadow: 0 0 10px #90a4ae;
 }
 
@@ -130,16 +137,16 @@ header h1 {
     color: #90a4ae;
     font-size: 14px;
     text-shadow: 0 0 5px #90a4ae;
-    word-wrap: break-word; /* Evita el desbordamiento */
+    word-wrap: break-word; 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 100%; /* Asegura que el texto no sobrepase el contenedor */
+    max-width: 100%; 
 }
 
 .section-content a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* Mantiene el color del texto */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 /* Clase para ocultar inicialmente las imágenes */
@@ -158,19 +165,19 @@ header h1 {
 .movie, .series {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra imagen y texto */
+    align-items: center; 
     justify-content: center;
-    width: 200px; /* Mantén un tamaño uniforme */
-    height: auto; /* Permite que se ajuste dinámicamente */
-    margin: 10px; /* Espaciado entre películas y series */
+    width: 200px; 
+    height: auto; 
+    margin: 10px; 
 }
 
 .lazy-image {
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 5px; /* Esquinas redondeadas */
-    object-fit: cover; /* Recorta la imagen si es necesario para que encaje bien */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación al cargar */
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    object-fit: cover; 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .movie-title, .series-title {
@@ -185,11 +192,11 @@ header h1 {
 
 /* Sección de series - Similar a la de películas */
 #series {
-    display: none; /* Oculta por defecto */
+    display: none; 
     margin-top: 10px;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-x: auto; 
     scroll-behavior: smooth;
     gap: 20px;
 }
@@ -207,7 +214,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px; /* Ancho fijo */
+    width: 200px; 
     background-color: #1e1e1e;
     padding: 10px;
     border-radius: 10px;
@@ -220,9 +227,9 @@ header h1 {
 }
 
 #series img {
-    width: 200px; /* Ancho fijo */
-    height: 300px; /* Altura fija */
-    object-fit: cover; /* Asegura que las imágenes se recorten para encajar */
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover; 
     border-radius: 10px;
     box-shadow: 0 0 10px #90a4ae;
 }
@@ -233,16 +240,16 @@ header h1 {
     color: #90a4ae;
     font-size: 14px;
     text-shadow: 0 0 5px #90a4ae;
-    word-wrap: break-word; /* Evita el desbordamiento */
+    word-wrap: break-word; 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 100%; /* Asegura que el texto no sobrepase el contenedor */
+    max-width: 100%; 
 }
 
 #series a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* Mantiene el color del texto */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .popup {
@@ -253,15 +260,15 @@ header h1 {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(84, 110, 122, 0.5);
     z-index: 1000;
-    display: none; /* Oculto por defecto */
+    display: none; 
     max-width: 250px;
     transition: opacity 0.2s ease;
 }
 
 .popup h3 {
     margin: 0;
-    font-size: 16px;
-    color: #90a4ae;
+    font-size: 1rem;
+    color: #e50914;
 }
 
 .popup p {
@@ -284,7 +291,12 @@ header h1 {
     color: #37474f;
 }
 
+.section-content::-webkit-scrollbar {
+    height: 8px;
+}
+
 .section-content::-webkit-scrollbar-thumb {
-    background: #546e7a; /* Azul grisáceo oscuro */
+    background: #e50914;
     border-radius: 5px;
 }
+
