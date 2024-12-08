@@ -150,30 +150,94 @@ nav a:hover {
     color: #fff;
 }
 
-/*estilo donaciones*/
+/* Contenedor principal del carrusel */
 .donate-section {
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); 
+    width: 100%;
+    max-width: 200px; /* Puedes ajustar el ancho máximo según tus necesidades */
+    height: 300px; /* Ajusta la altura */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background: #000; /* Fondo oscuro por si una imagen no carga */
 }
 
-.donate-section h2 {
-    color: #00FF00;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+/* Contenedor de las imágenes */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.donate-section p {
-    color: #f5f5f5;
-    margin-bottom: 20px;
+/* Los controles de radio (input) están ocultos, pero se usan para controlar el carrusel */
+.carousel input {
+    display: none;
 }
 
+/* Las imágenes del carrusel */
+.slides {
+    display: flex;
+    width: 300%; /* Número de imágenes multiplicado por 100% */
+    height: 100%;
+    transition: transform 0.5s ease;
+}
 
+/* Cada imagen ocupa el 100% del espacio del contenedor */
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen si es necesario para que encaje bien */
+    border-radius: 5px; /* Opcional: redondea las esquinas */
+}
+
+/* Animación para el carrusel automático */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Aplicar la animación al carrusel */
+.carousel {
+    animation: slide 15s infinite; /* Desliza las imágenes automáticamente */
+}
+
+/* Animación con controles de radio para navegación manual */
+#image1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#image2:checked ~ .slides {
+    transform: translateX(-33.33%);
+}
+
+#image3:checked ~ .slides {
+    transform: translateX(-66.66%);
+}
+
+/* Asegurarse de que los puntos no se vean en la parte inferior de la imagen */
+.carousel {
+    position: relative; /* Añadimos un contexto de apilamiento */
+}
+
+.slides .slide a {
+    display: block; /* Aseguramos que los enlaces cubran todo el espacio de la imagen */
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    display: block; /* Elimina cualquier espacio debajo de las imágenes */
+}
+
+/* otras cosas */
 .submit-button {
     background-color: #00FF00;
     color: #121212;
@@ -404,41 +468,48 @@ body {
     }
 }
 /*botones*/
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Espacio entre botones */
-            flex-wrap: wrap; /* Ajusta a múltiples líneas si es necesario */
-        }
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+    flex-wrap: wrap; /* Ajusta a múltiples líneas si es necesario */
+    margin-top: 20px; /* Espacio desde otros elementos */
+}
 
-        /* Estilo general de los botones */
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            border: 2px solid #00ff00;
-            border-radius: 50%;
-            background: transparent;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
+/* Estilo general de los botones */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 255, 0, 0.2); /* Sombra sutil inicial */
+}
 
-        .button img {
-            width: 30px;
-            height: 30px;
-            filter: invert(100%); /* Hace los logos blancos para que encajen con el tema oscuro */
-        }
+/* Imágenes dentro de los botones */
+.button img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%); /* Hace los logos blancos para que encajen con el tema oscuro */
+    transition: filter 0.3s ease;
+}
 
-        .button:hover {
-            background-color: #00ff00;
-            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-        }
+/* Efecto al pasar el mouse */
+.button:hover {
+    background-color: #00ff00;
+    box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00; /* Efecto de brillo */
+    transform: scale(1.1); /* Ligeramente más grande */
+}
 
-        .button:hover img {
-            filter: invert(0); /* Hace los logos negros cuando el botón se activa */
-        }
+.button:hover img {
+    filter: invert(0); /* Hace los logos negros cuando el botón se activa */
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
