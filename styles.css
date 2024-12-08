@@ -153,14 +153,15 @@ nav a:hover {
 /* Contenedor principal del carrusel */
 .donate-section {
     width: 100%;
-    max-width: 200px; /* Puedes ajustar el ancho máximo según tus necesidades */
-    height: 300px; /* Ajusta la altura */
+    max-width: 200px;
+    height: 300px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    background: #000; /* Fondo oscuro por si una imagen no carga */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(145deg, #001f00, #002a00); 
+    border: 2px solid #00ff00; 
 }
 
 /* Contenedor de las imágenes */
@@ -170,7 +171,7 @@ nav a:hover {
     height: 100%;
 }
 
-/* Los controles de radio (input) están ocultos, pero se usan para controlar el carrusel */
+
 .carousel input {
     display: none;
 }
@@ -178,9 +179,9 @@ nav a:hover {
 /* Las imágenes del carrusel */
 .slides {
     display: flex;
-    width: 300%; /* Número de imágenes multiplicado por 100% */
+    width: 300%; 
     height: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 15s ease;
 }
 
 /* Cada imagen ocupa el 100% del espacio del contenedor */
@@ -192,8 +193,8 @@ nav a:hover {
 .carousel img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen si es necesario para que encaje bien */
-    border-radius: 5px; /* Opcional: redondea las esquinas */
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 /* Animación para el carrusel automático */
@@ -206,7 +207,7 @@ nav a:hover {
 
 /* Aplicar la animación al carrusel */
 .carousel {
-    animation: slide 15s infinite; /* Desliza las imágenes automáticamente */
+    animation: slide 25s infinite; 
 }
 
 /* Animación con controles de radio para navegación manual */
@@ -222,19 +223,19 @@ nav a:hover {
     transform: translateX(-66.66%);
 }
 
-/* Asegurarse de que los puntos no se vean en la parte inferior de la imagen */
+
 .carousel {
-    position: relative; /* Añadimos un contexto de apilamiento */
+    position: relative; 
 }
 
 .slides .slide a {
-    display: block; /* Aseguramos que los enlaces cubran todo el espacio de la imagen */
+    display: block; 
     width: 100%;
     height: 100%;
 }
 
 .carousel img {
-    display: block; /* Elimina cualquier espacio debajo de las imágenes */
+    display: block; 
 }
 
 /* otras cosas */
