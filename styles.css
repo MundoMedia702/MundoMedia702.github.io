@@ -492,6 +492,8 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 255, 0, 0.2); /* Sombra sutil inicial */
+    position: relative;
+    left: -10px; /* Ajusta el valor según lo que necesites */
 }
 
 /* Imágenes dentro de los botones */
