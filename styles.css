@@ -153,16 +153,16 @@ nav a:hover {
 /* Contenedor principal del carrusel */
 .donate-section {
     width: 100%;
-    max-width: 200px;  
+    max-width: 200px;
     height: 300px;
-    margin-left: 0px;  
-    margin-right: 0;  
+    margin-left: 0px;
+    margin-right: 0;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-    background: linear-gradient(145deg, #001f00, #002a00); 
-    border: 2px solid #00ff00; 
+    background: linear-gradient(145deg, #001f00, #002a00);
+    border: 2px solid #00ff00;
 }
 
 /* Contenedor de las imágenes */
@@ -172,17 +172,12 @@ nav a:hover {
     height: 100%;
 }
 
-
-.carousel input {
-    display: none;
-}
-
 /* Las imágenes del carrusel */
 .slides {
     display: flex;
-    width: 300%; 
+    width: 300%;
     height: 100%;
-    transition: transform 15s ease;
+    animation: slideAnimation 30s infinite ease-in-out; 
 }
 
 /* Cada imagen ocupa el 100% del espacio del contenedor */
@@ -194,49 +189,27 @@ nav a:hover {
 .carousel img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    border-radius: 5px; 
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-/* Animación para el carrusel automático */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33.33% { transform: translateX(-100%); }
-    66.66% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-}
-
-/* Aplicar la animación al carrusel */
-.carousel {
-    animation: slide 25s infinite; 
-}
-
-/* Animación con controles de radio para navegación manual */
-#image1:checked ~ .slides {
-    transform: translateX(0);
-}
-
-#image2:checked ~ .slides {
-    transform: translateX(-33.33%);
-}
-
-#image3:checked ~ .slides {
-    transform: translateX(-66.66%);
-}
-
-
-.carousel {
-    position: relative; 
-}
-
-.slides .slide a {
-    display: block; 
-    width: 100%;
-    height: 100%;
-}
-
-.carousel img {
-    display: block; 
+/* Animación de deslizamiento en ciclo de ida y vuelta */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-33.33%); 
+    }
+    50% {
+        transform: translateX(-66.66%); 
+    }
+    75% {
+        transform: translateX(-33.33%); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
 }
 
 /* otras cosas */
