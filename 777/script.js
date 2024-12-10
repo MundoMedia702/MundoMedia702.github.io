@@ -29,90 +29,51 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    const levenshteinDistance = (a, b) => {
-    const matrix = Array.from({ length: a.length + 1 }, () => []);
-    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
-    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+   // Configuración de Fuse.js
+   const fuseOptions = {
+       keys: [
+           { name: "title", weight: 0.6 },  
+           { name: "genres", weight: 0.2 }, 
+           { name: "description", weight: 0.2 }, 
+       ],
+       threshold: 0.3,  
+       distance: 100,   
+   };
 
-    for (let i = 1; i <= a.length; i++) {
-        for (let j = 1; j <= b.length; j++) {
-            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-            matrix[i][j] = Math.min(
-                matrix[i - 1][j] + 1, 
-                matrix[i][j - 1] + 1, 
-                matrix[i - 1][j - 1] + cost
-            );
-        }
-    }
-    return matrix[a.length][b.length];
-};
+   // Función para obtener los datos de las películas/series (puedes adaptarlo según cómo tengas almacenados los datos)
+   const getItemsData = () => {
+       return Array.from(document.querySelectorAll(".movie, .series")).map(item => ({
+           title: item.dataset.title,
+           genres: item.dataset.genres ? item.dataset.genres.split(",") : [],
+           description: item.dataset.description,
+           element: item,  
+       }));
+   };
 
-// Función para calcular el puntaje de coincidencia
-const calculateMatchScore = (query, item) => {
-    const queryLower = query.toLowerCase().trim();
-    const title = item.dataset.title?.toLowerCase() || "";
-    const genres = item.dataset.genres?.toLowerCase().split(",") || [];
-    const description = item.dataset.description?.toLowerCase() || "";
+   // Función para filtrar y mostrar contenido usando Fuse.js
+   const filterContent = () => {
+       const query = document.getElementById("searchBar").value.toLowerCase().trim();
+       
+       // Obtener los datos de las películas/series
+       const itemsData = getItemsData();
+       
+       // Crear una instancia de Fuse.js con los datos
+       const fuse = new Fuse(itemsData, fuseOptions);
+       
+       // Realizar la búsqueda
+       const results = fuse.search(query);
+       
+       // Ocultar todos los elementos inicialmente
+       itemsData.forEach(({ element }) => element.style.display = "none");
 
-    let score = 0;
+       // Mostrar solo los elementos que coinciden con el término de búsqueda
+       results.forEach(result => {
+           result.item.element.style.display = "block";
+       });
+   };
 
-    // 1. Coincidencia Exacta del Título
-    if (title === queryLower) {
-        score += 3; // Puntaje alto para coincidencia exacta en el título
-    }
-
-    // 2. Coincidencia Parcial en el Título (si no hubo coincidencia exacta)
-    if (score === 0) {
-        const titleWords = title.split(" ");
-        const queryWords = queryLower.split(" ");
-        score += queryWords.reduce((acc, queryWord) => {
-            const titleMatch = titleWords.some(titleWord => {
-                const isSubstring = titleWord.includes(queryWord);
-                const isSimilar = levenshteinDistance(queryWord, titleWord) <= Math.max(1, Math.floor(titleWord.length * 0.2)); // Más estricto
-                return isSubstring || isSimilar;
-            });
-            return acc + (titleMatch ? 1 : 0); // Puntaje básico para coincidencia
-        }, 0);
-    }
-
-    // 3. Coincidencia Exacta o Aproximada en Géneros
-    genres.forEach(genre => {
-        const genreMatch = genre.includes(queryLower) || levenshteinDistance(queryLower, genre) <= Math.max(2, Math.floor(genre.length * 0.3));
-        if (genreMatch) score += 0.5; // Género coincide ligeramente
-    });
-
-    // 4. Coincidencia Parcial en la Descripción
-    if (description.includes(queryLower)) {
-        score += 0.5; // Puntaje más bajo para coincidencia parcial en descripción
-    }
-
-    return score;
-};
-
-// Función para filtrar y mostrar contenido
-const filterContent = () => {
-    const query = document.getElementById("searchBar").value.toLowerCase().trim();
-    const items = Array.from(document.querySelectorAll(".movie, .series"));
-
-    // Filtrar y calcular puntajes de similitud
-    const filteredItems = items.map(item => {
-        const score = calculateMatchScore(query, item);
-        return { item, score };
-    }).filter(({ score }) => score > 0); // Solo los elementos que tienen coincidencia
-
-    // Ordenar por el puntaje de similitud (de mayor a menor)
-    filteredItems.sort((a, b) => b.score - a.score);
-
-    // Ocultar todos los elementos inicialmente
-    items.forEach(item => item.style.display = "none");
-    // Mostrar los elementos filtrados y ordenados
-    filteredItems.forEach(({ item }) => {
-        item.style.display = "block";
-    });
-};
-
-// Agregar evento al buscador
-document.getElementById("searchBar").addEventListener("input", filterContent);
+   // Agregar evento al buscador
+   document.getElementById("searchBar").addEventListener("input", filterContent);
     
     // Exponer funciones globalmente
     window.toggleSection = toggleSection;

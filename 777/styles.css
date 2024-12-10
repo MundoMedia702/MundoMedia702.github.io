@@ -8,11 +8,11 @@ body {
     overflow-x: hidden;
 }
 
-header {
+ header {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    padding: 1em;
+    padding: 3em;
     background: #1c1c1c;
     box-shadow: 0 2px 10px rgba(84, 110, 122, 0.5);
     text-align: center; /* Asegura que el texto esté centrado */
@@ -25,6 +25,7 @@ header h1 {
     letter-spacing: 2px;
     color: #90a4ae;
 }
+
 
 
 
@@ -296,4 +297,42 @@ header h1 {
 .section-content::-webkit-scrollbar-thumb {
     background: #e50914;
     border-radius: 5px;
+}
+
+/* Contenedor principal */
+.marquee-container {
+    width: 80%;             
+    margin: 20px auto;      
+    padding: 10px 20px;     
+    background-color: rgba(50, 50, 50, 0.7); 
+    border-radius: 20px;    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;       
+}
+
+/* Estilo del texto en movimiento */
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;    
+    animation: marquee 40s linear infinite; 
+    color: #fff;            
+    font-size: 18px;        
+    font-weight: normal;    
+    letter-spacing: 0.5px; 
+    line-height: 1.4;       
+    will-change: transform; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Empieza fuera del contenedor */
+    }
+    100% {
+        transform: translateX(-100%); /* Se mueve completamente hacia la izquierda */
+    }
+}
+
+.highlight {
+    background-color: yellow; /* Resaltar con un color de fondo */
+    font-weight: bold; /* Poner el texto en negrita */
 }
