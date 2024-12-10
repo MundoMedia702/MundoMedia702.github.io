@@ -47,43 +47,67 @@ document.addEventListener("DOMContentLoaded", () => {
     return matrix[a.length][b.length];
 };
 
+// Función para calcular el puntaje de coincidencia
+const calculateMatchScore = (query, item) => {
+    const queryLower = query.toLowerCase().trim();
+    const title = item.dataset.title?.toLowerCase() || "";
+    const genres = item.dataset.genres?.toLowerCase().split(",") || [];
+    const description = item.dataset.description?.toLowerCase() || "";
+
+    let score = 0;
+
+    // 1. Coincidencia Exacta del Título
+    if (title === queryLower) {
+        score += 3; // Puntaje alto para coincidencia exacta en el título
+    }
+
+    // 2. Coincidencia Parcial en el Título (si no hubo coincidencia exacta)
+    if (score === 0) {
+        const titleWords = title.split(" ");
+        const queryWords = queryLower.split(" ");
+        score += queryWords.reduce((acc, queryWord) => {
+            const titleMatch = titleWords.some(titleWord => {
+                const isSubstring = titleWord.includes(queryWord);
+                const isSimilar = levenshteinDistance(queryWord, titleWord) <= Math.max(1, Math.floor(titleWord.length * 0.2)); // Más estricto
+                return isSubstring || isSimilar;
+            });
+            return acc + (titleMatch ? 1 : 0); // Puntaje básico para coincidencia
+        }, 0);
+    }
+
+    // 3. Coincidencia Exacta o Aproximada en Géneros
+    genres.forEach(genre => {
+        const genreMatch = genre.includes(queryLower) || levenshteinDistance(queryLower, genre) <= Math.max(2, Math.floor(genre.length * 0.3));
+        if (genreMatch) score += 0.5; // Género coincide ligeramente
+    });
+
+    // 4. Coincidencia Parcial en la Descripción
+    if (description.includes(queryLower)) {
+        score += 0.5; // Puntaje más bajo para coincidencia parcial en descripción
+    }
+
+    return score;
+};
+
+// Función para filtrar y mostrar contenido
 const filterContent = () => {
     const query = document.getElementById("searchBar").value.toLowerCase().trim();
-    const items = document.querySelectorAll(".movie, .series");
+    const items = Array.from(document.querySelectorAll(".movie, .series"));
 
-    items.forEach(item => {
-        const title = item.dataset.title?.toLowerCase() || "";
-        const genres = item.dataset.genres?.toLowerCase().split(",") || [];
-        const description = item.dataset.description?.toLowerCase() || "";
+    // Filtrar y calcular puntajes de similitud
+    const filteredItems = items.map(item => {
+        const score = calculateMatchScore(query, item);
+        return { item, score };
+    }).filter(({ score }) => score > 0); // Solo los elementos que tienen coincidencia
 
-        const queryWords = query.split(" ");
-        const titleWords = title.split(" ");
+    // Ordenar por el puntaje de similitud (de mayor a menor)
+    filteredItems.sort((a, b) => b.score - a.score);
 
-        // Coincidencias por palabras individuales
-        const wordMatch = queryWords.some(queryWord =>
-            titleWords.some(titleWord => {
-                const isSubstring = titleWord.includes(queryWord);
-                const isSimilar = levenshteinDistance(queryWord, titleWord) <= Math.max(2, Math.floor(titleWord.length * 0.3));
-                return isSubstring || isSimilar;
-            })
-        );
-
-        // Coincidencia exacta en géneros
-        const genreMatch = genres.some(genre => {
-            const genreDistance = levenshteinDistance(query, genre.trim());
-            const maxGenreDistance = Math.max(2, Math.floor(genre.length * 0.3));
-            return genre.includes(query) || genreDistance <= maxGenreDistance;
-        });
-
-        // Coincidencias parciales en descripción
-        const descriptionMatch = description.includes(query);
-
-        // Mostrar el artículo si cumple alguna de las condiciones
-        if (wordMatch || genreMatch || descriptionMatch) {
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
+    // Ocultar todos los elementos inicialmente
+    items.forEach(item => item.style.display = "none");
+    // Mostrar los elementos filtrados y ordenados
+    filteredItems.forEach(({ item }) => {
+        item.style.display = "block";
     });
 };
 
