@@ -119,3 +119,31 @@ window.addEventListener("load", function() {
     escribirMensaje(); 
 });
 
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const slidesContainer = document.querySelector('.slides');
+let direction = 'forward'; // Controlamos la dirección del movimiento
+
+// Función para mover el carrusel
+function moveCarrusel() {
+    if (direction === 'forward') {
+        currentIndex++;
+        if (currentIndex === totalSlides - 1) {
+            direction = 'backward';  // Cambiar dirección al llegar a la última imagen
+        }
+    } else {
+        currentIndex--;
+        if (currentIndex === 0) {
+            direction = 'forward';  // Cambiar dirección al llegar a la primera imagen
+        }
+    }
+    
+    // Actualizar la posición del carrusel
+    slidesContainer.style.transition = 'transform 1s ease-in-out';  // Transición suave
+    slidesContainer.style.transform = `translateX(-${(currentIndex * 100) / totalSlides}%)`;
+}
+
+// Configurar el intervalo para mover el carrusel cada 5 segundos
+setInterval(moveCarrusel, 5000); // 5 segundos entre cada desplazamiento
+
