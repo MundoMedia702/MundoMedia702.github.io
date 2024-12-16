@@ -3,126 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Enlace</title>
-    <script defer src="https://app.embed.im/snow.js"></script>
+    <title>Contacto</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
-       body {
-    font-family: 'Courier New', Courier, monospace; 
-    background-color: #1e1e1e; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #00ff00; 
-}
+       /* Estilo global */
+               * {
+                   margin: 0;
+                   padding: 0;
+                   box-sizing: border-box;
+               }
 
-.form-container {
-    background-color: rgba(20, 20, 20, 0.8); 
-    border: 2px solid #00ff00; 
-    border-radius: 5px;
-    padding: 20px;
-    width: 350px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); 
-    font-size: 14px;
-}
+               body {
+                   font-family: Arial, sans-serif;
+                   background-color: #f7f7f7;
+                   color: #333;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   height: 100vh;
+                   margin: 0;
+               }
 
-h1 {
-    text-align: center;
-    color: #00ff00;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    border-bottom: 1px solid #00ff00;
-    padding-bottom: 10px;
-    font-weight: bold;
-}
+               /* Contenedor del formulario */
+               .form-container {
+                   background-color: rgba(255, 255, 255, 0.9);
+                   border-radius: 8px;
+                   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                   padding: 20px;
+                   width: 90%;
+                   max-width: 400px; /* Ancho máximo */
+               }
 
-p {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-size: 12px;
-}
+               h1 {
+                   text-align: center;
+                   font-size: 20px;
+                   margin-bottom: 20px;
+                   color: #444;
+                   text-transform: uppercase;
+                   letter-spacing: 1px;
+               }
 
-label {
-    color: #00ff00;
-    font-weight: bold;
-    font-size: 12px;
-    display: block;
-    margin-bottom: 5px;
-}
+               label {
+                   display: block;
+                   font-size: 14px;
+                   margin-bottom: 8px;
+                   color: #555;
+               }
 
-input[type="text"],
-select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #00ff00;
-    border-radius: 5px;
-    background-color: #2a2a2a;
-    color: #00ff00;
-    font-size: 14px;
-    box-sizing: border-box;
-    transition: border-color 0.3s, background-color 0.3s;
-}
+               input[type="text"],
+               textarea {
+                   width: 100%;
+                   padding: 10px;
+                   margin-bottom: 15px;
+                   border: 1px solid #ccc;
+                   border-radius: 4px;
+                   font-size: 14px;
+                   background-color: #f9f9f9;
+                   color: #333;
+               }
 
-input[type="text"]:focus,
-select:focus {
-    border-color: #ff3333; 
-    background-color: #333333;
-    outline: none;
-}
+               input[type="text"]:focus,
+               textarea:focus {
+                   outline: none;
+                   border-color: #999;
+                   background-color: #fff;
+               }
 
-input[type="submit"] {
-    background-color: #00ff00;
-    color: #000;
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
+               input[type="submit"] {
+                   background-color: #666;
+                   color: #fff;
+                   border: none;
+                   padding: 10px;
+                   font-size: 14px;
+                   cursor: pointer;
+                   border-radius: 4px;
+                   text-transform: uppercase;
+                   transition: background-color 0.3s ease;
+               }
 
-input[type="submit"]:hover {
-    background-color: #00cc00; 
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
-}
+               input[type="submit"]:hover {
+                   background-color: #444;
+               }
 
-input[type="submit"]:active {
-    background-color: #00b300; 
-    box-shadow: inset 0 0 5px rgba(0, 255, 0, 0.8);
-}
+               /* Ajustes para dispositivos pequeños */
+               @media (max-width: 480px) {
+                   .form-container {
+                       padding: 15px;
+                   }
 
-
+                   input[type="text"],
+                   textarea {
+                       font-size: 12px;
+                   }
+               }
     </style>
 </head>
 <body>
     <div class="form-container">
-        <h1>Agregar Enlace</h1>
-        <p>Proporciona el enlace y su nombre, y selecciona la categoría correspondiente.</p>
-        <form action="mailto:julianandresvallestero@proton.me" method="post" enctype="text/plain">
-            <label for="enlace">Enlace:</label>
-            <input type="text" id="enlace" name="enlace" required>
+        <h1>Contacto</h1>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
 
-            <label for="nombre">Nombre del Enlace:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="categoria">Selecciona una categoría:</label>
-            <select id="categoria" name="categoria" required>
-                <option value="" disabled selected>--Selecciona una categoría--</option>
-                <option value="libros">Libros</option>
-                <option value="peliculas">Películas</option>
-                <option value="onion">Onion</option>
-                <option value="Games PS2">Games PS2</option>
-            </select>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
             <input type="submit" value="Enviar">
         </form>
     </div>
+
+    <script>
+        // Inicializa EmailJS
+        emailjs.init("eVNRrpZjjXaa3uuvK");
+
+        // Agrega el evento de envío al formulario
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita el comportamiento predeterminado del formulario
+
+            // Envía el formulario con EmailJS
+            emailjs.sendForm('service_ppejbdn', 'template_6qfgk5g', this)
+                .then(function () {
+                    alert("Mensaje enviado exitosamente.");
+                }, function (error) {
+                    console.error("Error:", error);
+                    alert("Ocurrió un error al enviar el mensaje.");
+                });
+        });
+    </script>
 </body>
 </html>

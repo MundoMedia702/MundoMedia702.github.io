@@ -1,0 +1,102 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background: #111; /* Fondo oscuro */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Título del libro */
+.book-title {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #00ff99; /* Verde neón */
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+}
+
+/* Imagen del libro */
+.book-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-image img:hover {
+    transform: scale(1.1); 
+}
+
+/* Sinopsis del libro */
+.book-synopsis {
+    font-size: 1.2em;
+    color: #ddd;
+    margin: 20px 0;
+    text-shadow: 0 0 10px #000;
+}
+
+/* Botón de descarga */
+.download-button {
+    background: linear-gradient(135deg, #ff00ff, #00ffff); 
+    color: #000;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.download-button:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); 
+}
+
+.download-button:active {
+    transform: scale(1); 
+}
+
+/* Estilos de responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .book-title {
+        font-size: 2em;
+    }
+
+    .book-synopsis {
+        font-size: 1em;
+    }
+
+    .download-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
