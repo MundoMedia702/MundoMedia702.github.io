@@ -77,37 +77,37 @@
             object-fit: cover;
         }
         .book-title {
-            padding: 12px 20px;  /* Aumenta el espacio interno */
-            font-size: 1.0rem;  /* Tamaño de fuente más grande */
-            font-weight: bold;  /* Fuente en negrita */
-            color: #333;  /* Color oscuro para el texto */
-            background-color: #f4f4f4;  /* Fondo gris suave */
-            border-radius: 8px;  /* Bordes redondeados */
+            padding: 12px 20px;  
+            font-size: 1.0rem;  
+            font-weight: bold;  
+            color: #333;  
+            background-color: #f4f4f4;  
+            border-radius: 8px;  
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            text-transform: capitalize;  /* Hace la primera letra de cada palabra mayúscula */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
-            transition: transform 0.3s ease, color 0.3s ease;  /* Transiciones para efectos al pasar el ratón */
-            text-decoration: none;  /* Elimina cualquier subrayado */
+            text-transform: capitalize;  
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+            transition: transform 0.3s ease, color 0.3s ease;  
+            text-decoration: none; 
         }
 
         .book-title:hover {
-            transform: scale(1.05);  /* Efecto de aumento al pasar el ratón */
-            color: #007BFF;  /* Cambio de color al pasar el ratón */
-            background-color: #ffffff;  /* Fondo blanco al pasar el ratón */
+            transform: scale(1.05); 
+            color: #007BFF;  
+            background-color: #ffffff;  
         }
 
         /* Secciones de categoría */
         .sections {
             text-align: center;
             margin-bottom: 20px;
-            position: relative; /* Necesario para el posicionamiento del menú */
+            position: relative; 
         }
 
         /* Botón del menú (visible solo en pantallas pequeñas) */
         .menu-button {
-            display: none;  /* Se oculta por defecto */
+            display: none;  
             background-color: #555;
             color: #fff;
             border: none;
@@ -149,7 +149,7 @@
         /* Diseño responsive: ajustes para pantallas pequeñas */
         @media (max-width: 1024px) {
             .search-bar input {
-                width: 80%;  /* Más amplio en pantallas medianas */
+                width: 80%;  
             }
 
             .books-container {
@@ -157,17 +157,17 @@
             }
 
             .book {
-                flex: 0 0 22%;  /* Los libros ocupan un 22% del ancho en pantallas medianas */
+                flex: 0 0 22%;  
             }
         }
 
         @media (max-width: 768px) {
             body {
-                padding: 10px;  /* Reducir el padding en pantallas pequeñas */
+                padding: 10px;  
             }
 
             .search-bar input {
-                width: 100%;  /* La barra de búsqueda ocupa todo el ancho en pantallas pequeñas */
+                width: 100%;  
             }
 
             .books-container {
@@ -175,18 +175,18 @@
             }
 
             .book {
-                flex: 0 0 45%;  /* Los libros ocupan un 45% del ancho en pantallas pequeñas */
+                flex: 0 0 45%;  
             }
         }
 
         @media (max-width: 480px) {
             .search-bar input {
-                width: 100%;  /* Barra de búsqueda 100% de ancho en dispositivos más pequeños */
-                padding: 8px;  /* Reducir el padding */
+                width: 100%; 
+                padding: 8px;  
             }
 
             .sections button {
-                padding: 8px 12px;  /* Reducir el padding de los botones */
+                padding: 8px 12px;  
             }
 
             .books-container {
@@ -194,21 +194,21 @@
             }
 
             .book {
-                flex: 0 0 90%;  /* Los libros ocupan casi todo el ancho en dispositivos muy pequeños */
+                flex: 0 0 90%;  
             }
 
             h1 {
-                font-size: 1.5rem;  /* Reducir el tamaño del título */
+                font-size: 1.5rem;  
             }
 
             .book-title {
-                font-size: 0.9rem;  /* Reducir el tamaño de la fuente de los títulos */
+                font-size: 0.9rem;  
             }
         }
 
         @media (max-width: 768px) {
             .menu-button {
-                display: block;  /* Muestra el botón de menú en pantallas pequeñas */
+                display: block;  
             }
 
             /* Esconde los botones de las secciones hasta que se muestre el menú */
@@ -221,7 +221,7 @@
             .sections-container.show {
                 display: flex;
                 justify-content: center;
-                flex-direction: column; /* Los botones se apilan verticalmente en pantallas pequeñas */
+                flex-direction: column; 
             }
         }
     </style>
@@ -254,11 +254,17 @@
     </header>
     <div class="books-container">
             <div class="book ficcion-narrativa">
-                <a href="mi_biblioteca/libro1.html">
+                <div class="book ficcion-narrativa">
+            <a href="mi_biblioteca/libro57.html">
+                <img src="image/069.png" alt="Libro 57">
+                <div class="book-title">Ragnarok: El Camino de un Hombre (Masculinidad - Sociedad Moderna - Mujeres)</div>
+            </a>
+        </div>
+         <a href="mi_biblioteca/libro1.html">
                     <img src="image/001.png" alt="Libro 1">
                     <div class="book-title">Imaginaria (Spanish Edition) - Kristopher Rodas</div>
                 </a>
-            </div>
+            </div>        
         <div class="book psicologia">
             <a href="mi_biblioteca/libro2.html">
                 <img src="image/002.png" alt="Libro 2">
