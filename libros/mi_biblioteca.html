@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Libros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
+</head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43G1PCGBDE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-43G1PCGBDE');
+</script>
+<body>
+    <header>
+        <h1>Mi Biblioteca</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar libros...">
+        </div>
+        <div class="sections">
+        <div class="sections-container" id="sectionsContainer">
+            <button onclick="filterBooks('all')">Todos</button>
+            <button onclick="filterBooks('ficcion-narrativa')">Ficción narrativa</button>
+            <button onclick="filterBooks('psicologia')">Psicología</button>
+            <button onclick="filterBooks('literatura-tecnologica')">Literatura tecnológica</button>
+            <button onclick="filterBooks('comics')">Comics</button>
+            <button onclick="filterBooks('games')">Games</button>
+        </div>
+    </header>
+    <div class="books-container">
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/069.png" alt="Libro 57" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro57.html">
+                    Ragnarok: El Camino de un Hombre 
+                </div>
+            </div>
+        </div>
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/001.png" alt="Libro 1" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro1.html">              
+                    Imaginaria (Spanish Edition) - Kristopher Rodas
+                </div>
+            </div>
+        </div>
+        <div class="book psicologia">
+            <div class="book-link"> 
+                <img src="image/002.png" alt="Libro 2" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro2.html">
+                     Desarrolla una mente prodigiosa
+               </div>
+            </div>
+        </div>
+
+        <div class="book psicologia">
+            <div class="book-link"> 
+                <img src="image/003.png" alt="Libro 3" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro3.html"> 
+                  Manipulación y Psicología Oscura
+              </div>
+            </div>
+        </div>
+
+        <div class="book psicologia">
+            <div class="book-link"> 
+                <img src="image/004.png" alt="Libro 4" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro4.html">
+                  Psicología Oscura Domine Las Técnicas Secretas de la Manipulación Emocional
+              </div>
+            </div>
+        </div>
+
+        <div class="book psicologia">
+            <div class="book-link"> 
+                <img src="image/005.png" alt="Libro 5" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro5.html">
+                Cómo Analizar a Las Personas con Psicología
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link"> 
+                <img src="image/006.png" alt="Libro 6" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro6.html">
+                25 Técnicas aplicadas a campañas de Red Team y Hacking
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link"> 
+                <img src="image/007.png" alt="Libro 7" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro7.html">
+                Ingeniería Social El Arte del Hacking Personal
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link"> 
+                <img src="image/008.png" alt="Libro 8" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro8.html">
+                Web Hacking
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/009.png" alt="Libro 9" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro9.html">
+                Ethical Hacking 2.0
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/010.png" alt="Libro 10" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro10.html">
+                Hacking Etico 101 - Cómo hackear profesionalmente en 21 días o menos
+            </div>
+            </div>
+        </div>
+
+        <div class="book Psicologia">
+            <div class="book-link">
+                <img src="image/011.png" alt="Libro 11" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro11.html">
+                La domesticación del azar la erosión del determinismo y el nacimiento de las ciencias del caos
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/012.png" alt="Libro 12" class="book-image">
+                <div class="book-title"  data-url="mi_biblioteca/libro12.html">
+                Linux Server Linux Server Hacks Los Mejores Trucos the Best Tricks
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/013.png" alt="Libro 13" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro13.html">
+                Criptografía (USERS)
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/014.png" alt="Libro 14" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro14.html">
+                Criptografía Ofensiva. Atacando y defendiendo organizaciones Criptografía aplicada para pentesters, programadores y analistas
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/015.png" alt="Libro 15" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro15.html">
+                Criptografía sin secretos con python
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/016.png" alt="Libro 16" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro16.html"> 
+                Hacking ético con herramientas Python
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/017.png" alt="Libro 17" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro17.html">
+                Matemáticos, espías y piratas informáticos codificación y criptografía
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/018.png" alt="Libro 18" class="book-image">
+                <div class="book-title"  data-url="mi_biblioteca/libro18.html">
+                Web Hacking 101 en Español - Cómo hacer dinero hackeando éticamente
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/019.png" alt="Libro 19" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro19.html">
+                Curso de diseño y programación de videojuegos, Fasiculo 1
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/020.png" alt="Libro 20" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro20.html">
+                Diseño Y Programación De Páginas Web
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/021.png" alt="Libro 21" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro21.html">
+                El aprendiz de brujo manual de ejercicios prácticos de Programación Neurolingüística
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/022.png" alt="Libro 22" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro22.html">
+                El Microcontrolador ATMega328P de Microchip Programación en Ensamblador, Lenguaje C y un enlace con Arduino
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/023.png" alt="Libro 23" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro23.html">
+                Fundamentos de Programación Piensa en C
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/024.png" alt="Libro 24" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro24.html">
+                Introducción a la computación y a la programación estructurada
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/025.png" alt="Libro 25" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro25.html">
+                Introducción a la programación orientada a objetos
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/026.png" alt="Libro 26" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro26.html">
+                Programación en Java, Vol. 3
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/027.png" alt="Libro 27" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro27.html">
+                Programación en Java, Volumen 2
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/028.png" alt="Libro 28" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro28.html">
+                Programación en Java, Volumen 4
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/029.png" alt="Libro 29" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro29.html">
+                Programación orientada a objetos con Java una introducción práctica usando BlueJ
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/030.png" alt="Libro 30" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro30.html">
+                Robótica Avanzada Construcción y Programación de Robots
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/031.png" alt="Libro 31" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro31.html">
+                Ética hacker seguridad y vigilancia
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/032.png" alt="Libro 32" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro32.html">
+                Google Hacking for Penetration Testers
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/033.png" alt="Libro 33" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro33.html">
+                Ethical Hacking
+            </div>
+            </div>
+        </div>
+
+        <div class="book literatura-tecnologica">
+            <div class="book-link">
+                <img src="image/034.png" alt="Libro 34" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro34.html">
+                Ejercicios de Programación en Java
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/035.png" alt="Libro 35" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro35.html">
+                Odisea, de Homero
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/036.png" alt="Libro 36" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro36.html">
+                Don Quijote de la Mancha
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/037.png" alt="Libro 37" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro37.html">
+                El código Da Vinci
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/038.png" alt="Libro 38" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro38.html">
+                Diez negritos
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/039.png" alt="Libro 39" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro39.html">
+                Alicia en el país de las maravillas
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/040.png" alt="Libro 40" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro40.html">
+                Las aventuras de Sherlock Holmes
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/041.png" alt="Libro 41" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro41.html">
+                El Hobbit
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/042.png" alt="Libro 42" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro42.html">
+                El señor de los anillos
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/043.png" alt="Libro 43" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro43.html">
+                El alquimista
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/044.png" alt="Libro 44" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro44.html">
+                1984 - George Orwell
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/045.png" alt="Libro 45" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro45.html">
+                Guerra y Paz
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/046.png" alt="Libro 46" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro46.html">
+                Deadpool mata al Universo Marvel otra vez
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/047.png" alt="Libro 47" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro47.html">
+                Deadpool mata al Universo Marvel
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/048.png" alt="Libro 48" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro48.html">World War Hulks
+                </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/049.png" alt="Libro 49" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro49.html">
+                The Punisher vs Deadpool
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/050.png" alt="Libro 50" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro50.html">
+                Deadpool vs Thanos
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/051.png" alt="Libro 51" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro51.html">
+                Deadpool vs Carnage
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/052.png" alt="Libro 52" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro52.html">
+                Deadpool Back in Black
+            </div>
+            </div>
+        </div>
+
+        <div class="book comics">
+            <div class="book-link">
+                <img src="image/053.png" alt="Libro 53" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro53.html">
+                Spiderman 2099
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/054.png" alt="Libro 54" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro54.html">
+                El gran Gatsby
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/055.png" alt="Libro 55" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro55.html">
+                Veinte mil leguas de viaje submarino
+            </div>
+            </div>
+        </div>
+
+        <div class="book ficcion-narrativa">
+            <div class="book-link">
+                <img src="image/056.png" alt="Libro 56" class="book-image">
+                <div class="book-title" data-url="mi_biblioteca/libro56.html">
+                Las aventuras de Huckleberry Finn
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/057.png" alt="Libro 57" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game1.html">
+                GTA con mods
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/058.png" alt="Libro 58" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game2.html">
+                GTA san andreas
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/059.png" alt="Libro 59" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game3.html">
+                Resident Evil 4 Ultimate HD Edition
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/060.png" alt="Libro 60" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game4.html">
+                Need for Speed Most Wanted
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/061.png" alt="Libro 61" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game5.html">
+                Crash Bandicoot: Colección Portable
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/062.png" alt="Libro 62" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game6.html">
+                X-MEN 2
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/063.png" alt="Libro 63" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game7.html">
+                Call of Duty 2
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/064.png" alt="Libro 64" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game8.html">
+                Slender: The Arrival
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/065.png" alt="Libro 65" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game9.html">
+                POSTAL 4: No Regrets
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/066.png" alt="Libro 66" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game10.html">
+                Resident Evil: Survivor
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/067.png" alt="Libro 67" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game11.html">
+                Pink Panther: Pinkadelic Pursuit
+            </div>
+            </div>
+        </div>
+
+        <div class="book games">
+            <div class="book-link">
+                <img src="image/068.png" alt="Libro 68" class="book-image">
+                <div class="book-title" data-url="biblioteca_games/game12.html">
+                Alien Trilogy
+            </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
