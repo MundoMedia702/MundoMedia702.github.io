@@ -6,113 +6,145 @@
     <title>Contacto</title>
     <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <style>
-       /* Estilo global */
-               * {
-                   margin: 0;
-                   padding: 0;
-                   box-sizing: border-box;
-               }
+     <style>
+        /* Estilo global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-               body {
-                   font-family: Arial, sans-serif;
-                   background-color: #f7f7f7;
-                   color: #333;
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-                   height: 100vh;
-                   margin: 0;
-               }
+        body {
+            font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+            background-color: #141414; /* Fondo oscuro estilo gamer */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+        }
 
-               /* Contenedor del formulario */
-               .form-container {
-                   background-color: rgba(255, 255, 255, 0.9);
-                   border-radius: 8px;
-                   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                   padding: 20px;
-                   width: 90%;
-                   max-width: 400px; /* Ancho máximo */
-               }
+        /* Contenedor del formulario */
+        .form-container {
+            background-color: rgba(28, 28, 28, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            width: 90%;
+            max-width: 400px; /* Ancho máximo */
+            border: 2px solid #e63946;
+        }
 
-               h1 {
-                   text-align: center;
-                   font-size: 20px;
-                   margin-bottom: 20px;
-                   color: #444;
-                   text-transform: uppercase;
-                   letter-spacing: 1px;
-               }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e63946;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 28px;
+        }
 
-               label {
-                   display: block;
-                   font-size: 14px;
-                   margin-bottom: 8px;
-                   color: #555;
-               }
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ddd;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
 
-               input[type="text"],
-               textarea {
-                   width: 100%;
-                   padding: 10px;
-                   margin-bottom: 15px;
-                   border: 1px solid #ccc;
-                   border-radius: 4px;
-                   font-size: 14px;
-                   background-color: #f9f9f9;
-                   color: #333;
-               }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #222;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease;
+        }
 
-               input[type="text"]:focus,
-               textarea:focus {
-                   outline: none;
-                   border-color: #999;
-                   background-color: #fff;
-               }
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #e63946;
+            background-color: #333;
+        }
 
-               input[type="submit"] {
-                   background-color: #666;
-                   color: #fff;
-                   border: none;
-                   padding: 10px;
-                   font-size: 14px;
-                   cursor: pointer;
-                   border-radius: 4px;
-                   text-transform: uppercase;
-                   transition: background-color 0.3s ease;
-               }
+        input[type="submit"] {
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.2s;
+            font-weight: bold;
+        }
 
-               input[type="submit"]:hover {
-                   background-color: #444;
-               }
+        input[type="submit"]:hover {
+            background-color: #d62828;
+            transform: scale(1.05);
+        }
 
-               /* Ajustes para dispositivos pequeños */
-               @media (max-width: 480px) {
-                   .form-container {
-                       padding: 15px;
-                   }
+        input[type="submit"]:active {
+            transform: scale(1);
+            background-color: #9e2a2f;
+        }
 
-                   input[type="text"],
-                   textarea {
-                       font-size: 12px;
-                   }
-               }
+        /* Animación sutil al enfocar los campos */
+        input[type="text"]:focus, textarea:focus {
+            animation: focusAnim 0.5s ease-in-out;
+        }
+
+        @keyframes focusAnim {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Ajustes para dispositivos pequeños */
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            input[type="text"],
+            textarea {
+                font-size: 14px;
+            }
+        }
     </style>
-</head>
-<body>
-    <div class="form-container">
-        <h1>Contacto</h1>
-        <form id="contact-form">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+    </head>
+    <body>
+        <div class="form-container">
+            <h1>Contacto</h1>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
-
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </body>
     <script>
         // Inicializa EmailJS
         emailjs.init("eVNRrpZjjXaa3uuvK");
