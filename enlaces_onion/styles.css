@@ -1,144 +1,141 @@
-/* Reset global */
-* {
+/* Estilos generales */
+body {
+    background-color: #121212; 
+    color: #f0f0f0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden; 
 }
 
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1f1f1f; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
-    line-height: 1.6;
-    padding: 20px;
-}
-
+/* Contenedor principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Estilos del grid de enlaces */
-.links-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espacio entre los enlaces */
-    justify-content: space-between; /* Alineación espaciada */
+/* Título */
+.title-container {
+    margin-bottom: 40px;
 }
 
-/* Estilo de cada enlace */
+h1 {
+    font-size: 36px;
+    color: #00ffcc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00ffcc;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Estilo para los enlaces */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; 
+}
+
+body {
+    background-color: #121212; 
+    transition: background 0.5s ease; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+body img {
+    width: 100%; 
+    height: auto;
+}
+
+/* Elementos de cada enlace */
 .link-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo opaco */
+    background-color: #1e1e1e;
+    padding: 15px;
     border-radius: 10px;
     overflow: hidden;
-    width: calc(33.333% - 20px); /* Tres columnas por fila, ajustable */
+    text-decoration: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Asegura que la imagen y la descripción estén alineadas correctamente */
-    height: 350px; /* Fija la altura para todos los enlaces (ajustable según el diseño) */
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #e0e0e0;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Estilo de las imágenes */
-.link-item img {
-    width: 100%; /* Ocupa el 100% del contenedor */
-    height: 200px; /* Fija una altura para la imagen, ajusta según el diseño */
-    object-fit: contain; /* La imagen no se recorta */
-    object-position: center; /* Centra la imagen */
-    border-radius: 8px; /* Opcional: Añadir bordes redondeados si lo deseas */
+/* Cuando el enlace entra en la vista, se hace visible */
+.link-item.visible {
+    opacity: 1;
+    transform: translateY(0); 
 }
 
-/* Estilo del texto (título) */
-.link-item p {
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
-    font-size: 14px; /* Tamaño del texto */
-    color: #b0b0b0; /* Color gris claro */
-    font-weight: 600; /* Poner el título en negrita si se desea */
-    flex-shrink: 0; /* Evita que el texto se reduzca */
-    text-align: center; /* Centra el texto */
-    line-height: 1.5; /* Asegura que haya suficiente espacio entre líneas */
-    max-width: 100%; /* Asegura que el texto no se desborde */
-}
-
-/* Efectos al pasar el mouse */
+/* Efecto al pasar el ratón sobre los enlaces */
 .link-item:hover {
     transform: translateY(-10px);
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo más claro en hover */
+    box-shadow: 0 8px 16px rgba(0, 255, 204, 0.4);
 }
 
-/* Efecto de hover para los enlaces */
-.link-item:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.2);
+/* Imagen de los enlaces */
+.link-item img {
+    max-width: 60px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-    .links-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Estilo para el contenedor del título */
-.title-container {
+/* Texto de los enlaces */
+.link-item p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
     text-align: center;
-    margin-top: 50px;
+    font-weight: 500;
 }
 
-#onion-title {
-    font-family: 'Courier New', monospace; /* Fuentes monoespaciadas */
-    font-size: 36px;
-    color: #e0e0e0;
-    display: inline-block;
-    white-space: nowrap; /* El texto no se dividirá en varias líneas */
-    overflow: hidden; /* Asegura que el texto solo se muestre cuando se escribe */
-    border-right: 4px solid #e0e0e0; /* Crea el cursor */
+/* Efecto al pasar el ratón sobre los enlaces */
+.link-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 255, 204, 0.4);
 }
 
-/* Animación del cursor parpadeante */
-@keyframes blink {
-    0%,
-    100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #e0e0e0;
-    }
+/* Efecto al pasar el ratón sobre las imágenes */
+.link-item:hover img {
+    opacity: 0.8;
 }
 
-/* Hacer que el cursor parpadee */
-#onion-title {
-    animation: blink 0.75s step-end infinite; /* Parpadeo del cursor */
-}
-
-/* Media queries para dispositivos móviles */
-
-/* Para pantallas más grandes, se mantienen 3 columnas */
-@media (max-width: 1200px) {
-    .link-item {
-        width: calc(33.333% - 20px); /* Tres columnas por fila en pantallas grandes */
-    }
-}
-
-/* Para tabletas y pantallas más pequeñas */
-@media (max-width: 1024px) {
-    .link-item {
-        width: calc(50% - 20px); /* Dos columnas por fila en tabletas */
-    }
-}
-
-/* Para dispositivos móviles */
+/* Media queries para hacer el diseño más adaptable */
 @media (max-width: 768px) {
-    .link-item {
-        width: 100%; /* Una columna por fila en móviles */
-        height: auto; /* Dejar que la altura se ajuste automáticamente según el contenido */
+    h1 {
+        font-size: 28px;
     }
-    .links-grid {
-        justify-content: center; /* Centrar los enlaces */
+
+    .link-item {
+        padding: 12px;
+    }
+
+    .link-item img {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .link-item {
+        padding: 10px;
+    }
+
+    .link-item img {
+        max-width: 40px;
     }
 }
