@@ -1,0 +1,250 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #121212; /* Fondo oscuro */
+  color: #f5f5f5; /* Texto claro */
+  font-size: 16px;
+  line-height: 1.6;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header and Navbar */
+header {
+  background-color: #1e1e1e;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #666;
+}
+
+/* Menu Styles */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* Content */
+.content {
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Sections */
+.section {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.account {
+  background-color: #1d1d1d;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.account p {
+  margin-bottom: 10px;
+}
+
+.account strong {
+  font-size: 18px;
+  color: #00d1b2;
+}
+
+/* Buttons (Copy Button) */
+button {
+  background-color: #00d1b2;
+  color: #121212;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007e6f;
+}
+
+/* Hover effect for account items */
+.account:hover {
+  background-color: #2b2b2b;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Copy to clipboard - success */
+button.copied {
+  background-color: #ff6347;
+}
+
+button.copied:hover {
+  background-color: #cc4e30;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #121212;
+}
+
+/* Menu Toggle */
+.menu-btn.active + .menu {
+  display: block;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-btn {
+    margin-bottom: 10px;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+}
+
+/* Menú desplegable */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Menu toggle: ocultar el menú en pantallas pequeñas */
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Cuando el menú tiene la clase 'active' se muestra */
+.menu.active {
+  display: block;
+}
+
+.menu-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #666;
+}
+
+/* Menu Links */
+.menu a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* En pantallas grandes */
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+  .menu-btn {
+    display: none; /* Esconde el botón en pantallas grandes */
+  }
+}
