@@ -1,356 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plataformas de Streaming</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio en Mantenimiento</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 60px;
+            color: #ff6f61;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 15px rgba(255, 111, 97, 0.8);
+        }
+        p {
+            font-size: 24px;
+            color: #bbb;
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+            margin-top: 0;
+        }
+        .maintenance {
+            background-color: rgba(32, 32, 32, 0.9);
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0px 0px 50px rgba(255, 111, 97, 0.6);
+            width: 80%;
+            max-width: 500px;
+            transform: scale(1);
+            animation: bounce 1.5s infinite alternate;
+        }
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
 </head>
-  <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43G1PCGBDE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-43G1PCGBDE');
-    </script>
 <body>
-  <header>
-    <nav>
-      <button class="menu-btn" onclick="toggleMenu()">Menú</button>
-      <ul id="menu" class="menu">
-        <li><a href="javascript:void(0)" onclick="showSection('netflix')">Netflix</a></li>
-        <li><a href="javascript:void(0)" onclick="showSection('hbo')">HBO</a></li>
-        <li><a href="javascript:void(0)" onclick="showSection('Paramount')">Paramount</a></li>
-        <li><a href="javascript:void(0)" onclick="showSection('disney')">Disney</a></li>
-        <li><a href="javascript:void(0)" onclick="showSection('spotify')">Spotify</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <div id="content" class="content">
-    <div id="netflix" class="section" style="display: none;">
-      <h2>Netflix</h2>
-      <div class="account">
-        <p><strong>Cuenta 1</strong></p>
-        <p>Usuario: <span id="netflix-user1">p-love25@i.softbank.jp</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">kana0224</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 2</strong></p>
-        <p>Usuario: <span id="netflix-user2">hidessjp@yahoo.co.jp</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">7519hide</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 3</strong></p>
-        <p>Usuario: <span id="netflix-user1">u.airi_95@i.softbank.jp</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">uemaro95</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 4</strong></p>
-        <p>Usuario: <span id="netflix-user2">knaotakukkk@yahoo.co.jp</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">k9k8n4t10</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 5</strong></p>
-        <p>Usuario: <span id="netflix-user1">paulsen.per@gmail.com</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">silviaken</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 6</strong></p>
-        <p>Usuario: <span id="netflix-user2">paultoomey@btinternet.com</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">bagpuss019</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 7</strong></p>
-        <p>Usuario: <span id="netflix-user1">paultripi@gmail.com</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">maddent1</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 8</strong></p>
-        <p>Usuario: <span id="netflix-user2">pavarina2@gmail.com</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">16289600</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 9</strong></p>
-        <p>Usuario: <span id="netflix-user1">pavic.vedran@gmail.com</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">zavidovici</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 10</strong></p>
-        <p>Usuario: <span id="netflix-user2">paymanmd@gmail.com</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">stallion</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 11</strong></p>
-        <p>Usuario: <span id="netflix-user1">pbaraybar@gmail.com</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">methodman52</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 12</strong></p>
-        <p>Usuario: <span id="netflix-user2">caleta123456789pdlyne@gmail.com</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">ir3land</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 13</strong></p>
-        <p>Usuario: <span id="netflix-user1">peace263@gmail.com</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">2theheart</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 14</strong></p>
-        <p>Usuario: <span id="netflix-user2">pearlhanster@gmail.com</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">sailfish</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-      <div class="account">
-      <p><strong>Cuenta 15</strong></p>
-        <p>Usuario: <span id="netflix-user1">peasterbunny@gmail.com</span> <button onclick="copyToClipboard('netflix-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass1">chutzpah</span> <button onclick="copyToClipboard('netflix-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 16</strong></p>
-        <p>Usuario: <span id="netflix-user2">pecheur.julien@gmail.com</span> <button onclick="copyToClipboard('netflix-user2')">Copiar</button></p>
-        <p>Contraseña: <span id="netflix-pass2">redrum2204</span> <button onclick="copyToClipboard('netflix-pass2')">Copiar</button></p>
-      </div>
-    </div>
-
-    <div id="hbo" class="section" style="display: none;">
-      <h2>HBO</h2>
-      <div class="account">
-        <p><strong>Cuenta 1</strong></p>
-        <p>Usuario: <span id="hbo-user1">cumby.molly@gmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">Goldentiger0234</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 2</strong></p>
-        <p>Usuario: <span id="hbo-user1">andreas_bisgaard@hotmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">uhm22uwj</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 3</strong></p>
-        <p>Usuario: <span id="hbo-user1">undead505@hotmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">Killer12</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 4</strong></p>
-        <p>Usuario: <span id="hbo-user1">d-man22@comcast.net</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">Unsoundxx1</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 5</strong></p>
-        <p>Usuario: <span id="hbo-user1">gmamacr@yahoo.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">Fannie1234</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 6</strong></p>
-        <p>Usuario: <span id="hbo-user1">mamanioctavio7@gmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">pelagia2002</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 7</strong></p>
-        <p>Usuario: <span id="hbo-user1">marcelodario10@gmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">Fliablanco2003</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 8</strong></p>
-        <p>Usuario: <span id="hbo-user1">nadialopez@mb.unc.edu.ar</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">tammy25XD@</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 9</strong></p>
-        <p>Usuario: <span id="hbo-user1">nicobefig@gmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">Be3al2si6o18</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 10</strong></p>
-        <p>Usuario: <span id="hbo-user1">anyelinaoyarzo.c@gmail.com</span> <button onclick="copyToClipboard('hbo-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="hbo-pass1">12345678hbo</span> <button onclick="copyToClipboard('hbo-pass1')">Copiar</button></p>
-      </div>
-    </div>
-
-    <div id="Paramount" class="section" style="display: none;">
-      <h2>Paramount +</h2>
-      <div class="account">
-        <p><strong>Cuenta 1</strong></p>
-        <p>Usuario: <span id="Paramount-user1">andrefs229@gmail.com</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">Andre1254</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 2</strong></p>
-        <p>Usuario: <span id="Paramount-user1">Para_313507862@migelstream.com</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">pupegi12</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 3</strong></p>
-        <p>Usuario: <span id="Paramount-user1">guido.fuhrmann@t-online.de</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">paulus12</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 4</strong></p>
-        <p>Usuario: <span id="Paramount-user1">yamilekarla4@gmail.com</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">yamil3400</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 5</strong></p>
-        <p>Usuario: <span id="Paramount-user1">p-arnzen@t-online.de</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">Pa101161</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 6</strong></p>
-        <p>Usuario: <span id="Paramount-user1">PKBOGD863@juanpa.lat</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">PAR5531BO</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 7</strong></p>
-        <p>Usuario: <span id="Paramount-user1">dieter.schimmele@t-online.de</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">Alexander-2</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 8</strong></p>
-        <p>Usuario: <span id="Paramount-user1">kokeeee002@gmail.com</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">kokeparamount0044</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 9</strong></p>
-        <p>Usuario: <span id="Paramount-user1">analiagonzalez1667@gmail.com</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">analia188</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 10</strong></p>
-        <p>Usuario: <span id="Paramount-user1">dark520ja@gmail.com</span> <button onclick="copyToClipboard('Paramount-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="Paramount-pass1">Maki520ja*</span> <button onclick="copyToClipboard('Paramount-pass1')">Copiar</button></p>
-      </div>
-    </div>
-
-    <div id="disney" class="section" style="display: none;">
-      <h2>Disney</h2>
-      <div class="account">
-        <p><strong>Cuenta 1</strong></p>
-        <p>Usuario: <span id="disney-user1">keyliluzpaolagonzalezrey@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">regalodekey10000</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 2</strong></p>
-        <p>Usuario: <span id="disney-user1">jaclyn.burney@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Yellow123</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 3</strong></p>
-        <p>Usuario: <span id="disney-user1">priyapriti96@yahoo.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Pritim@12</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 4</strong></p>
-        <p>Usuario: <span id="disney-user1">smith.kathleen21@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Bamboosticks1!</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 5</strong></p>
-        <p>Usuario: <span id="disney-user1">millertime5527@yahoo.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Jeremy123!</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 6</strong></p>
-        <p>Usuario: <span id="disney-user1">sethinator01@yahoo.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Lanarae07</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 7</strong></p>
-        <p>Usuario: <span id="disney-user1">justinlevitan@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">1443Lawndale</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 8</strong></p>
-        <p>Usuario: <span id="disney-user1">artilesmigueisha@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Harrystyles94!</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 9</strong></p>
-        <p>Usuario: <span id="disney-user1">smichelle1227@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Shawna1011!</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 10</strong></p>
-        <p>Usuario: <span id="disney-user1">gamah123456@gmail.com</span> <button onclick="copyToClipboard('disney-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="disney-pass1">Volleyball1!</span> <button onclick="copyToClipboard('disney-pass1')">Copiar</button></p>
-      </div>
-    </div>
-  
-      <div id="spotify" class="section" style="display: none;">
-      <h2>Spotify</h2>
-      <div class="account">
-        <p><strong>Cuenta 1</strong></p>
-        <p>Usuario: <span id="spotify-user1">luizafernanda2004</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">08082004</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 2</strong></p>
-        <p>Usuario: <span id="spotify-user1">brenomuniz116@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">breno2079</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 3</strong></p>
-        <p>Usuario: <span id="spotify-user1">johnsteppler@hotmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Thunder1</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 4</strong></p>
-        <p>Usuario: <span id="spotify-user1">arcealonso70@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">cukyamor</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 5</strong></p>
-        <p>Usuario: <span id="spotify-user1">staborda0711@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Verde2012</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 6</strong></p>
-        <p>Usuario: <span id="spotify-user1">jame.meji1@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Navidad1005</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 7</strong></p>
-        <p>Usuario: <span id="spotify-user1">james.meji1996@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">jamesmejia</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 8</strong></p>
-        <p>Usuario: <span id="spotify-user1">jardabenesov58@seznam.cz</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Kromeriz1265</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 9</strong></p>
-        <p>Usuario: <span id="spotify-user1">jose.25miguel33@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">surgeon25</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 10</strong></p>
-        <p>Usuario: <span id="spotify-user1">jose.24mg35@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Sur.8092582669</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 11</strong></p>
-        <p>Usuario: <span id="spotify-user1">jose.24mg35</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Sur.8092582669</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 12</strong></p>
-        <p>Usuario: <span id="spotify-user1">jose.24mg35@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">surgeon.25</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 13</strong></p>
-        <p>Usuario: <span id="spotify-user1">fawzyozoz2@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Fawzyozoz331</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-      <div class="account">
-        <p><strong>Cuenta 14</strong></p>
-        <p>Usuario: <span id="spotify-user1">sussybakamanheh@gmail.com</span> <button onclick="copyToClipboard('spotify-user1')">Copiar</button></p>
-        <p>Contraseña: <span id="spotify-pass1">Thatonedude123</span> <button onclick="copyToClipboard('spotify-pass1')">Copiar</button></p>
-      </div>
-  </div>
+<div class="maintenance">
+    <h1>Sitio en Mantenimiento</h1>
+    <p>Este sitio está siendo actualizado. Vuelve pronto.</p>
 </div>
 
-  <script src="scripts.js"></script>
 </body>
 </html>
