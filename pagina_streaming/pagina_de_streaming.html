@@ -3,60 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Mantenimiento</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1e1e;
-            color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            overflow: hidden;
-        }
-        h1 {
-            font-size: 60px;
-            color: #ff6f61;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin-bottom: 20px;
-            text-shadow: 0px 0px 15px rgba(255, 111, 97, 0.8);
-        }
-        p {
-            font-size: 24px;
-            color: #bbb;
-            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
-            margin-top: 0;
-        }
-        .maintenance {
-            background-color: rgba(32, 32, 32, 0.9);
-            border-radius: 15px;
-            padding: 50px;
-            box-shadow: 0px 0px 50px rgba(255, 111, 97, 0.6);
-            width: 80%;
-            max-width: 500px;
-            transform: scale(1);
-            animation: bounce 1.5s infinite alternate;
-        }
-        @keyframes bounce {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.05);
-            }
-        }
-    </style>
+    <title>Cuentas de Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43G1PCGBDE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-43G1PCGBDE');
+    </script>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>Cuentas Streaming</h1>
+        </div>
+    </header>
 
-<div class="maintenance">
-    <h1>Sitio en Mantenimiento</h1>
-    <p>Este sitio está siendo actualizado. Vuelve pronto.</p>
-</div>
+    <main>
+        <section class="accounts">
+            <!-- Cuenta Netflix -->
+            <div class="account">
+                <h2>Cuenta PARAMOUNT +</h2>
+                <p><strong>Usuario:</strong> analiagonzalez1667@gmail.com</p>
+                <p><strong>Contraseña:</strong> <span class="password">analia188</span></p>
+                <button class="copy-btn" onclick="copyPassword('contraseña123')">Copiar Contraseña</button>
+            </div>
 
+            <!-- Cuenta Spotify -->
+            <div class="account">
+                <h2>Cuenta Crunchyroll</h2>
+                <p><strong>Usuario:</strong> ss.sebaortega@gmail.com</p>
+                <p><strong>Contraseña:</strong> <span class="password">Blacky0604</span></p>
+                <button class="copy-btn" onclick="copyPassword('contraseña456')">Copiar Contraseña</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cuentas Streaming</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
