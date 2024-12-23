@@ -147,3 +147,38 @@ function moveCarrusel() {
 // Configurar el intervalo para mover el carrusel cada 5 segundos
 setInterval(moveCarrusel, 5000); // 5 segundos entre cada desplazamiento
 
+// funcion sugerir pagina 
+function showBookmarkSuggestion() {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const messageElement = document.getElementById('bookmark-message');
+    
+    if (isMobile) {
+      messageElement.innerText = 'Añade esta página a tu pantalla de inicio para acceder rápidamente: \n\n En Android, usa el menú del navegador y selecciona "Añadir a pantalla de inicio". \n\n En iOS, pulsa en el ícono de compartir y selecciona "Añadir a pantalla de inicio".';
+    } else {
+      const isChrome = /chrome/i.test(navigator.userAgent);
+      const isFirefox = /firefox/i.test(navigator.userAgent);
+      
+      if (isChrome) {
+        messageElement.innerText = 'Usa Ctrl+D (Cmd+D en Mac) para guardar esta página en tus favoritos.';
+      } else if (isFirefox) {
+        messageElement.innerText = 'Pulsa Ctrl+D para añadir esta página a tus marcadores.';
+      } else {
+        messageElement.innerText = 'Guarda esta página en tus favoritos desde el menú del navegador.';
+      }
+    }
+    
+    document.getElementById('bookmark-suggestion').style.display = 'flex';
+  }
+
+  function hideBookmarkSuggestion(disablePermanently) {
+    const suggestion = document.getElementById('bookmark-suggestion');
+    suggestion.style.display = 'none';
+    if (disablePermanently) {
+      localStorage.setItem('bookmarkSuggestionDismissed', 'true');
+    }
+  }
+
+  // Mostrar el mensaje solo si no se ha deshabilitado permanentemente
+  if (!localStorage.getItem('bookmarkSuggestionDismissed')) {
+    showBookmarkSuggestion();
+  }
