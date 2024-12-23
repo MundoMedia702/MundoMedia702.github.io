@@ -155,3 +155,35 @@ body {
         text-align: center; /* Alineación del texto del botón */
     }
 }
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+    .book-title {
+        font-size: 1.5em;
+    }
+
+    .book-synopsis {
+        font-size: 1em;
+    }
+
+    .download-button {
+        font-size: 1.1em;
+        padding: 8px 16px;
+    }
+}
+
+/* Estilos para dispositivos muy pequeños (móviles en modo retrato) */
+@media (max-width: 480px) {
+    .book-title {
+        font-size: 1.2em;
+    }
+
+    .book-synopsis {
+        font-size: 0.95em;
+    }
+
+    .download-button {
+        font-size: 1em;
+        padding: 7px 14px;
+    }
+}
