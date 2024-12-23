@@ -17,6 +17,19 @@
     </script>
 </head>
 <body>
+    <div id="bookmark-suggestion" style="position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #1a1a1a, #333333); color: #0ff; padding: 20px; border-radius: 10px; display: none; align-items: center; box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); z-index: 1000; font-family: 'Courier New', Courier, monospace;">
+      <div style="flex: 1; text-align: left;">
+        <span id="bookmark-message" style="font-size: 14px; line-height: 1.5;"></span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 20px;">
+        <button onclick="hideBookmarkSuggestion(true)" style="background: #0ff; color: #000; border: none; cursor: pointer; border-radius: 5px; padding: 10px; font-size: 14px; font-weight: bold; transition: 0.3s; box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);">
+          No mostrar más
+        </button>
+        <button onclick="hideBookmarkSuggestion(false)" style="background: #333; color: #0ff; border: 1px solid #0ff; cursor: pointer; border-radius: 5px; padding: 10px; font-size: 14px; font-weight: bold; transition: 0.3s;">
+          Cerrar
+        </button>
+      </div>
+    </div>
 
     <!-- Pantalla de carga -->
     <div id="pantalla-carga">
