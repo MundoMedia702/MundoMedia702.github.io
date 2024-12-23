@@ -6,7 +6,7 @@
     <title>Contacto</title>
     <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-     <style>
+    <style>
         /* Estilo global */
         * {
             margin: 0;
@@ -100,18 +100,30 @@
             background-color: #9e2a2f;
         }
 
-        /* Animación sutil al enfocar los campos */
-        input[type="text"]:focus, textarea:focus {
-            animation: focusAnim 0.5s ease-in-out;
+        /* Notificación estilizada */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            font-size: 16px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
-        @keyframes focusAnim {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.05);
-            }
+        .notification.error {
+            background-color: #dc3545;
+        }
+
+        .notification.show {
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Ajustes para dispositivos pequeños */
@@ -130,24 +142,44 @@
             }
         }
     </style>
-    </head>
-    <body>
-        <div class="form-container">
-            <h1>Contacto</h1>
-            <form id="contact-form">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contacto</h1>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </body>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Notificación -->
+    <div id="notification" class="notification"></div>
+
     <script>
         // Inicializa EmailJS
         emailjs.init("eVNRrpZjjXaa3uuvK");
+
+        // Función para mostrar la notificación
+        function showNotification(message, isError = false) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            if (isError) {
+                notification.classList.add('error');
+            } else {
+                notification.classList.remove('error');
+            }
+
+            // Ocultar la notificación después de 5 segundos
+            setTimeout(function () {
+                notification.classList.remove('show');
+            }, 5000);
+        }
 
         // Agrega el evento de envío al formulario
         document.getElementById('contact-form').addEventListener('submit', function (e) {
@@ -156,10 +188,10 @@
             // Envía el formulario con EmailJS
             emailjs.sendForm('service_ppejbdn', 'template_6qfgk5g', this)
                 .then(function () {
-                    alert("Mensaje enviado exitosamente.");
+                    showNotification("Mensaje enviado exitosamente.");
                 }, function (error) {
                     console.error("Error:", error);
-                    alert("Ocurrió un error al enviar el mensaje.");
+                    showNotification("Ocurrió un error al enviar el mensaje.", true);
                 });
         });
     </script>
