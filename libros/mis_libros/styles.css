@@ -1,0 +1,125 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Contenedor principal de la página */
+.book-page {
+    width: 90%;
+    max-width: 900px;
+    background-color: #1f1f1f; /* Fondo ligeramente más claro */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Sombra sutil */
+    text-align: center;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Título del libro */
+#booktitle {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0ff; /* Color brillante */
+    font-weight: bold;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; /* Efecto brillante */
+}
+
+/* Imagen del libro */
+#bookImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3); /* Sombra azul */
+}
+
+/* Descripción del libro */
+#bookDescription {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #bbb; /* Gris claro */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra suave */
+}
+
+/* Botón de descarga */
+#downloadBtn {
+    padding: 10px 20px;
+    background-color: #00b8b8; /* Verde azulado brillante */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Efecto de hover en el botón */
+#downloadBtn:hover {
+    background-color: #0ff;
+    transform: scale(1.1);
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+    #booktitle {
+        font-size: 2em;
+    }
+
+    #bookImage {
+        max-width: 250px;
+    }
+
+    #bookDescription {
+        font-size: 1em;
+    }
+
+    #downloadBtn {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-page {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #booktitle {
+        font-size: 1.8em;
+    }
+
+    #bookImage {
+        max-width: 200px;
+    }
+
+    #bookDescription {
+        font-size: 0.9em;
+    }
+
+    #downloadBtn {
+        font-size: 1.1em;
+        padding: 8px 15px;
+    }
+}

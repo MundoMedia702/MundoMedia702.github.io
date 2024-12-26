@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    background-color: #1e1e1e; /* Fondo oscuro */
-    color: #ccc; /* Texto claro */
+    background-color: #0f0f0f; 
+    color: #ccc; 
     padding: 20px;
+    overflow-x: hidden;
 }
 
+/* Cabecera */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -18,9 +20,11 @@ header {
 
 h1 {
     margin-bottom: 10px;
-    color: #fff; /* Título en blanco */
+    color: #00ffe1; /* Neón futurista */
+    text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
 }
 
+/* Barra de búsqueda */
 .search-bar {
     display: flex;
     justify-content: center;
@@ -29,33 +33,48 @@ h1 {
 
 .search-bar input {
     width: 60%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #444;
-    border-radius: 5px;
-    background-color: #333; /* Fondo oscuro del input */
-    color: #fff; /* Texto claro */
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #fff; 
+    box-shadow: 0 0 8px rgba(0, 255, 225, 0.6);
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 225, 0.9);
+    transform: scale(1.05);
+}
+
+/* Secciones */
 .sections {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .sections button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
+    background-color: #111;
+    color: #00ffe1;
+    border: 1px solid #00ffe1;
+    padding: 12px 20px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .sections button:hover {
-    background-color: #777;
+    background-color: #00ffe1;
+    color: #0f0f0f;
+    box-shadow: 0 0 15px #00ffe1;
+    transform: scale(1.1);
 }
 
+/* Contenedor de libros */
 .books-container {
     display: flex;
     flex-wrap: wrap;
@@ -65,17 +84,18 @@ h1 {
 
 .book {
     flex: 0 0 18%;
-    background: #2c2c2c; /* Fondo oscuro para los libros */
+    background: linear-gradient(145deg, #1a1a1a, #000);
     border: 1px solid #444;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
-    transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 255, 225, 0.3); 
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .book:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 255, 225, 0.6);
 }
 
 .book img {
@@ -84,58 +104,37 @@ h1 {
     object-fit: cover;
 }
 
-/* Asegura que el nuevo contenedor no tenga estilos de enlace */
+/* Enlace del libro */
 .book-link {
     display: block;
-    text-decoration: none; /* Elimina subrayado */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el div */
+    text-decoration: none;
+    cursor: pointer; 
 }
 
-/* Los estilos del título siguen igual */
+/* Título del libro */
 .book-title {
     padding: 12px 20px;
     font-size: 1.0rem;
     font-weight: bold;
-    color: #eee;
-    background-color: #333;
+    color: #00ffe1;
+    background-color: #111;
     border-radius: 8px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     text-transform: capitalize;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 255, 225, 0.2);
     transition: transform 0.3s ease, color 0.3s ease;
     text-decoration: none;
 }
 
 .book-title:hover {
     transform: scale(1.05);
-    color: #fff;
-    background-color: #444;
+    color: #0f0f0f;
+    background-color: #00ffe1;
 }
 
-.sections {
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.menu-button {
-    display: none;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-}
-
-.menu-button:hover {
-    background-color: #777;
-}
-
+/* Contenedor de secciones */
 .sections-container {
     display: flex;
     justify-content: center;
@@ -145,18 +144,22 @@ h1 {
 }
 
 .sections-container button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
+    background-color: #111;
+    color: #00ffe1;
+    border: 1px solid #00ffe1;
+    padding: 12px 15px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .sections-container button:hover {
-    background-color: #777;
+    background-color: #00ffe1;
+    color: #0f0f0f;
+    box-shadow: 0 0 15px #00ffe1;
+    transform: scale(1.1);
 }
 
 /* Diseño responsive */
@@ -167,16 +170,16 @@ h1 {
 
     .books-container {
         display: flex;
-        flex-wrap: nowrap; /* Asegura que los libros no se apilen y se muestren horizontalmente */
-        overflow-x: auto; /* Permite desplazamiento horizontal */
-        justify-content: flex-start; /* Alineación hacia la izquierda */
-        gap: 15px; /* Espaciado entre los libros */
-        padding: 10px 0; /* Un pequeño padding para que no toquen los bordes */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        justify-content: flex-start; 
+        gap: 15px; 
+        padding: 10px 0; 
     }
 
     .book {
-        flex: 0 0 auto; /* Los libros ocupan solo el espacio que necesitan */
-        width: 22%; /* Los libros ocuparán el 22% del ancho */
+        flex: 0 0 auto;
+        width: 22%; 
         box-sizing: border-box;
     }
 }
@@ -192,26 +195,26 @@ h1 {
 
     .books-container {
         display: flex;
-        flex-wrap: nowrap; /* Los libros se muestran horizontalmente */
-        overflow-x: auto; /* Permite desplazamiento horizontal */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
         justify-content: flex-start;
-        gap: 15px; /* Espaciado entre los libros */
+        gap: 15px; 
         padding: 10px 0;
     }
 
     .book {
-        flex: 0 0 auto; /* Los libros ocupan solo el espacio que necesitan */
-        width: 45%; /* Los libros ocuparán el 45% del ancho */
+        flex: 0 0 auto; 
+        width: 45%; 
     }
 
     /* Contenedor de los botones en fila horizontal con scroll */
     .sections-container {
         display: flex;
-        flex-wrap: nowrap; /* Evita que los botones se ajusten a una nueva línea */
-        overflow-x: auto; /* Permite desplazamiento horizontal */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
         padding: 10px 0;
-        justify-content: flex-start; /* Alineación hacia la izquierda */
-        white-space: nowrap; /* Evita el salto de línea de los botones */
+        justify-content: flex-start; 
+        white-space: nowrap;
     }
 
 
@@ -227,15 +230,15 @@ h1 {
 
     .books-container {
         display: flex;
-        flex-wrap: nowrap; /* Los libros se muestran horizontalmente */
+        flex-wrap: nowrap; 
         justify-content: flex-start;
-        overflow-x: auto; /* Permite desplazamiento horizontal */
+        overflow-x: auto; 
         gap: 10px;
     }
 
     .book {
-        flex: 0 0 auto; /* Los libros ocupan solo el espacio que necesitan */
-        width: 90%; /* En pantallas pequeñas, los libros ocupan el 90% del ancho */
+        flex: 0 0 auto; 
+        width: 90%; 
     }
 
     h1 {
@@ -271,7 +274,7 @@ h1 {
 
 /* Estilo para las secciones de libros */
 .books-section {
-    display: none; /* Ocultamos las secciones por defecto */
+    display: none; 
     margin-bottom: 20px;
 }
 
