@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Película</title>
+    <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fondo general oscuro y tipografía futurista */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Contenedor principal */
+        .details {
+            text-align: center;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(45deg, #1c1c1c, #2a2a2a);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+
+        /* Imagen de la película */
+        img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efecto en la imagen al pasar el ratón */
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Títulos y textos */
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #ccc;
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Estilo de los botones */
+        button {
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #444;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Efecto de hover para los botones */
+        button:hover {
+            background-color: #ff5a5f;
+            transform: translateY(-2px);
+        }
+
+        /* Enlaces */
+        a {
+            text-decoration: none;
+        }
+
+        /* Media queries para hacer el diseño responsive */
+        @media (max-width: 768px) {
+            .details {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            img {
+                max-width: 90%;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .details {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            img {
+                max-width: 90%;
+            }
+
+            button {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="details">
+        <img id="movie-image" alt="Imagen de la película">
+        <h1 id="movie-title"></h1>
+        <p id="movie-description"></p>
+        <p id="movie-genres"></p>
+        <p id="movie-rating"></p>
+        <div>
+            <a id="link-es" target="_blank"><button>Latino</button></a>
+            <a id="link-en" target="_blank"><button>Inglés</button></a>
+            <a id="link-es-sub" target="_blank"><button>Español</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Obtener los datos de sessionStorage
+        const movieData = JSON.parse(sessionStorage.getItem('movieData'));
+
+        if (movieData) {
+            // Insertar los datos en la página
+            document.getElementById('movie-image').src = movieData.image;
+            document.getElementById('movie-title').textContent = movieData.title;
+            document.getElementById('movie-description').textContent = movieData.description;
+            document.getElementById('movie-genres').textContent = `Géneros: ${movieData.genres}`;
+            document.getElementById('movie-rating').textContent = `Calificación: ${movieData.rating} estrellas`;
+
+            // Asignar los enlaces a los botones
+            document.getElementById('link-es').href = movieData.linkEs;
+            document.getElementById('link-en').href = movieData.linkEn;
+            document.getElementById('link-es-sub').href = movieData.linkEsSub;
+        } else {
+            document.body.innerHTML = '<p>No se encontraron datos de la película.</p>';
+        }
+    </script>
+</body>
+</html>
