@@ -57,6 +57,18 @@
         footer p {
             margin: 0;
         }
+        .diagram-container {
+            max-width: 100%;
+            overflow-x: auto;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .mermaid {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -141,7 +153,28 @@ function initSearch() {
                 <li>El script de Node.js actualiza el archivo <code>onion_links.json</code> con los últimos enlaces.</li>
                 <li>La página web utiliza este archivo para mostrar resultados actualizados al usuario.</li>
             </ul>
+            <div class="mermaid">
+                graph TD
+                A[Script Node.js] -->|Actualiza| B[onion_links.json]
+                B -->|Carga datos| C[Página Web]
+                C -->|Muestra| D[Resultados al Usuario]
+            </div>
         </section>
     </main>
+    <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: "forest",  
+                themeVariables: {
+                    primaryColor: "#2e86de",
+                    primaryTextColor: "#ffffff",
+                    edgeLabelBackground: "#ffffff",
+                    clusterBkg: "#e8f8f5",
+                    clusterBorder: "#2e86de",
+                    useMaxWidth: true,
+                }
+            });
+        </script> 
 </body>
 </html>
