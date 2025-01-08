@@ -1,0 +1,173 @@
+/* Reset básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Header (barra de búsqueda fija) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    padding: 10px 40px;
+    z-index: 10;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajustar el tamaño de la fuente */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #00FF99; /* Verde futurista */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background-color: #444;
+    box-shadow: 0 0 10px #00FF99;
+}
+
+.search-buttons {
+    margin-top: 20px;
+}
+
+.search-buttons a {
+    margin: 0 10px;
+    color: #00FF99;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.search-buttons a:hover {
+    color: #fff;
+}
+
+/* Ajuste del contenedor de resultados */
+#results-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: calc(80px + 40px); 
+    padding: 0 20px;  
+}
+
+/* Estilo de los resultados */
+ul#results {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#results li {
+    background-color: #222;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+ul#results li:hover {
+    background-color: #333;
+}
+
+ul#results .no-results {
+    color: #ff5e5e;
+    font-size: 1.1rem;
+}
+
+/* Enlace */
+ul#results li a {
+    color: #00FF99;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul#results li a:hover {
+    color: #fff;
+}
+
+/* Media Query: Diseño Responsive para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"] {
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    .search-buttons a {
+        font-size: 0.9rem;
+    }
+
+    ul#results li {
+        padding: 12px;
+    }
+
+    ul#results li a {
+        font-size: 1rem;
+    }
+}
+
+/* Media Query: Diseño para dispositivos móviles muy pequeños */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    .search-buttons a {
+        font-size: 0.8rem;
+        margin: 0 5px;
+    }
+
+    ul#results li {
+        padding: 10px;
+    }
+
+    ul#results li a {
+        font-size: 1rem;
+    }
+}
