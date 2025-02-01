@@ -426,7 +426,54 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "MIST SURVIVAL es un juego tipo sandbox de supervivencia con zombis para un solo jugador.Los jugadores tienen que sobrevivir a las dificultades.",
             downloadLink: "https://docs.google.com/presentation/d/14poGys-PPz4Vn3KKF6JHiLNt2WbblmxvfTC_xrDT1TU/edit?usp=sharing"
         },
-
+                71: {
+            title: "El arte de la intrusión: cómo ser un hacker o evitarlos",
+            image: "/libros/image/071.png",
+            description: "El arte de la intrusión ha sido incluso más dificil de escribir que nuestro último libro. En lugar de utilizar nuestros talentos creativos combinados para desarrollar historias y anécdotas que ilustren los peligros de la ingeniería social y qué pueden hacer las empresas para mitigar los riesgos, Bill Simon y yo hemos trabajado principalmente sobre las entrevistas de ex hackers, phreakers y hackers convertidos a profesionales de la seguridad.",
+            downloadLink: "https://drive.google.com/file/d/1dcsoA1bkFlAHi5ZXNeChrJ5Yd4NcVKJL/view?usp=drive_link"
+        },
+        72: {
+            title: "Privacidad y Ocultación de Información Digital. Esteganografía. Protegiendo y atacando redes informáticas",
+            image: "/libros/image/072.png",
+            description: "El ingenio humano es ilimitado a la hora de proteger nuestros más valiosos secretos nadie guarda mejor un secreto que el que lo ignora Este libro pretende acercar al lector con un lenguaje accesible el potencial de las múltiples técnicas modernas para proteger y compartir sus secretos. Hoy día su utilidad supera con creces sus orígenes dedicados a entornos militares diplomacia y servicios secretos",
+            downloadLink: "https://drive.google.com/file/d/1ePrg_60QSSSWr9dhqsR0Qi96e8vAe7w5/view?usp=drive_link"
+        },
+        73: {
+            title: "Ethical Hacking: Teoría y práctica para la realización de un pentesting",
+            image: "/libros/image/073.png",
+            description: "...",
+            downloadLink: "https://drive.google.com/file/d/1114P2XnC128VzUEDPfCJ0Gy_3UEWZkVM/view?usp=drive_link"
+        },
+        74: {
+            title: "Google Hacking para Pentesters",
+            image: "/libros/image/074.png",
+            description: "...",
+            downloadLink: "https://drive.google.com/file/d/1n91-KBhQ-_TNtGwkzXTbxKIhvL_vLzhN/view?usp=drive_link"
+        },
+        75: {
+            title: "Hackear al hacker",
+            image: "/libros/image/075.png",
+            description: "Cada día, los hackers de sombrero blanco se encuentran con los de sombrero negro en el ciberespacio, batallando por el control de la tecnología que impulsa nuestro mundo. Los hackers éticos -de sombrero blanco- se encuentran entre los expertos en tecnología más brillantes e ingeniosos, quienes constantemente desarrollan nuevas formas de mantenerse un paso por delante de aquellos que quieren secuestrar nuestros datos y sistemas en beneficio personal.",
+            downloadLink: "https://drive.google.com/file/d/1DNChZv8sUPeFv9DZjLSkmhzrA7n-wk4K/view?usp=drive_link"
+        },
+        76: {
+            title: "El libro negro del programador",
+            image: "/libros/image/076.png",
+            description: "El Libro Negro del Programador» muestra qué distingue a un programador neófito de quien actúa y trabaja profesionalmente.En la era del emprendimiento y de la nueva economía, el desarrollo profesional de software es su pilar fundamental. Si como programador quieres llegar a ser no sólo bueno sino profesional, no puedes dejar de conocer las gemas de sabiduría que contiene «El Libro Negro del Programador",
+            downloadLink: "https://drive.google.com/file/d/19NjvTxndEEEjR9yfLvQkU_RLoDAHcrgk/view?usp=drive_link"
+        },
+        77: {
+            title: "Pentesting con PowerShell Completo",
+            image: "/libros/image/077.png",
+            description: "...",
+            downloadLink: "https://drive.google.com/file/d/1cn9E4P8kVvif3QCUFXSSRtAZQehHm8jr/view?usp=drive_link"
+        },
+        78: {
+            title: "Redes Informáticas: Una Guía Compacta para el principiante que Desea Entender los Sistemas de Comunicaciones",
+            image: "/libros/image/078.png",
+            description: "Si, como principiante, desea aprender los fundamentos básicos de las redes informáticas sin tener que recurrir a numerosos libros, siga leyendo... Este libro contiene una variedad de temas relacionados con las conexiones de redes, tratados desde una perspectiva fácilmente comprensible para personas que quieren iniciarse en esta materia.",
+            downloadLink: "https://drive.google.com/file/d/1xqqhUwtx312Pfe0ddaL7ZFK_D5FprSvR/view?usp=drive_link"
+        },
 
         // Otros libros...
     };
