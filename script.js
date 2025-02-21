@@ -36,117 +36,6 @@ function generalSearch() {
     });
 }
 
-// Funcionalidad de la barra lateral en dispositivos móviles
-const menuToggle = document.getElementById('menu-toggle'); 
-const sidebar = document.querySelector('.sidebar'); 
-const mainContent = document.querySelector('.main-content'); 
-const links = document.querySelectorAll('.sidebar .file'); 
-
-// Alternar la visibilidad de la barra lateral al hacer clic en el botón de menú
-menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active'); 
-    mainContent.classList.toggle('shifted'); 
-});
-
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) { 
-            sidebar.classList.remove('active'); 
-        }
-    });
-});
-
-// Cerrar la barra lateral si se hace clic en cualquier lugar fuera de ella (en dispositivos móviles)
-document.addEventListener('click', (event) => {
-    if (window.innerWidth <= 768) {
-        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-            sidebar.classList.remove('active'); 
-        }
-    }
-});
-
-
-
-// mensaje
-window.addEventListener("load", function() {
-    const mensaje = document.getElementById("mensaje-corredizo");
-    const pantallaCarga = document.getElementById("pantalla-carga");
-    const contenido = document.getElementById("contenido");
-
-    const mensajeTexto = "HOLA... :)";
-    let i = 0;
-    
-    // Función para escribir el mensaje
-    function escribirMensaje() {
-        if (i < mensajeTexto.length) {
-            mensaje.textContent += mensajeTexto.charAt(i);
-            i++;
-            setTimeout(escribirMensaje, 100); 
-        } else {
-            setTimeout(borrarMensaje, 1000); 
-        }
-    }
-
-    // Función para borrar el mensaje
-    function borrarMensaje() {
-        let j = mensaje.textContent.length;
-
-        function eliminarTexto() {
-            if (j > 0) {
-                mensaje.textContent = mensaje.textContent.slice(0, -1);
-                j--;
-                setTimeout(eliminarTexto, 50); 
-            } else {
-                mostrarPagina();
-            }
-        }
-
-        eliminarTexto();
-    }
-
-    // Función para mostrar el contenido principal
-    function mostrarPagina() {
-        // Ocultar la pantalla de carga
-        pantallaCarga.style.opacity = '0';
-        setTimeout(() => {
-            pantallaCarga.style.display = 'none'; 
-        }, 1000); 
-
-        // Mostrar el contenido
-        contenido.classList.add("visible");
-    }
-
-    escribirMensaje(); 
-});
-
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-const slidesContainer = document.querySelector('.slides');
-let direction = 'forward'; // Controlamos la dirección del movimiento
-
-// Función para mover el carrusel
-function moveCarrusel() {
-    if (direction === 'forward') {
-        currentIndex++;
-        if (currentIndex === totalSlides - 1) {
-            direction = 'backward';  // Cambiar dirección al llegar a la última imagen
-        }
-    } else {
-        currentIndex--;
-        if (currentIndex === 0) {
-            direction = 'forward';  // Cambiar dirección al llegar a la primera imagen
-        }
-    }
-    
-    // Actualizar la posición del carrusel
-    slidesContainer.style.transition = 'transform 1s ease-in-out';  // Transición suave
-    slidesContainer.style.transform = `translateX(-${(currentIndex * 100) / totalSlides}%)`;
-}
-
-// Configurar el intervalo para mover el carrusel cada 5 segundos
-setInterval(moveCarrusel, 5000); // 5 segundos entre cada desplazamiento
-
 // funcion sugerir pagina 
 function showBookmarkSuggestion() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -182,3 +71,32 @@ function showBookmarkSuggestion() {
   if (!localStorage.getItem('bookmarkSuggestionDismissed')) {
     showBookmarkSuggestion();
   }
+
+  function openPopup(id) {
+      closeAllPopups(); // Cierra cualquier popup abierto antes de abrir uno nuevo
+      let popup = document.getElementById(id);
+      if (popup) {
+          popup.classList.add("active");
+      }
+  }
+
+  function closePopup(id) {
+      let popup = document.getElementById(id);
+      if (popup) {
+          popup.classList.remove("active");
+      }
+  }
+
+  function closeAllPopups() {
+      let popups = document.querySelectorAll(".popup");
+      popups.forEach(popup => {
+          popup.classList.remove("active");
+      });
+  }
+
+  // Cierra el popup si se hace clic fuera del contenido
+  window.onclick = function(event) {
+      if (event.target.classList.contains("popup")) {
+          event.target.classList.remove("active");
+      }
+  };

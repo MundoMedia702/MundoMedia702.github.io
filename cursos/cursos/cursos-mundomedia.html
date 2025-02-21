@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursos</title>
+    <link rel="shortcut icon" href="/../../favicon/12345.png" type="image/x-icon">
+    <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #121212;
+                color: #e0e0e0;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .container {
+                background: #1e1e1e;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 60%;
+                max-width: 600px;
+            }
+            .content {
+                flex: 1;
+                text-align: center;
+            }
+            .icon {
+                font-size: 50px;
+                transition: transform 0.5s ease-in-out;
+            }
+            h1 {
+                color: #bb86fc;
+                border-bottom: 2px solid #bb86fc;
+                padding-bottom: 10px;
+            }
+            p {
+                margin: 10px 0;
+            }
+            .file {
+                color: #03dac6;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .file:hover {
+                text-decoration: underline;
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 id="titulo">Título del archivo</h1>
+            <p id="fecha_creacion">Fecha de Creación: </p>
+            <p id="ultima_modificacion">Última Modificación: </p>
+            <p id="tamano">Tamaño: </p>
+            <p id="contenido_adicional">Contenido Adicional: </p>
+            <p><a href="#" class="file" id="enlace_descarga">Descargar archivo</a></p>
+        </div>
+        <div class="icon" id="fileIcon">📁</div>
+    </div>
+
+    <script src="cursos.js"></script>
+    <script src="db.js"></script>
+</body>
+</html>

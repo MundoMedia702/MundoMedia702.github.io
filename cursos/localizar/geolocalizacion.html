@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalización de IPs</title>
+    <link rel="stylesheet" href="localizar.css">
+    <link rel="shortcut icon" href="/../../favicon/12345.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Geolocalización de IPs</h1>
+    
+    <div>
+        <label for="ipInput">Introduce una IP:</label>
+        <input type="text" id="ipInput" placeholder="Ej: 8.8.8.8">
+        <button onclick="geolocalizarIP()">Geolocalizar</button>
+    </div>
+
+    <div id="infoSistema">
+        <h2>Información del Sistema</h2>
+        <p><strong>IP Pública:</strong> <span id="ipPublica"></span></p>
+        <p><strong>Sistema Operativo:</strong> <span id="sistemaOperativo"></span></p>
+        <p><strong>Navegador:</strong> <span id="navegador"></span></p>
+        <p><strong>Resolución de pantalla:</strong> <span id="resolucionPantalla"></span></p>
+        <p><strong>Idioma del navegador:</strong> <span id="idiomaNavegador"></span></p>
+        <p><strong>Cookies habilitadas:</strong> <span id="cookiesHabilitadas"></span></p>
+        <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+    </div>
+
+    <div id="infoGeolocalizacion">
+        <h2>Información de Geolocalización</h2>
+        <p><strong>País:</strong> <span id="pais"></span></p>
+        <p><strong>Ciudad:</strong> <span id="ciudad"></span></p>
+        <p><strong>Región:</strong> <span id="region"></span></p>
+        <p><strong>Latitud:</strong> <span id="latitud"></span></p>
+        <p><strong>Longitud:</strong> <span id="longitud"></span></p>
+        <p><strong>Enlace a Google Maps:</strong> <a id="enlaceMaps" target="_blank">Ver en Google Maps</a></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

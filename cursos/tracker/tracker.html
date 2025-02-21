@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Phone Number Tracker</h1>
+        <form id="phoneForm" class="form">
+            <label for="phoneNumber" class="label">Enter Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="+6281xxxxxxxxx" required class="input">
+            <button type="submit" class="button">Track</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="https://unpkg.com/libphonenumber-js@1.x/bundle/libphonenumber-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -6,6 +6,8 @@
     <title>MundoMedia</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="/favicon/12345.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-43G1PCGBDE"></script>
@@ -17,99 +19,99 @@
     </script>
 </head>
 <body>
-    <div id="bookmark-suggestion" style="position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #1a1a1a, #333333); color: #0ff; padding: 20px; border-radius: 10px; display: none; align-items: center; box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); z-index: 1000; font-family: 'Courier New', Courier, monospace;">
-      <div style="flex: 1; text-align: left;">
-        <span id="bookmark-message" style="font-size: 14px; line-height: 1.5;"></span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 20px;">
-        <button onclick="hideBookmarkSuggestion(true)" style="background: #0ff; color: #000; border: none; cursor: pointer; border-radius: 5px; padding: 10px; font-size: 14px; font-weight: bold; transition: 0.3s; box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);">
-          No mostrar más
-        </button>
-        <button onclick="hideBookmarkSuggestion(false)" style="background: #333; color: #0ff; border: 1px solid #0ff; cursor: pointer; border-radius: 5px; padding: 10px; font-size: 14px; font-weight: bold; transition: 0.3s;">
-          Cerrar
-        </button>
-      </div>
-    </div>
+    <!-- Barra de navegación superior -->
+    <nav class="navbar">
+        <h1>MundoMedia</h1>
+        <div class="nav-links">
+            <a href="/cursos/index.html">CursoXpress</a>
+            <a href="/libros/mi_biblioteca.html">EbookGo</a>
+            <a href="/enlaces_onion/enlaces_onion.html">BlackLink</a>
+            <a href="/peliculas_series/peliculas_series.html">CineLibre</a>
+            <a href="/ransomware/ransomwarehub.html">RansomwareHub</a>
+        </div>
 
-    <!-- Pantalla de carga -->
-    <div id="pantalla-carga">
-        <div id="mensaje-corredizo"></div>
-    </div>
-
-    <!-- Contenedor principal -->
-    <div class="container">
-        
-        <!-- Botón del menú -->
-        <button id="menu-toggle" onclick="toggleMenu()">⚙</button>
-        
-        <!-- Barra lateral -->
-        <div class="sidebar" id="sidebar">
-            <h2 class="centered-title">Secciones</h2>
-            <a href="/libros/mi_biblioteca.html" class="submit-button">Mi biblioteca</a>
-            <a href="/enlaces_onion/enlaces_onion.html" class="submit-button">BlackLink</a>
-            <a href="/peliculas_series/peliculas_series.html" class="submit-button">Peliculas/series</a>
-            
-            <!-- Sección de donaciones y carrusel -->
-            <div class="donate-section">
-                <div id="carousel-images" class="carousel">
-                    <div class="slides">
-                        <!-- Carrusel de imágenes -->
-                        <div class="slide"><a href="https://mundomedia702.github.io/777/1233/breaking%20bad.html"><img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FaAR6JVgMiveng1dzsVq9eIDq7Gr.jpg&w=640&q=75" alt="Imagen 1"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/777/robot/mr_robot.html"><img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FmXxD21JhhW3kRGCSFifWs2xJXbT.jpg&w=256&q=75" alt="Imagen 2"></a></div>
-                        <div class="slide"><a href="https://dood.li/d/ei6k64bhmaji"><img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FySPCri7VfAjbLLkMKs7Zjn6Njco.jpg&w=256&q=75" alt="Imagen 3"></a></div>
-                        <div class="slide"><a href="https://dood.li/d/dsx2kbwnkt7p"><img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfgrVbga0oZQNeljO6dyoWknjOzJ.jpg&w=256&q=75" alt="Imagen 4"></a></div>
-                        <div class="slide"><a href="https://dood.li/d/symgu7pq501x"><img src="https://image.tmdb.org/t/p/w300/ftUDFRYywWzajElI2RT9NIno2PS.jpg" alt="Imagen 5"></a></div>
-                        <div class="slide"><a href="https://dood.li/d/xudg6ulqp64z"><img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F1INXMUzeL6ffzNierJdu5YQf1Ek.jpg&w=3840&q=75" alt="Imagen 6"></a></div>
-                        <div class="slide"><a href="https://swhoi.com/kw1ysrw6vixi"><img src="https://cuevana.biz/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FhdCt77CmKXe1oLJ2vH1UtNRa4XH.jpg&w=3840&q=75" alt="Imagen 7"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/libros/mi_biblioteca/libro1.html"><img src="https://mundomedia702.github.io/libros/image/001.png" alt="Imagen 8"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/libros/mi_biblioteca/libro3.html"><img src="https://mundomedia702.github.io/libros/image/003.png" alt="Imagen 9"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/libros/mi_biblioteca/libro7.html"><img src="https://mundomedia702.github.io/libros/image/007.png" alt="Imagen 10"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/libros/mi_biblioteca/libro52.html"><img src="https://mundomedia702.github.io/libros/image/052.png" alt="Imagen 11"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/libros/biblioteca_games/game2.html"><img src="https://mundomedia702.github.io/libros/image/058.png" alt="Imagen 12"></a></div>
-                        <div class="slide"><a href="https://mundomedia702.github.io/libros/biblioteca_games/game7.html"><img src="https://mundomedia702.github.io/libros/image/063.png" alt="Imagen 13"></a></div>
-                    </div>
-                </div>
+        <!-- Contenedor principal para los perfiles -->
+        <div class="profiles-container">
+            <!-- Primer usuario -->
+            <div class="profile-pic" onclick="openPopup('popup1')">
+                <img src="/perfil/mmedia.jpeg" alt="Foto de perfil">
             </div>
 
-            <!-- Botones de redes sociales -->
-            <div class="button-container">
-                <a href="https://chat.whatsapp.com/KO4cjBFBu7u5mGnZDfx28V" target="_blank" class="button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-                </a>
-                <a href="https://github.com/codingjandres" target="_blank" class="button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
-                </a>
-                <a href="https://www.tiktok.com/@codespectre?_t=8rdjJqXwj6G&_r=1" target="_blank" class="button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok">
-                </a>
+            <!-- Segundo usuario -->
+            <div class="profile-pic" onclick="openPopup('popup2')">
+                <img src="/perfil/mmedia.jpeg" alt="Foto de perfil">
             </div>
         </div>
 
-        <!-- Contenido principal -->
-        <div class="main-content" id="main-content">
-            <h1>Bienvenido a MundoMedia</h1>
-
-            <!-- Descargo de responsabilidad -->
-            <div class="disclaimer">
-               <h2>Descargo de Responsabilidad</h2>
-                <p>MundoMedia proporciona enlaces a contenidos de terceros únicamente para fines de entretenimiento e información. No alojamos ni almacenamos ningún contenido en nuestros servidores. Todos los enlaces apuntan a contenidos que están disponibles públicamente en otros sitios web. No asumimos ninguna responsabilidad por la precisión, el cumplimiento de derechos de autor o la legalidad del contenido enlazado.</p>
-                <p><strong>Uso responsable de cuentas compartidas</strong></p>
-                <p>Al compartir cuentas, es crucial que los usuarios no cambien contraseñas ni modifiquen perfiles, para que todos podamos disfrutar del contenido de manera segura y ordenada. Las cuentas se actualizan cada cinco días a las 5:00 PM. Accede a las nuevas cuentas a través de nuestra <a href="/pagina_streaming/pagina_de_streaming.html">página de streaming</a>.</p>
-                <p><strong>¿Algo no funciona?</strong></p>
-                <p>Si encuentras problemas con la página o algún contenido, <a href="/enlace/agregar_enlace.html">Contáctanos aquí</a>.</p>
+        <!-- Popup del primer usuario -->
+        <div class="popup" id="popup1">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+                <p><strong>Nombre:</strong> LainCipher</p>
+                <p><strong>País:</strong> 🇨🇴 </p>
+                <p><strong>Edad:</strong> 20</p>
+                <p><strong>Rol:</strong> Administrador</p>
             </div>
+        </div>
+
+        <!-- Popup del segundo usuario -->
+        <div class="popup" id="popup2">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+                <p><strong>Nombre:</strong> Billy</p>
+                <p><strong>País:</strong> 🇧🇴 </p>
+                <p><strong>Edad:</strong> 24</p>
+                <p><strong>Rol:</strong> Moderador</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <div class="disclaimer">
+            <p>
+                      Siempre he sido un apasionado del aprendizaje autodidacta.Sin embargo, al embarcarme en este camino, me encontré con un gran obstáculo: la falta de contenido claro, accesible y realmente útil para quienes queremos aprender sin depender de educación tradicional o costosos cursos.
+                  </p>
+                  <p>
+                      La mayoría del material gratuito que encontraba estaba incompleto, era confuso o simplemente humo: promesas vacías sin explicaciones reales ni bases sólidas. Muchos recursos no ofrecían una guía clara para avanzar, lo que hacía que el proceso de aprendizaje fuera lento y frustrante. Pero en lugar de rendirme, decidí investigar, practicar y descubrir por mí mismo lo que realmente funciona.
+                  </p>
+                  <p>
+                      Fue entonces cuando me di cuenta de que no era el único enfrentando este problema. Muchas personas que quieren aprender cualquier habilidad —ya sea programación, diseño, negocios, idiomas o cualquier otro conocimiento— se encuentran con los mismos obstáculos. Por eso, decidí crear esta página: un espacio donde aquellos que desean aprender de verdad puedan encontrar información útil, recursos prácticos y una comunidad con la misma pasión por el crecimiento personal y el conocimiento.
+                  </p>
+                  <p>
+                      Mi objetivo es que nadie más tenga que pasar por la misma frustración que yo viví. Si estás aquí, es porque quieres aprender y mejorar, y este sitio existe para apoyarte en ese proceso. Juntos, podemos hacer del aprendizaje autodidacta una experiencia accesible, efectiva y motivadora.
+                  </p>
+        </div>
+
+        <!-- Redes sociales en la parte inferior -->
+        <div class="social-links">
+            <a href="https://chat.whatsapp.com/KO4cjBFBu7u5mGnZDfx28V" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            </a>
+            <a href="https://github.com/codingjandres" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+            </a>
+            <a href="https://www.tiktok.com/@codespectre?_t=8rdjJqXwj6G&_r=1" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok">
+            </a>
+        </div>
+    </div>
+
+    <!-- Mensaje de bookmark -->
+    <div id="bookmark-suggestion">
+        <div style="flex: 1; text-align: left;">
+            <span id="bookmark-message" style="font-size: 14px; line-height: 1.5;"></span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-left: 20px;">
+            <button onclick="hideBookmarkSuggestion(true)" style="background: #0ff; color: #000; border: none; cursor: pointer; border-radius: 5px; padding: 10px; font-size: 14px; font-weight: bold; transition: 0.3s; box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);">
+                No mostrar más
+            </button>
+            <button onclick="hideBookmarkSuggestion(false)" style="background: #333; color: #0ff; border: 1px solid #0ff; cursor: pointer; border-radius: 5px; padding: 10px; font-size: 14px; font-weight: bold; transition: 0.3s;">
+                Cerrar
+            </button>
         </div>
     </div>
 
     <script src="script.js"></script>
-
-    <!-- Abrir enlaces externos en nueva pestaña -->
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-            if (link.href.startsWith('http') && !link.href.includes(window.location.hostname)) {
-                link.setAttribute('target', '_blank');
-            }
-        });
-    </script>
 </body>
 </html>
