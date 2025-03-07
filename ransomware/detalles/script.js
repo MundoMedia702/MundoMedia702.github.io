@@ -104,6 +104,13 @@ const archivos = [
         imagen: "../img ransomware/015.png",
         descripcion: "Un ransomware que se ha utilizado en ataques dirigidos contra organizaciones, cifrando archivos y exigiendo un rescate.",
         rutaDescarga: "https://mega.nz/file/BMID1CQI#usUpB51lLw5-qeJ_sVF3UpRALCSrHWu8OGImEA10BeY"
+    },
+    {
+        id: 16,
+        nombre: "BadRabbit-ransomware",
+        imagen: "../img ransomware/016.png",
+        descripcion: "Bad Rabbit es un ransomware que surgió en 2017, y del que se sospecha que es una variante del Petya.",
+        rutaDescarga: "https://mega.nz/file/qYJlFLja#7Kg7UfwOzp9fqxWc-cJCVfEkoqY6Lw-9GTfo3RWNh7s"
     }
     // Puedes añadir más archivos aquí
 ];

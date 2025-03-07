@@ -157,64 +157,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-/* Estilos para el popup */
-/* Estilos generales del popup (oculto por defecto) */
-.popup {
-    display: none; /* No mostrar el pop-up al cargar */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    z-index: 1000;
-}
-
-/* Clase que se agregará dinámicamente para mostrar el popup centrado */
-.popup.active {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-}
-
-/* Contenido del popup */
-.popup-content {
-    background-color: #1e1e2f;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    color: #ffffff;
-    border: 2px solid #00ffcc;
-}
-
-/* Botón de cierre */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #00ffcc;
-}
-
-.close-btn:hover {
-    color: #ff0000;
-}
-
-/* Estilos para los textos dentro del popup */
-.popup-content p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.popup-content strong {
-    color: #00ffcc; /* Color para los textos en negrita */
-}
-
 /* Diseño responsivo */
 @media (max-width: 768px) {
     /* Barra de navegación */

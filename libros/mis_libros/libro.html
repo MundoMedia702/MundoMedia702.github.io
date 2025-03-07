@@ -9,13 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="loader">
+        <div></div>
+    </div>
+
     <div class="book-page">
         <h1 id="booktitle">Título del libro</h1>
         <img id="bookImage" src="" alt="Imagen del libro" class="book-image">
         <p id="bookDescription">Descripción del libro.</p>
         <button id="downloadBtn">Descargar</button>
+        <div class="recommendations">
+            <h2>Libros de la seccion</h2>
+            <div id="recommendedBooks"></div>
+        </div>
+
     </div>
 
     <script src="book.js"></script>
+    <script src="recommendations.js"></script>
 </body>
 </html>

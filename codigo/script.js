@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Lista de nombres de malware con sus URLs de descarga
     const malwares = [
+                { name: "Lockbit", url: "https://mega.nz/file/GZxGQISL#GLzYgQyOTY2j8h_EOjL7_zuy1JNlwNd4q-eY-sHMqas" },
                 { name: "Alina", url: "https://mega.nz/file/g9JGxaQQ#6w1kVEljVMm3l9ceFSkJ73DZSnJ8gguqPxlp9TlK5hs" },
                 { name: "andr0id_l0cker", url: "https://mega.nz/file/pg4g3CbC#FnNbz9rMx_eQIjSKwlZ8teSgjqoVne_87coDMdnomf4" },
                 { name: "Android.CEREBRUS", url: "https://mega.nz/file/54QElKRI#V5zTGeuo_q17N6PBt6L_rdYPG63SXUIFqcfBHSP7cTg" },

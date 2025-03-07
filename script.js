@@ -72,31 +72,3 @@ function showBookmarkSuggestion() {
     showBookmarkSuggestion();
   }
 
-  function openPopup(id) {
-      closeAllPopups(); // Cierra cualquier popup abierto antes de abrir uno nuevo
-      let popup = document.getElementById(id);
-      if (popup) {
-          popup.classList.add("active");
-      }
-  }
-
-  function closePopup(id) {
-      let popup = document.getElementById(id);
-      if (popup) {
-          popup.classList.remove("active");
-      }
-  }
-
-  function closeAllPopups() {
-      let popups = document.querySelectorAll(".popup");
-      popups.forEach(popup => {
-          popup.classList.remove("active");
-      });
-  }
-
-  // Cierra el popup si se hace clic fuera del contenido
-  window.onclick = function(event) {
-      if (event.target.classList.contains("popup")) {
-          event.target.classList.remove("active");
-      }
-  };
