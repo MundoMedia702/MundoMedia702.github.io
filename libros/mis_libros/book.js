@@ -614,6 +614,34 @@ document.addEventListener("DOMContentLoaded", function() {
             downloadLink: "https://mega.nz/file/rd4EWCxR#NFfcaLzyTbj7uxfQVs0N3HQBgSBeNA_FrY0EHiwH2GU",
             category: "psicologia"
         },
+        88: {
+            title: "Black Hat Python",
+            image: "/libros/image/088.jpg",
+            description: "When it comes to creating powerful and effective hacking tools, Python is the language of choice for most security analysts. But just how does the magic happen? In Black Hat Python, the latest from Justin Seitz (author of the best-selling Gray Hat Python), you’ll explore the darker side of Python’s capabilities—writing network sniffers, manipulating packets, infecting virtual machines, creating stealthy trojans, and more. You’ll learn how to: –Create a trojan command-and-control using GitHub –Detect sandboxing and automate com­mon malware tasks, like keylogging and screenshotting –Escalate Windows privileges with creative process control –Use offensive memory forensics tricks to retrieve password hashes and inject shellcode into a virtual machine –Extend the popular Burp Suite web-hacking tool –Abuse Windows COM automation to perform a man-in-the-browser attack –Exfiltrate data from a network most sneakily Insider techniques and creative challenges throughout show you how to extend the hacks and how to write your own exploits. When it comes to offensive security, your ability to create powerful tools on the fly is indispensable. Learn how in Black Hat Python.",
+            downloadLink: "https://mega.nz/file/3QI00bDJ#5O-MYr8osM57zc6jiQT-AmaWG2ROYbMKuyJxUk1KqoU",
+            category: "literatura-tecnologica"
+        },
+        89: {
+            title: "Black Hat Python: Python Programming for Hackers and Pentesters",
+            image: "/libros/image/089.jpg",
+            description: "...",
+            downloadLink: "https://mega.nz/file/vIYhQDLC#SIbt_eTOzPlS5ijFH-S4QfDchsL9IIRvhDLbjiKgwgU",
+            category: "literatura-tecnologica"
+        },
+        90: {
+            title: "Black Hat Python: Python Programming for Hackers and Pentesters, 2e",
+            image: "/libros/image/090.jpg",
+            description: "<b>Fully-updated, second edition of this worldwide bestseller with over 100,000 copies sold.</b>When it comes to creating powerful and effective hacking tools, Python is the language of choice for most security analysts. In <i>Black Hat Python</i>, you'll explore the darker side of Python's capabilities--writing network sniffers, manipulating packets, infecting virtual machines, creating stealthy trojans, and more.",
+            downloadLink: "https://mega.nz/file/SI5RRCDL#XGYms5ZqbLjRWhl5sEB3626t1nmhzGinkjFbVqWqNKE",
+            category: "literatura-tecnologica"
+        },
+        91: {
+            title: "The Art of Invisibility: The World's Most Famous Hacker Teaches You How to Be Safe in the Age of Big Brother and Big Data",
+            image: "/libros/image/091.jpg",
+            description: "Be online without leaving a trace. Your every step online is being tracked and stored, and your identity literally stolen. Big companies and big governments want to know and exploit what you do, and privacy is a luxury few can afford or understand.",
+            downloadLink: "https://mega.nz/file/iJYlBBia#IqQg83Tp9igQXntAi1P1lBF_1IPiKYi2-nL-fPsLapU",
+            category: "literatura-tecnologica"
+        },
 
         // Otros libros...
     };

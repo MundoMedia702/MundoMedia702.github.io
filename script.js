@@ -72,3 +72,41 @@ function showBookmarkSuggestion() {
     showBookmarkSuggestion();
   }
 
+  // Funciones para mostrar/ocultar los pop-ups
+  function showProfileInfo(profileId) {
+      const modal = document.getElementById(`${profileId}-modal`);
+      if (modal) {
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // Evita scroll del fondo
+      }
+  }
+
+  function closeModal(profileId) {
+      const modal = document.getElementById(`${profileId}-modal`);
+      if (modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Restaura scroll
+      }
+  }
+
+  // Cerrar al hacer clic fuera del contenido
+  window.onclick = function(event) {
+      const modals = document.querySelectorAll('.profile-modal');
+      modals.forEach(modal => {
+          if (event.target == modal) {
+              modal.style.display = 'none';
+              document.body.style.overflow = 'auto';
+          }
+      });
+  }
+
+  // Cerrar con tecla ESC
+  document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+          const modals = document.querySelectorAll('.profile-modal');
+          modals.forEach(modal => {
+              modal.style.display = 'none';
+              document.body.style.overflow = 'auto';
+          });
+      }
+  });

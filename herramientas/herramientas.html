@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas MundoMedia</title>
+    <link rel="shortcut icon" href="../favicon/12345.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Herramientas MundoMedia</h1>
+        <p>Bienvenido a mi colección de herramientas construidas en Python.</p>
+    </header>
+
+    <main>
+        <section class="tool-list">
+            <div class="tool-card">
+                <img src="img/linux_example.webp" alt="Tool 1" class="tool-image">
+                <h2>ProfileFinder</h2>
+                <p>Esta herramienta permite buscar información sobre un nombre de usuario en múltiples plataformas (Facebook, YouTube, Instagram, etc.) utilizando DuckDuckGo como motor de búsqueda.</p>
+                <a href="tools/tool1/ProfileFinder/ProfileFinder.py.zip" download class="download-link" data-exe="tools/tool1/ProfileFinder/ProfileFinder.zip">Descargar</a>
+            </div>
+            <div class="tool-card">
+                <img src="img/escaneo.webp" alt="Tool 1" class="tool-image">
+                <h2>PortFinder</h2>
+                <p>Este script es una aplicación de escaneo de puertos desarrollada con PyQt6, que permite escanear direcciones IP para identificar puertos abiertos, servicios, banners, TTL (Time to Live) y sistemas operativos.</p>
+                <a href="tools/tool1/PortFinder/PortFinder.py.zip" download class="download-link" data-exe="tools/tool1/PortFinder/PortFinder.zip">Descargar</a>
+            </div>
+            <div class="tool-card">
+                <img src="img/diccionario.webp" alt="Tool 1" class="tool-image">
+                <h2>PasswordCrafter</h2>
+                <p>Este script es un generador de diccionarios personalizados que puede crear listas de palabras para diferentes propósitos, como pruebas de fuerza bruta, fuzzing web o combinaciones basadas en respuestas personales. </p>
+                <a href="tools/tool1/PasswordCrafter/PasswordCrafter.py.zip" download class="download-link" data-exe="tools/tool1/PasswordCrafter/PasswordCrafter.zip">Descargar</a>
+            </div>
+            <div class="tool-card">
+                <img src="img/convert.webp" alt="Tool 1" class="tool-image">
+                <h2>MultiConvert</h2>
+                <p>Este script es una herramienta de conversión de archivos que permite transformar entre diferentes formatos de imágenes, documentos y otros tipos de archivos</p>
+                <a href="tools/tool1/MultiConvert/MultiConvert.py.zip" download class="download-link" data-exe="tools/tool1/MultiConvert/MultiConvert.zip">Descargar</a>
+            </div>
+            <div class="tool-card">
+                <img src="img/creacion.webp" alt="Tool 1" class="tool-image">
+                <h2>PentestFoldergen</h2>
+                <p>Este script es una aplicación gráfica desarrollada con PyQt6 que permite crear estructuras de carpetas y archivos para proyectos de pruebas de penetración (pentesting).</p>
+                <a href="tools/tool2/PentestFoldergen/PentestFoldergen.py.zip" download class="download-link">Descargar</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para mostrar la imagen en grande -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Modal para selección EXE/PY -->
+    <div id="exeModal" class="exe-modal">
+        <div class="exe-modal-content">
+            <h3>Versión ejecutable disponible</h3>
+            <p>Hemos detectado que estás usando Windows. Esta herramienta tiene una versión ejecutable (.exe) que no requiere Python instalado.</p>
+            <p>¿Qué versión prefieres descargar?</p>
+            <div class="exe-modal-buttons">
+                <button id="exeBtn" class="exe-modal-btn exe-btn-exe">Descargar EXE</button>
+                <button id="pyBtn" class="exe-modal-btn exe-btn-py">Descargar Python</button>
+                <button id="cancelBtn" class="exe-modal-btn exe-btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        // Detectar si el usuario está en Windows
+        function isWindows() {
+            return navigator.userAgent.indexOf('Windows') !== -1;
+        }
+        
+        // Mostrar modal de selección EXE/PY
+        function showExeModal(pyUrl, exeUrl) {
+            const modal = document.getElementById('exeModal');
+            const exeBtn = document.getElementById('exeBtn');
+            const pyBtn = document.getElementById('pyBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            
+            modal.style.display = 'block';
+            
+            exeBtn.onclick = function() {
+                window.location.href = exeUrl;
+                modal.style.display = 'none';
+            };
+            
+            pyBtn.onclick = function() {
+                window.location.href = pyUrl;
+                modal.style.display = 'none';
+            };
+            
+            cancelBtn.onclick = function() {
+                modal.style.display = 'none';
+            };
+            
+            // Cerrar modal al hacer clic fuera del contenido
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        }
+        
+        // Configurar eventos para los enlaces de descarga
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadLinks = document.querySelectorAll('.download-link');
+            
+            downloadLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const exeUrl = this.getAttribute('data-exe');
+                    
+                    // Solo intervenir si hay versión EXE y es Windows
+                    if (exeUrl && isWindows()) {
+                        e.preventDefault();
+                        showExeModal(this.href, exeUrl);
+                    }
+                    // En otros casos, el comportamiento normal continúa
+                });
+            });
+        });
+    </script>
+</body>
+</html>

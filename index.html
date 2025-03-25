@@ -28,12 +28,53 @@
             <a href="/buscador/BlackLink.html">BlackLink</a>
             <a href="/peliculas_series/peliculas_series.html">CineLibre</a>
             <a href="/ransomware/ransomwarehub.html">RansomwareHub</a>
+            <a href="/herramientas/herramientas.html">Herramientas</a>
         </div>
-        <!-- Foto de perfil -->
-        <a href="perfil2/sobrenosotros.html" class="profile-pic">
-            <img src="perfil/mmedia.jpeg" alt="Foto de perfil">
-        </a>
+
     </nav>
+
+    <!-- Agrega esto antes del cierre del body -->
+    <div class="floating-profiles">
+        <div class="profile-pic" onclick="showProfileInfo('profile1')">
+            <img src="perfil/mundomedia.jpeg" alt="Perfil 1">
+        </div>
+        <div class="profile-pic" onclick="showProfileInfo('profile2')">
+            <img src="perfil/mundomedia.jpeg" alt="Perfil 2">
+        </div>
+    </div>
+
+    <!-- Pop-ups de información -->
+    <div id="profile1-modal" class="profile-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('profile1')">&times;</span>
+            <div class="profile-header">
+                <img src="perfil/mundomedia.jpeg" alt="Perfil 1">
+                <h3>SysXploit</h3>
+            </div>
+            <div class="profile-info">
+                <p><strong>Rol:</strong>  Entusiasta de Seguridad Informática</p>
+                <p><strong>País:</strong> Colombia</p>
+                <p><strong>Edad:</strong> 20 años</p>
+                <p><strong>Descripción:</strong> Apasionado por el hacking ético, pentesting y desarrollo de herramientas de seguridad. Autodidacta en constante aprendizaje.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile2-modal" class="profile-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('profile2')">&times;</span>
+            <div class="profile-header">
+                <img src="perfil/mundomedia.jpeg" alt="Perfil 2">
+                <h3>Billy</h3>
+            </div>
+            <div class="profile-info">
+                <p><strong>Rol:</strong> Entusiasta de Pentesting de Redes</p>
+                <p><strong>País:</strong> Bolivia</p>
+                <p><strong>Edad:</strong> 25 años</p>
+                <p><strong>Descripción:</strong> Pruebas de penetración en infraestructuras de red y análisis de vulnerabilidades</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Contenido principal -->
     <div class="main-content">
